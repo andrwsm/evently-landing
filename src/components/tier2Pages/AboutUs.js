@@ -11,34 +11,34 @@ const stats = [
 ]
 const values = [
   {
-    name: 'Be world-class',
+    name: 'Customer first',
     description:
-      'Aut illo quae. Ut et harum ea animi natus. Culpa maiores et sed sint et magnam exercitationem quia. Ullam voluptas nihil vitae dicta molestiae et. Aliquid velit porro vero.',
+      'We prioritize our customers in everything we do, ensuring our products, services, and interactions create real value and exceptional experiences. By deeply understanding their needs, we build long-term trust and loyalty.',
   },
   {
-    name: 'Share everything you know',
+    name: 'Ownership & Accountability',
     description:
-      'Mollitia delectus a omnis. Quae velit aliquid. Qui nulla maxime adipisci illo id molestiae. Cumque cum ut minus rerum architecto magnam consequatur. Quia quaerat minima.',
+      'We take full responsibility for our work, owning both successes and challenges. Every team member is empowered to make decisions, take initiative, and drive meaningful outcomes with integrity and commitment.',
   },
   {
-    name: 'Always learning',
+    name: 'Innovation & Continuous Improvement',
     description:
-      'Aut repellendus et officiis dolor possimus. Deserunt velit quasi sunt fuga error labore quia ipsum. Commodi autem voluptatem nam. Quos voluptatem totam.',
+      'We embrace change and constantly seek better ways to solve problems. By fostering a culture of curiosity and adaptability, we stay ahead of the curve and continuously improve our processes, products, and services.',
   },
   {
-    name: 'Be supportive',
+    name: 'Collaboration & Teamwork',
     description:
-      'Magnam provident veritatis odit. Vitae eligendi repellat non. Eum fugit impedit veritatis ducimus. Non qui aspernatur laudantium modi. Praesentium rerum error deserunt harum.',
+      'We believe in the power of working together. Open communication, mutual respect, and shared goals drive our success, enabling us to create impactful solutions and a strong, inclusive workplace.',
   },
   {
-    name: 'Take responsibility',
+    name: 'Transparency & Trust',
     description:
-      'Sit minus expedita quam in ullam molestiae dignissimos in harum. Tenetur dolorem iure. Non nesciunt dolorem veniam necessitatibus laboriosam voluptas perspiciatis error.',
+      'Honest and open communication is at the heart of our culture. We encourage constructive feedback, share knowledge freely, and operate with integrity to build trust with our team, customers, and stakeholders.',
   },
   {
-    name: 'Enjoy downtime',
+    name: 'Excellence & Impact',
     description:
-      'Ipsa in earum deserunt aut. Quos minus aut animi et soluta. Ipsum dicta ut quia eius. Possimus reprehenderit iste aspernatur ut est velit consequatur distinctio.',
+      'We set high standards and strive to deliver outstanding results in everything we do. By focusing on quality, efficiency, and measurable impact, we ensure our work makes a meaningful difference.',
   },
 ]
 const team = [
@@ -56,7 +56,7 @@ const team = [
   },
   {
     name: 'Finlay Thornell',
-    role: 'Marketing manager',
+    role: 'Executive Marketing Manager',
     imageUrl:
       '',
   },
@@ -462,30 +462,6 @@ export default function AboutUs() {
           </div>
         </div>
       </main>
-
-      {/* Footer */}
-      <footer className="mt-16 sm:mt-32">
-        <div className="mx-auto max-w-7xl overflow-hidden px-6 py-20 sm:py-24 lg:px-8">
-          <nav aria-label="Footer" className="-mb-6 flex flex-wrap justify-center gap-x-12 gap-y-3 text-sm/6">
-            {footerNavigation.main.map((item) => (
-              <a key={item.name} href={item.href} className="text-gray-600 hover:text-gray-900">
-                {item.name}
-              </a>
-            ))}
-          </nav>
-          <div className="mt-16 flex justify-center gap-x-10">
-            {footerNavigation.social.map((item) => (
-              <a key={item.name} href={item.href} className="text-gray-600 hover:text-gray-800">
-                <span className="sr-only">{item.name}</span>
-                <item.icon aria-hidden="true" className="size-6" />
-              </a>
-            ))}
-          </div>
-          <p className="mt-10 text-center text-sm/6 text-gray-600">
-            &copy; 2024 Your Company, Inc. All rights reserved.
-          </p>
-        </div>
-      </footer>
     </div>
   )
 }

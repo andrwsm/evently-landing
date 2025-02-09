@@ -8,6 +8,7 @@ import Footer from './components/Footer';
 import Faqs from './components/tier2Pages/FAQs';
 import AboutUs from './components/tier2Pages/AboutUs';
 import WhatsNew from './components/tier2Pages/WhatsNew';
+import Error404 from './errors/Error404';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route path="/Faqs" element={<Faqs />} />
         <Route path="/AboutUs" element={<AboutUs />}/>
         <Route path="/WhatsNew" element={<WhatsNew />} />
+        <Route path="*" element={<Error404/>} />
       </Routes>
       {/* <SignUp /> */}
       <Footer />

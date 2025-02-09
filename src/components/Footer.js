@@ -1,3 +1,5 @@
+import EventlyLogo from '../assets/EventlyLogo.png'
+
 const navigation = {
     solutions: [
       { name: 'Marketing', href: '#' },
@@ -97,11 +99,11 @@ const navigation = {
             <div className="space-y-8">
               <img
                 alt="Company name"
-                src="https://tailwindui.com/plus-assets/img/logos/mark.svg?color=indigo&shade=600"
+                src={EventlyLogo}
                 className="h-9"
               />
               <p className="text-balance text-sm/6 text-gray-600">
-                Making the world a better place through constructing elegant hierarchies.
+                Don't just learn it, be it.
               </p>
               <div className="flex gap-x-6">
                 {navigation.social.map((item) => (
@@ -168,7 +170,7 @@ const navigation = {
             </div>
           </div>
           <div className="mt-16 border-t border-gray-900/10 pt-8 sm:mt-20 lg:mt-24">
-            <p className="text-sm/6 text-gray-600">&copy; 2024 Your Company, Inc. All rights reserved.</p>
+            <p className="text-sm/6 text-gray-600">&copy; 2025 Evently Ltd, Inc. All rights reserved.</p>
           </div>
         </div>
       </footer>

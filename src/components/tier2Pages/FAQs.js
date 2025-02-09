@@ -26,12 +26,27 @@ const faqs = [
     question: "What types of events can I host on Evently?",
     answer:
       "We support a range of events, however the majorty of events are corporate events, networking events, and conferences. We also support webinars, workshops, and training sessions.",
-  },{
+  },
+  {
     question: "Can I print attendee badges?",
     answer:
       "Yes. You can print attendee badges using the Evently platform. You can also print out a list of attendees, and their contact details.",
   },
-  
+  {
+    question: "Can I customize the event page?",
+    answer:
+      "Yes. You can customize the event page to match your brand. You can add your logo, change the colors, and add images and videos.",
+  },
+  {
+    question: "Can I host recurring events?",
+    answer:
+      "Yes. You can host recurring events on Evently. You can set the frequency of the event, and the number of times it will repeat.",
+  },
+  {
+    question: "Are there any set up fees?",
+    answer:
+      "No. There are no set up fees for using Evently. You can create an account and start selling tickets for your event for free.",
+  },
   // More questions...
 ]
 

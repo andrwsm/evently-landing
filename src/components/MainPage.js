@@ -3,7 +3,7 @@ import CustomIcons from '../assets/icons'
 const features = [
   {
     name: 'Keep Your Profits.',
-    description: 'Your profits are yours. Keep all of what you earn from your events with no hidden fees.',
+    description: 'Your profits are your own. Keep all of what you earn from your events with no hidden fees.',
     icon: CustomIcons.find(icon => icon.name === 'MoneyIcon').component,
   },
   {

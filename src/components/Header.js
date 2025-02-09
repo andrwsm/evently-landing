@@ -310,10 +310,10 @@ export default function Header() {
           </Popover>
 
           <a href="#" className="text-sm/6 font-semibold text-gray-900">
-            Features
+            About us
           </a>
           <a href="#" className="text-sm/6 font-semibold text-gray-900">
-            Marketplace
+            What's new
           </a>
           <a href="#" className="text-sm/6 font-semibold text-gray-900">
             Company

@@ -1,22 +1,22 @@
-import { CloudArrowUpIcon, LockClosedIcon, ServerIcon } from '@heroicons/react/20/solid'
+import CustomIcons from '../assets/icons'
 
 const features = [
   {
-    name: 'Push to deploy.',
-    description:
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
-    icon: CloudArrowUpIcon,
+    name: 'Keep Your Profits.',
+    description: 'Your profits are your own. Keep all of what you earn from your events with no hidden fees.',
+    icon: CustomIcons.find(icon => icon.name === 'MoneyIcon').component,
   },
   {
-    name: 'SSL certificates.',
-    description: 'Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo.',
-    icon: LockClosedIcon,
+    name: 'Easy To Use.',
+    description: 'Our platform designed to be easy to use and easy to understand. No need to be a tech wizard.',
+    icon: CustomIcons.find(icon => icon.name === 'TicketIcon').component,
   },
   {
-    name: 'Database backups.',
-    description: 'Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.',
-    icon: ServerIcon,
+    name: 'Client First',
+    description: 'You are our priority. We will always be here to help you with any issues you may have.',
+    icon: CustomIcons.find(icon => icon.name === 'UserIcon').component,
   },
+
 ]
 
 export default function LandingPage() {
@@ -26,19 +26,18 @@ export default function LandingPage() {
         <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
           <div className="lg:pt-4 lg:pr-8">
             <div className="lg:max-w-lg">
-              <h2 className="text-base/7 font-semibold text-2a2874" style={{fontFamily: 'Montserrat, sans-serif'}}>Deploy faster</h2>
-              <p className="mt-2 text-4xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-5xl" style={{fontFamily: 'Montserrat, sans-serif'}}> 
-                A better workflow
+              <h2 className="text-base/7 font-semibold text-grey" style={{fontFamily: 'Montserrat, sans-serif'}}>Don't just learn it</h2>
+              <p className="mt-2 text-4xl font-bold tracking-tight text-pretty text-grey sm:text-5xl" style={{fontFamily: 'Montserrat, sans-serif'}}> 
+                BECOME IT
               </p>
-              <p className="mt-6 text-lg/8 text-gray-600">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque,
-                iste dolor cupiditate blanditiis ratione.
+              <p className="mt-6 text-lg/8 text-grey-600">
+                Join us to elevate your corporate and networking events to the next level. Connect, collaborate, and create unforgettable experiences.
               </p>
               <dl className="mt-10 max-w-xl space-y-8 text-base/7 text-gray-600 lg:max-w-none">
                 {features.map((feature) => (
                   <div key={feature.name} className="relative pl-9">
                     <dt className="inline font-semibold text-gray-900">
-                      <feature.icon aria-hidden="true" className="absolute top-1 left-1 size-5 text-indigo-600" />
+                      <feature.icon aria-hidden="true" className="absolute top-1 left-1 size-5 text--midnight-sky-600" />
                       {feature.name}
                     </dt>{' '}
                     <dd className="inline">{feature.description}</dd>

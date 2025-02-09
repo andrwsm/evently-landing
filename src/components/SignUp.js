@@ -6,10 +6,9 @@ export default function SignUp() {
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-2">
           <div className="max-w-xl lg:max-w-lg">
-            <h2 className="text-4xl font-semibold tracking-tight text-white">Subscribe to our newsletter</h2>
+            <h2 className="text-4xl font-semibold tracking-tight text-white">Stay updated</h2>
             <p className="mt-4 text-lg text-gray-300">
-              Nostrud amet eu ullamco nisi aute in ad minim nostrud adipisicing velit quis. Duis tempor incididunt
-              dolore.
+              Stay updated with what's going on. Be notified of new features and updates.
             </p>
             <div className="mt-6 flex max-w-md gap-x-4">
               <label htmlFor="email-address" className="sr-only">
@@ -26,6 +25,10 @@ export default function SignUp() {
               />
               <button
                 type="submit"
+                onClick={() => {
+                  const email = document.getElementById('email-address').value;
+                  console.log("Email: " + email);
+                }}
                 className="flex-none rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-indigo-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500"
               >
                 Subscribe
@@ -37,9 +40,9 @@ export default function SignUp() {
               <div className="rounded-md bg-white/5 p-2 ring-1 ring-white/10">
                 <CalendarDaysIcon aria-hidden="true" className="size-6 text-white" />
               </div>
-              <dt className="mt-4 text-base font-semibold text-white">Weekly articles</dt>
+              <dt className="mt-4 text-base font-semibold text-white">Be the first to know</dt>
               <dd className="mt-2 text-base/7 text-gray-400">
-                Non laboris consequat cupidatat laborum magna. Eiusmod non irure cupidatat duis commodo amet.
+                We will let you know when new features are available. Stay ahead of the competition.
               </dd>
             </div>
             <div className="flex flex-col items-start">
@@ -48,7 +51,7 @@ export default function SignUp() {
               </div>
               <dt className="mt-4 text-base font-semibold text-white">No spam</dt>
               <dd className="mt-2 text-base/7 text-gray-400">
-                Officia excepteur ullamco ut sint duis proident non adipisicing. Voluptate incididunt anim.
+                No pointless emails filling up your junk folder. We only send important updates.
               </dd>
             </div>
           </dl>

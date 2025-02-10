@@ -4,6 +4,16 @@ import { Dialog, DialogPanel } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 
 
+import  GithubLogo  from '../../assets/GithubLogo.png'
+import  StripeLogo  from '../../assets/StripeLogo.png'
+import SupabaseLogo  from '../../assets/SupabaseLogo.png'
+
+import dwightimg from '../../assets/dwight.jpg'
+import Kyle from '../../assets/Kyle.jpg'
+import Will from '../../assets/Will.jpg'
+import Finlay from '../../assets/Finlay.jpg' 
+
+
 const stats = [
       { label: 'Per ticket cost of our competitors', value: '6.95% + £0.59' },
       { label: 'Customer satisfaction rate', value: '100%' },
@@ -46,43 +56,46 @@ const team = [
     name: 'Kyle Tracey',
     role: 'Founder / CEO',
     imageUrl:
-      '',
+      Kyle,
+
   },
   {
     name: 'Will Jones',
     role: 'CTO',
     imageUrl:
-      '',
+      Will,
   },
   {
     name: 'Finlay Thornell',
     role: 'Executive Marketing Manager',
     imageUrl:
-      '',
+
+      Finlay,
   },
   {
     name: 'Andrew Smith',
     role: 'Software Engineer',
     imageUrl:
-      '',
+      dwightimg,
+
   },
   // More people...
 ]
 const blogPosts = [
   {
     id: 1,
-    title: 'Vel expedita assumenda placeat aut nisi optio voluptates quas',
+    title: 'Evently is here',
     href: '#',
     description:
-      'Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.',
+      'We are excited to announce the launch of Evently, a new platform for event organizers to sell tickets without fees.',
     imageUrl:
       'https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3603&q=80',
-    date: 'Mar 16, 2020',
-    datetime: '2020-03-16',
+    date: 'Feb 9, 2025',
+    datetime: '2025-02-09',
     author: {
-      name: 'Michael Foster',
+      name: 'Andrew Smith',
       imageUrl:
-        'https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+        '',
     },
   },
   // More posts...
@@ -315,8 +328,9 @@ export default function AboutUs() {
           <div className="mx-auto max-w-2xl lg:mx-0">
             <h2 className="text-pretty text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl">Our values</h2>
             <p className="mt-6 text-lg/8 text-gray-600">
-              Lorem ipsum dolor sit amet consect adipisicing elit. Possimus magnam voluptatum cupiditate veritatis in
-              accusamus quisquam.
+                Our values are the guiding principles that shape our culture and define who we are as a company. They guide
+                our decisions, actions, and interactions, ensuring we stay true to our mission and create a positive impact
+                on the world.
             </p>
           </div>
           <dl className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 text-base/7 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-3">
@@ -354,43 +368,44 @@ export default function AboutUs() {
           </div>
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
             <h2 className="text-center text-lg/8 font-semibold text-gray-900">
-              Trusted by the world’s most innovative teams
+              We use the best tools to help you grow your events
             </h2>
             <div className="mx-auto mt-10 grid max-w-lg grid-cols-4 items-center gap-x-8 gap-y-10 sm:max-w-xl sm:grid-cols-6 sm:gap-x-10 lg:mx-0 lg:max-w-none lg:grid-cols-5">
+            <img
+                alt=""
+                src=" "
+                width={158}
+                height={48}
+                // className="col-span-2 max-h-12 w-full object-contain lg:col-span-1"
+              />
               <img
-                alt="Transistor"
-                src="https://tailwindui.com/plus-assets/img/logos/158x48/transistor-logo-gray-900.svg"
+                alt="GitHub"
+                src={GithubLogo}
                 width={158}
                 height={48}
                 className="col-span-2 max-h-12 w-full object-contain lg:col-span-1"
               />
               <img
-                alt="Reform"
-                src="https://tailwindui.com/plus-assets/img/logos/158x48/reform-logo-gray-900.svg"
+                alt="Stripe"
+                src={StripeLogo}
+
                 width={158}
                 height={48}
                 className="col-span-2 max-h-12 w-full object-contain lg:col-span-1"
               />
               <img
-                alt="Tuple"
-                src="https://tailwindui.com/plus-assets/img/logos/158x48/tuple-logo-gray-900.svg"
+                alt="Supabase"
+                src={SupabaseLogo}
                 width={158}
                 height={48}
                 className="col-span-2 max-h-12 w-full object-contain lg:col-span-1"
               />
               <img
-                alt="SavvyCal"
-                src="https://tailwindui.com/plus-assets/img/logos/158x48/savvycal-logo-gray-900.svg"
+                alt=""
+                src=" "
                 width={158}
                 height={48}
-                className="col-span-2 max-h-12 w-full object-contain sm:col-start-2 lg:col-span-1"
-              />
-              <img
-                alt="Statamic"
-                src="https://tailwindui.com/plus-assets/img/logos/158x48/statamic-logo-gray-900.svg"
-                width={158}
-                height={48}
-                className="col-span-2 col-start-2 max-h-12 w-full object-contain sm:col-start-auto lg:col-span-1"
+                // className="col-span-2 max-h-12 w-full object-contain lg:col-span-1"
               />
             </div>
           </div>
@@ -425,7 +440,7 @@ export default function AboutUs() {
             <h2 className="text-balance text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl">
               From the blog
             </h2>
-            <p className="mt-2 text-lg/8 text-gray-600">Learn how to grow your business with our expert advice.</p>
+            <p className="mt-2 text-lg/8 text-gray-600"></p>
           </div>
           <div className="mx-auto mt-16 grid max-w-2xl auto-rows-fr grid-cols-1 gap-8 sm:mt-20 lg:mx-0 lg:max-w-none lg:grid-cols-3">
             {blogPosts.map((post) => (

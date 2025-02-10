@@ -5,8 +5,12 @@ import { MinusSmallIcon, PlusSmallIcon } from '@heroicons/react/24/outline'
 const faqs = [
   {
     question: "What are the fees for selling using Evently?",
-    answer: "We don't charge any fees for selling tickets. You keep all of what you earn from your events. Although there is a 1.5% plus 30p for processing payments which is charged by Stripe.",
-  },
+    answer: (
+        <>
+          We don't charge any fees for selling tickets. You keep all of what you earn from your events. Although there is a 1.5% + 20p processing payment for 
+          <a href="https://support.stripe.com/questions/what-s-the-difference-between-standard-and-premium-cards" className="text-blue-600 underline" target='_blank'> standard UK cards</a> which is charged by Stripe.
+        </>
+      ), },
   {
     question: "How do I collect feedback from attendees?",
     answer:

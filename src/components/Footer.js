@@ -251,6 +251,7 @@ const navigation = {
           </svg>
         ),
       },
+
       {
         name: 'YouTube',
         href: '#',
@@ -279,7 +280,7 @@ const navigation = {
                 className="h-9"
               />
               <p className="text-balance text-sm/6 text-gray-300">
-                Making the world a better place through constructing elegant hierarchies.
+                Don't just learn it, be it.
               </p>
               <div className="flex gap-x-6">
                 {navigation.social.map((item) => (

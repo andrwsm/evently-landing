@@ -3,6 +3,7 @@ import { useState } from 'react'
 import { Dialog, DialogPanel } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 
+
 import  GithubLogo  from '../../assets/GithubLogo.png'
 import  StripeLogo  from '../../assets/StripeLogo.png'
 import SupabaseLogo  from '../../assets/SupabaseLogo.png'
@@ -56,6 +57,7 @@ const team = [
     role: 'Founder / CEO',
     imageUrl:
       Kyle,
+
   },
   {
     name: 'Will Jones',
@@ -67,6 +69,7 @@ const team = [
     name: 'Finlay Thornell',
     role: 'Executive Marketing Manager',
     imageUrl:
+
       Finlay,
   },
   {
@@ -74,6 +77,7 @@ const team = [
     role: 'Software Engineer',
     imageUrl:
       dwightimg,
+
   },
   // More people...
 ]
@@ -384,6 +388,7 @@ export default function AboutUs() {
               <img
                 alt="Stripe"
                 src={StripeLogo}
+
                 width={158}
                 height={48}
                 className="col-span-2 max-h-12 w-full object-contain lg:col-span-1"

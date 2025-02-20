@@ -1,6 +1,7 @@
 import CustomIcons from '../assets/icons';
 import EventlyIcon from '../assets/eventlyLogos/EventlyIcon.png';
-import EvenrlyLogo from '../assets/eventlyLogos/EventlyLogo.png';
+import EventlyLogo from '../assets/eventlyLogos/EventlyLogo.png';
+import lookingDown from '../assets/images/lookingAtPhone.png';
 
 const features = [
   {
@@ -36,11 +37,11 @@ export default function LandingPage() {
               <p className="mt-6 text-lg/8 text-grey-600">
                 Join us to elevate your corporate and networking events to the next level. Connect, collaborate, and create unforgettable experiences.
               </p>
-              <dl className="mt-10 max-w-xl space-y-8 text-base/7 text-gray-600 lg:max-w-none">
+              <dl className="mt-10 flex flex-wrap gap-x-8 gap-y-8 text-base/7 text-gray-600 lg:max-w-none">
                 {features.map((feature) => (
-                  <div key={feature.name} className="relative pl-9">
+                  <div key={feature.name} className="relative pl-4 flex-shrink-0 w-full sm:w-auto lg:w-1/3">
                     <dt className="inline font-semibold text-gray-900">
-                      <feature.icon aria-hidden="true" className="absolute top-1 left-1 size-5 text--midnight-sky-600" />
+                      <feature.icon aria-hidden="true" className="absolute top-1 left-0 size-5 text--midnight-sky-600" />
                       {feature.name}
                     </dt>{' '}
                     <dd className="inline">{feature.description}</dd>
@@ -51,10 +52,10 @@ export default function LandingPage() {
           </div>
           <img
             alt="Product screenshot"
-            src="https://tailwindui.com/plus-assets/img/component-images/dark-project-app-screenshot.png"
+            src={lookingDown}
             width={2432}
             height={1442}
-            className="w-[48rem] max-w-none rounded-xl ring-1 shadow-xl ring-gray-400/10 sm:w-[57rem] md:-ml-4 lg:-ml-0"
+            className="w-[36rem] max-w-none sm:w-[57rem] md:-ml-4 lg:-ml-0"
           />
         </div>
       </div>

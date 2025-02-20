@@ -25,7 +25,7 @@ export default function Contact() {
         <h2 className="text-4xl font-semibold tracking-tight text-balance text-gray-900 sm:text-5xl">Contact us</h2>
         <p className="mt-2 text-lg/8 text-gray-600">Aute magna irure deserunt veniam aliqua magna enim voluptate.</p>
       </div>
-      <form action="https://formsubmit.co/andrw.smth@outlook.com" method="POST" className="mx-auto mt-16 max-w-xl sm:mt-20">
+      <form action="a0139e0eabd5711df2cfaf270dbeddd9" method="POST" className="mx-auto mt-16 max-w-xl sm:mt-20">
         <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
           <div>
             <label htmlFor="first-name" className="block text-sm/6 font-semibold text-gray-900 border-black">

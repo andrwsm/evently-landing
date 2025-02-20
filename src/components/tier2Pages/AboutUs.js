@@ -8,10 +8,10 @@ import  GithubLogo  from '../../assets/GithubLogo.png'
 import  StripeLogo  from '../../assets/StripeLogo.png'
 import SupabaseLogo  from '../../assets/SupabaseLogo.png'
 
-import dwightimg from '../../assets/dwight.jpg'
-import Kyle from '../../assets/Kyle.jpg'
-import Will from '../../assets/Will.jpg'
-import Finlay from '../../assets/Finlay.jpg' 
+import dwightimg from '../../assets/photos/dwight.jpg'
+import Kyle from '../../assets/photos/Kyle.jpg'
+import Will from '../../assets/photos/Will.jpg'
+import Finlay from '../../assets/photos/Finlay.jpg' 
 
 
 const stats = [

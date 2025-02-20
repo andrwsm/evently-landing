@@ -26,8 +26,8 @@ export default function LandingPage() {
         <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
           <div className="lg:pt-4 lg:pr-8">
             <div className="lg:max-w-lg">
-              <h2 className="text-base/7 font-semibold text-grey" style={{fontFamily: 'Montserrat, sans-serif'}}>Don't just learn it</h2>
-              <p className="mt-2 text-4xl font-bold tracking-tight text-pretty text-grey sm:text-5xl" style={{fontFamily: 'Montserrat, sans-serif'}}> 
+              <h2 className="text-lg font-semibold text-grey" style={{fontFamily: 'Montserrat, sans-serif'}}>Don't just learn it</h2>
+              <p className="mt-2 text-5xl font-bold tracking-tight text-pretty text-grey sm:text-6xl" style={{fontFamily: 'Montserrat, sans-serif'}}> 
                 BECOME IT
               </p>
               <p className="mt-6 text-lg/8 text-grey-600">

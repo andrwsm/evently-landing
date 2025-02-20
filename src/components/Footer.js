@@ -1,4 +1,4 @@
-import EventlyLogo from '../assets/EventlyLogo.png'
+import EventlyLogo from '../assets/eventlyLogos/EventlyLogo.png';
 
 
 const navigation = {

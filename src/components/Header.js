@@ -1,6 +1,6 @@
 'use client'
 
-import EventlyLogo from '../assets/EventlyLogo.png';
+import EventlyLogo from '../assets/eventlyLogos/EventlyLogo.png';
 import { useState } from 'react'
 import {
   Dialog,
@@ -52,6 +52,7 @@ export default function Header() {
             />
           </a>
         </div>
+        
         <div className="flex lg:hidden">
           <button
             type="button"
@@ -63,9 +64,15 @@ export default function Header() {
           </button>
         </div>
         <PopoverGroup className="hidden lg:flex lg:gap-x-12">
+        <a href="/" className="text-sm/6 font-semibold text-gray-900">
+            Home
+          </a>
+          <a href="/AboutUs" className="text-sm/6 font-semibold text-gray-900">
+            About us
+          </a>
           <Popover className="relative">
             <PopoverButton className="flex items-center gap-x-1 text-sm/6 font-semibold text-gray-900">
-              Product
+              Features
               <ChevronDownIcon aria-hidden="true" className="size-5 flex-none text-gray-400" />
             </PopoverButton>
 
@@ -107,12 +114,6 @@ export default function Header() {
             </PopoverPanel>
           </Popover>
 
-          <a href="/AboutUs" className="text-sm/6 font-semibold text-gray-900">
-            About us
-          </a>
-          <a href="/WhatsNew" className="text-sm/6 font-semibold text-gray-900">
-            What's new
-          </a>
           <a href="/FAQs" className="text-sm/6 font-semibold text-gray-900">
             FAQs
           </a>

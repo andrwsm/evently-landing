@@ -1,28 +1,21 @@
-import { useState } from 'react'
-import { Dialog, DialogPanel } from '@headlessui/react'
-import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
-
-
-import  GithubLogo  from '../../assets/GithubLogo.png'
-import  StripeLogo  from '../../assets/StripeLogo.png'
-import SupabaseLogo  from '../../assets/SupabaseLogo.png'
+import { useState } from 'react';
+import { Dialog, DialogPanel } from '@headlessui/react';
+import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
+import CustomIcons from '../../assets/icons';
 
 import dwightimg from '../../assets/photos/dwight.jpg'
 import Kyle from '../../assets/photos/Kyle.jpg'
 import Will from '../../assets/photos/Will.jpg'
-import Finlay from '../../assets/photos/Finlay.jpg' 
+import Finlay from '../../assets/photos/Finlay.jpg'
+import Target from '../../assets/TargetIcon.png'
+import World from '../../assets/WorldIcon.png'
 
 
-const stats = [
-      { label: 'Per ticket cost of our competitors', value: '6.95% + £0.59' },
-      { label: 'Customer satisfaction rate', value: '100%' },
-      { label: 'Average support response time', value: '6 minutes' },
-]
 const values = [
   {
     name: 'Empowerment',
     description:
-    'We equip organisers with powerful tools to create and grow their events while giving users the best experience in discovering and attending them.'
+      'We equip organisers with powerful tools to create and grow their events while giving users the best experience in discovering and attending them.',
   },
   {
     name: 'Community',
@@ -54,29 +47,22 @@ const team = [
   {
     name: 'Kyle Tracey',
     role: 'Founder / CEO',
-    imageUrl:
-      Kyle,
-
+    imageUrl: Kyle,
   },
   {
     name: 'Will Jones',
     role: 'CTO',
-    imageUrl:
-      Will,
+    imageUrl: Will,
   },
   {
     name: 'Finlay Thornell',
     role: 'Executive Marketing Manager',
-    imageUrl:
-
-      Finlay,
+    imageUrl: Finlay,
   },
   {
     name: 'Andrew Smith',
     role: 'Software Engineer',
-    imageUrl:
-      dwightimg,
-
+    imageUrl: dwightimg,
   },
   // More people...
 ]
@@ -93,8 +79,7 @@ const blogPosts = [
     datetime: '2025-02-09',
     author: {
       name: 'Andrew Smith',
-      imageUrl:
-        '',
+      imageUrl: '',
     },
   },
   // More posts...
@@ -164,7 +149,7 @@ const footerNavigation = {
         <svg fill="currentColor" viewBox="0 0 24 24" {...props}>
           <path
             fillRule="evenodd"
-            d="M19.812 5.418c.861.23 1.538.907 1.768 1.768C21.998 8.746 22 12 22 12s0 3.255-.418 4.814a2.504 2.504 0 0 1-1.768 1.768c-1.56.419-7.814.419-7.814.419s-6.255 0-7.814-.419a2.505 2.505 0 0 1-1.768-1.768C2 15.255 2 12 2 12s0-3.255.417-4.814a2.507 2.507 0 0 1 1.768-1.768C5.744 5 11.998 5 11.998 5s6.255 0 7.814.418ZM15.194 12 10 15V9l5.194 3Z"
+            d="M19.812 5.418c.861.23 1.538.907 1.768 1.768C21.998 8.746 22 12 22 12s0 3.255-.418 4.814a2.504 2.504 0 01-1.768 1.768c-1.56.419-7.814.419-7.814.419s-6.255 0-7.814-.419a2.505 2.505 0 01-1.768-1.768C2 15.255 2 12 2 12s0-3.255.417-4.814a2.507 2.507 0 011.768-1.768C5.744 5 11.998 5 11.998 5s6.255 0 7.814.418ZM15.194 12 10 15V9l5.194 3Z"
             clipRule="evenodd"
           />
         </svg>
@@ -177,13 +162,13 @@ export default function AboutUs() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   return (
-    <div className="bg-white">
+    <div className="bg-white z-10">
       <main className="isolate">
         {/* Hero section */}
         <div className="relative isolate -z-10">
           <svg
             aria-hidden="true"
-            className="absolute inset-x-0 top-0 -z-10 h-[64rem] w-full stroke-gray-200 [mask-image:radial-gradient(32rem_32rem_at_center,white,transparent)]"
+            className="fixed inset-x-0 top-0 -z-10 h-[64rem] w-full stroke-gray-200 [mask-image:radial-gradient(50rem_32rem_at_center,white,transparent)]"
           >
             <defs>
               <pattern
@@ -197,12 +182,6 @@ export default function AboutUs() {
                 <path d="M.5 200V.5H200" fill="none" />
               </pattern>
             </defs>
-            <svg x="50%" y={-1} className="overflow-visible fill-gray-50">
-              <path
-                d="M-200 0h201v201h-201Z M600 0h201v201h-201Z M-400 600h201v201h-201Z M200 800h201v201h-201Z"
-                strokeWidth={0}
-              />
-            </svg>
             <rect fill="url(#1f932ae7-37de-4c0a-a8b0-a6e3b4d44b84)" width="100%" height="100%" strokeWidth={0} />
           </svg>
           <div
@@ -214,113 +193,68 @@ export default function AboutUs() {
                 clipPath:
                   'polygon(63.1% 29.5%, 100% 17.1%, 76.6% 3%, 48.4% 0%, 44.6% 4.7%, 54.5% 25.3%, 59.8% 49%, 55.2% 57.8%, 44.4% 57.2%, 27.8% 47.9%, 35.1% 81.5%, 0% 97.7%, 39.2% 100%, 35.2% 81.4%, 97.2% 52.8%, 63.1% 29.5%)',
               }}
-              className="aspect-[801/1036] w-[50.0625rem] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30"
+              className="aspect-[801/1036] w-[50.0625rem] bg-gradient-to-tr from-[#33479d] to-[#2a2874] opacity-20"
             />
           </div>
           <div className="overflow-hidden">
-            <div className="mx-auto max-w-7xl px-6 pb-32 pt-36 sm:pt-60 lg:px-8 lg:pt-32">
-              <div className="mx-auto max-w-2xl gap-x-14 lg:mx-0 lg:flex lg:max-w-none lg:items-center">
-                <div className="relative w-full lg:max-w-xl lg:shrink-0 xl:max-w-2xl">
-                  <h1 className="text-pretty text-5xl font-semibold tracking-tight text-gray-900 sm:text-7xl">
-                    We’re changing the way people connect
+            <div className="mx-auto max-w-7xl px-6 pb-1 pt-0 sm:pt-0 lg:px-60 lg:pt-0">
+              <div className="flex justify-center ">
+                <div className="text-center">
+                  <h1 className="text-pretty text-xl font-semibold tracking-tight text-black sm:text-3xl mt-20">
+                    Changing the way people connect
                   </h1>
-                  <p className="mt-8 text-pretty text-lg font-medium text-gray-500 sm:max-w-md sm:text-xl/8 lg:max-w-none">
-                  We are a team of passionate apprentices who launched our platform in 2024 with a mission to revolutionize the
-                   way organisers and attendees connect. Unlike expensive alternatives, we provide an affordable solution that
+                  <h2 className="mt-8 text-pretty text-xl font-semibold tracking-tight text-midnight-sky sm:text-6xl">
+                    About us
+                  </h2>
+                  <p className="mt-8 text-pretty text-lg font-medium text-black sm:max-w-md sm:text-xl/8 lg:max-w-none">
+                    We are a team of passionate apprentices who launched our platform in 2024 with a mission to revolutionize the
+                    way organisers and attendees connect. Unlike expensive alternatives, we provide an affordable solution that
                     makes event creation, discovery, and engagement seamless. Our goal is to help organisers reach their audience
-                     effortlessly while giving users access to meaningful experiences without the high costs. Whether you’re hosting 
-                     or attending, we ensure every step of the journey is smooth, rewarding, and budget-friendly.
+                    effortlessly while giving users access to meaningful experiences without the high costs. Whether you’re hosting 
+                    or attending, we ensure every step of the journey is smooth, rewarding, and budget-friendly.
                   </p>
-                  <p className="mt-8 text-pretty text-lg font-medium text-gray-500 sm:max-w-md sm:text-xl/8 lg:max-w-none">
-                  At our core, we believe in community, innovation, and accessibility. As apprentices, we are deeply invested in our 
-                  users and committed to driving growth for both organisers and attendees. By bridging the gap between event creators 
-                  and audiences, we’re building a space where connections flourish, ideas come to life, and every event becomes an 
-                  opportunity to grow. We care about making event management easier and more affordable, so you can focus on what truly
-                   matters—creating and experiencing unforgettable moments.
+                  <p className="mt-8 text-pretty text-lg font-medium text-black sm:max-w-md sm:text-xl/8 lg:max-w-none">
+                    At our core, we believe in community, innovation, and accessibility. As apprentices, we are deeply invested in our 
+                    users and committed to driving growth for both organisers and attendees. By bridging the gap between event creators 
+                    and audiences, we’re building a space where connections flourish, ideas come to life, and every event becomes an 
+                    opportunity to grow. We care about making event management easier and more affordable, so you can focus on what truly
+                    matters—creating and experiencing unforgettable moments.
                   </p>
-                </div>
-                <div className="mt-14 flex justify-end gap-8 sm:-mt-44 sm:justify-start sm:pl-20 lg:mt-0 lg:pl-0">
-                  <div className="ml-auto w-44 flex-none space-y-8 pt-32 sm:ml-0 sm:pt-80 lg:order-last lg:pt-36 xl:order-none xl:pt-80">
-                    <div className="relative">
-                      <img
-                        alt=""
-                        src="https://images.unsplash.com/photo-1557804506-669a67965ba0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&h=528&q=80"
-                        className="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg"
-                      />
-                      <div className="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10" />
-                    </div>
-                  </div>
-                  <div className="mr-auto w-44 flex-none space-y-8 sm:mr-0 sm:pt-52 lg:pt-36">
-                    <div className="relative">
-                      <img
-                        alt=""
-                        src="https://images.unsplash.com/photo-1485217988980-11786ced9454?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&h=528&q=80"
-                        className="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg"
-                      />
-                      <div className="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10" />
-                    </div>
-                    <div className="relative">
-                      <img
-                        alt=""
-                        src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&crop=focalpoint&fp-x=.4&w=396&h=528&q=80"
-                        className="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg"
-                      />
-                      <div className="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10" />
-                    </div>
-                  </div>
-                  <div className="w-44 flex-none space-y-8 pt-32 sm:pt-0">
-                    <div className="relative">
-                      <img
-                        alt=""
-                        src="https://images.unsplash.com/photo-1670272504528-790c24957dda?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&crop=left&w=400&h=528&q=80"
-                        className="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg"
-                      />
-                      <div className="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10" />
-                    </div>
-                    <div className="relative">
-                      <img
-                        alt=""
-                        src="https://images.unsplash.com/photo-1670272505284-8faba1c31f7d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&h=528&q=80"
-                        className="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg"
-                      />
-                      <div className="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10" />
-                    </div>
-                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-
+        <div className="my-40" />
         {/* Content section */}
-        <div className="mx-auto -mt-12 max-w-7xl px-6 sm:mt-0 lg:px-8 xl:-mt-8">
-          <div className="mx-auto max-w-2xl lg:mx-0 lg:max-w-none">
-            <h2 className="text-pretty text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl">Our mission</h2>
-            <div className="mt-6 flex flex-col gap-x-8 gap-y-20 lg:flex-row">
-              <div className="lg:w-full lg:max-w-2xl lg:flex-auto">
-                <p className="text-xl/8 text-gray-600">
-                Our mission is to create a seamless and engaging event experience for both organisers and attendees. 
-                We empower organisers with the tools to plan, promote, and grow their events while helping users discover and 
-                connect with experiences that matter to them. Through innovation and community-driven solutions, we bridge the 
-                gap between event creators and their audience.
-                </p>
-                <h2 className="mt-16 text-pretty text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl">Our vision</h2>
-                <p className="mt-10 max-w-xl text-base/7 text-gray-700">
-                We envision a world where event organisers and attendees are seamlessly connected, making every event an 
-                opportunity to engage, network, and create lasting memories. By building a platform that supports both creators
-                and participants, we aim to cultivate vibrant communities, fuel meaningful connections, and make event discovery
-                and management easier than ever.
+        <div className="mx-auto -mt-8 max-w-7xl px-6 sm:mt-4 lg:px-8 xl:-mt-4">
+          <div className="mx-auto max-w-2xl lg:mx-0 lg:max-w-none text-center">
+            <div className="flex flex-col lg:flex-row lg:gap-x-8">
+              <div className="lg:w-1/2">
+                <div>
+                  <img src={Target} alt="Target icon" className="mx-auto size-24" />
+                  <h2 className="text-pretty text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl">
+                    Our mission
+                  </h2>
+                </div>
+                <p className="mt-6 text-xl/8 text-gray-600">
+                  Our mission is to create a seamless and engaging event experience for both organisers and attendees. 
+                  We empower organisers with the tools to plan, promote, and grow their events while helping users discover and 
+                  connect with experiences that matter to them. Through innovation and community-driven solutions, we bridge the 
+                  gap between event creators and their audience.
                 </p>
               </div>
-              <div className="lg:flex lg:flex-auto lg:justify-center">
-                <dl className="w-64 space-y-8 xl:w-80">
-                  {stats.map((stat) => (
-                    <div key={stat.label} className="flex flex-col-reverse gap-y-4">
-                      <dt className="text-base/7 text-gray-600">{stat.label}</dt>
-                      <dd className="text-5xl font-semibold tracking-tight text-gray-900">{stat.value}</dd>
-                    </div>
-                  ))}
-                </dl>
+              <div className="lg:w-1/2 mt-16 lg:mt-0">
+              <div>
+                <img src={World} alt="World icon" className="mx-auto size-24" />
+                <h2 className="text-pretty text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl">Our vision</h2>
+              </div>
+                <p className="mt-6 text-xl/8 text-gray-600">
+                  We envision a world where event organisers and attendees are seamlessly connected, making every event an 
+                  opportunity to engage, network, and create lasting memories. By building a platform that supports both creators
+                  and participants, we aim to cultivate vibrant communities, fuel meaningful connections, and make event discovery
+                  and management easier than ever.
+                </p>
               </div>
             </div>
           </div>
@@ -354,74 +288,6 @@ export default function AboutUs() {
             ))}
           </dl>
         </div>
-
-        {/* Logo cloud */}
-        {/* <div className="relative isolate -z-10 mt-32 sm:mt-48">
-          <div className="absolute inset-x-0 top-1/2 -z-10 flex -translate-y-1/2 justify-center overflow-hidden [mask-image:radial-gradient(50%_45%_at_50%_55%,white,transparent)]">
-            <svg aria-hidden="true" className="h-[40rem] w-[80rem] flex-none stroke-gray-200">
-              <defs>
-                <pattern
-                  x="50%"
-                  y="50%"
-                  id="e9033f3e-f665-41a6-84ef-756f6778e6fe"
-                  width={200}
-                  height={200}
-                  patternUnits="userSpaceOnUse"
-                  patternTransform="translate(-100 0)"
-                >
-                  <path d="M.5 200V.5H200" fill="none" />
-                </pattern>
-              </defs>
-              <svg x="50%" y="50%" className="overflow-visible fill-gray-50">
-                <path d="M-300 0h201v201h-201Z M300 200h201v201h-201Z" strokeWidth={0} />
-              </svg>
-              <rect fill="url(#e9033f3e-f665-41a6-84ef-756f6778e6fe)" width="100%" height="100%" strokeWidth={0} />
-            </svg>
-          </div>
-          <div className="mx-auto max-w-7xl px-6 lg:px-8">
-            <h2 className="text-center text-lg/8 font-semibold text-gray-900">
-              We use the best tools to help you grow your events
-            </h2>
-            <div className="mx-auto mt-10 grid max-w-lg grid-cols-4 items-center gap-x-8 gap-y-10 sm:max-w-xl sm:grid-cols-6 sm:gap-x-10 lg:mx-0 lg:max-w-none lg:grid-cols-5">
-            <img
-                alt=""
-                src=" "
-                width={158}
-                height={48}
-                // className="col-span-2 max-h-12 w-full object-contain lg:col-span-1"
-              />
-              <img
-                alt="GitHub"
-                src={GithubLogo}
-                width={158}
-                height={48}
-                className="col-span-2 max-h-12 w-full object-contain lg:col-span-1"
-              />
-              <img
-                alt="Stripe"
-                src={StripeLogo}
-
-                width={158}
-                height={48}
-                className="col-span-2 max-h-12 w-full object-contain lg:col-span-1"
-              />
-              <img
-                alt="Supabase"
-                src={SupabaseLogo}
-                width={158}
-                height={48}
-                className="col-span-2 max-h-12 w-full object-contain lg:col-span-1"
-              />
-              <img
-                alt=""
-                src=" "
-                width={158}
-                height={48}
-                // className="col-span-2 max-h-12 w-full object-contain lg:col-span-1"
-              />
-            </div>
-          </div>
-        </div> */}
 
         {/* Team section */}
         <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-48 lg:px-8">

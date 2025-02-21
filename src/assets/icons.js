@@ -1,9 +1,5 @@
 import React from 'react';
 
-// const Icon = () => (
-
-// )
-
 const TicketIcon = () => (
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6">
     <path fillRule="evenodd" d="M1.5 6.375c0-1.036.84-1.875 1.875-1.875h17.25c1.035 0 1.875.84 1.875 1.875v3.026a.75.75 0 0 1-.375.65 2.249 2.249 0 0 0 0 3.898.75.75 0 0 1 .375.65v3.026c0 1.035-.84 1.875-1.875 1.875H3.375A1.875 1.875 0 0 1 1.5 17.625v-3.026a.75.75 0 0 1 .374-.65 2.249 2.249 0 0 0 0-3.898.75.75 0 0 1-.374-.65V6.375Zm15-1.125a.75.75 0 0 1 .75.75v.75a.75.75 0 0 1-1.5 0V6a.75.75 0 0 1 .75-.75Zm.75 4.5a.75.75 0 0 0-1.5 0v.75a.75.75 0 0 0 1.5 0v-.75Zm-.75 3a.75.75 0 0 1 .75.75v.75a.75.75 0 0 1-1.5 0v-.75a.75.75 0 0 1 .75-.75Zm.75 4.5a.75.75 0 0 0-1.5 0V18a.75.75 0 0 0 1.5 0v-.75ZM6 12a.75.75 0 0 1 .75-.75H12a.75.75 0 0 1 0 1.5H6.75A.75.75 0 0 1 6 12Zm.75 2.25a.75.75 0 0 0 0 1.5h3a.75.75 0 0 0 0-1.5h-3Z" clipRule="evenodd" />
@@ -55,19 +51,30 @@ const CostCuttingIcon = () => (
 </svg>
 )
 
+const MissionIcon = () => (
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="size-6">
+    <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 3v11.25A2.25 2.25 0 0 0 6 16.5h2.25M3.75 3h-1.5m1.5 0h16.5m0 0h1.5m-1.5 0v11.25A2.25 2.25 0 0 1 18 16.5h-2.25m-7.5 0h7.5m-7.5 0-1 3m8.5-3 1 3m0 0 .5 1.5m-.5-1.5h-9.5m0 0-.5 1.5m.75-9 3-3 2.148 2.148A12.061 12.061 0 0 1 16.5 7.605" />
+  </svg>
+);
+
+const TargetIcon = () => (
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="size-6">
+    <path strokeLinecap="round" strokeLinejoin="round" d="M12 3.75v16.5m8.25-8.25H3.75" />
+  </svg>
+);
 
 const CustomIcons = [
   { name: 'TicketIcon', component: TicketIcon },
   { name: 'MoneyIcon', component: MoneyIcon },
   { name: 'UserIcon', component: UserIcon },
-  
   { name: 'CalendarIcon', component: CalendarIcon },
   { name: 'PromotionIcon', component: PromotionIcon },
   { name: 'NetworkingIcon', component: NetworkingIcon },
   { name: 'AnalyticsIcon', component: AnalyticsIcon },
   { name: 'CostCuttingIcon', component: CostCuttingIcon },
-
-
+  { name: 'MissionIcon', component: MissionIcon },
+  { name: 'TargetIcon', component: TargetIcon },
 ];
 
+export { MissionIcon };
 export default CustomIcons;

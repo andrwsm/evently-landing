@@ -165,17 +165,17 @@ export default function AboutUs() {
 
     <div className="bg-white z-10">
       
-      <main className="isolate">
+      <main className="isolate pb-20"> {/* Add padding-bottom to create space */}
         {/* Hero section */}
         <div className="relative isolate -z-10">
           <svg
             aria-hidden="true"
-            className="fixed inset-x-0 top-50 -z-10 h-[64rem] w-full stroke-gray-200 [mask-image:radial-gradient(50rem_32rem_at_center,white,transparent)]"
+            className="absolute inset-x-0 top-0 -z-10 h-[50rem] w-full stroke-gray-300 [mask-image:radial-gradient(50rem_24rem_at_center,white,transparent)]"
           >
             <defs>
               <pattern
                 x="50%"
-                y={-1}
+                y={-10}
                 id="1f932ae7-37de-4c0a-a8b0-a6e3b4d44b84"
                 width={200}
                 height={200}

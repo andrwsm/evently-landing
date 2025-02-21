@@ -46,3 +46,18 @@
 body {
   font-family: 'Montserrat', sans-serif;
 }
+
+.landing-page-background {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.1;
+}
+
+.landing-page-content {
+  position: relative;
+  z-index: 10;
+}
+

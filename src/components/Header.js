@@ -1,6 +1,7 @@
 'use client'
 
-import EventlyLogo from '../assets/EventlyLogo.png';
+import EventlyLogo from '../assets/eventlyLogos/EventlyLogo.png';
+import CustomIcons from '../assets/icons'; 
 import { useState } from 'react'
 import {
   Dialog,
@@ -16,6 +17,7 @@ import {
 import {
   ArrowPathIcon,
   Bars3Icon,
+  CalendarIcon,
   ChartPieIcon,
   CursorArrowRaysIcon,
   FingerPrintIcon,
@@ -23,13 +25,14 @@ import {
   XMarkIcon,
 } from '@heroicons/react/24/outline'
 import { ChevronDownIcon, PhoneIcon, PlayCircleIcon } from '@heroicons/react/20/solid'
+import { Link } from 'react-router-dom'; // Add this import
 
 const products = [
-  { name: 'Analytics', description: 'Get a better understanding of your traffic', href: '#', icon: ChartPieIcon },
-  { name: 'Engagement', description: 'Speak directly to your customers', href: '#', icon: CursorArrowRaysIcon },
-  { name: 'Security', description: 'Your customers’ data will be safe and secure', href: '#', icon: FingerPrintIcon },
-  { name: 'Integrations', description: 'Connect with third-party tools', href: '#', icon: SquaresPlusIcon },
-  { name: 'Automations', description: 'Build strategic funnels that will convert', href: '#', icon: ArrowPathIcon },
+  { name: 'Event Creation', description: 'Easily create and manage events with a few clicks. Add event details, set categories, and share with your audience instantly', href: '#', icon: CustomIcons.find(icon => icon.name === 'CalendarIcon').component},
+  { name: 'Promotion & Engagement', description: 'Boost visibility with built-in promotion tools, including email notifications, social sharing, and direct updates to attendees.', href: '#', icon: CustomIcons.find(icon => icon.name === 'PromotionIcon').component },
+  { name: 'Networking & Business Cards', description: 'Connect with attendees and organisers through digital business cards, making professional networking effortless and efficient.', href: '#', icon: CustomIcons.find(icon => icon.name === 'NetworkingIcon').component },
+  { name: 'Analytics & Insights', description: 'Track attendance, engagement, and RSVPs with real-time data to optimise your event strategy and maximise reach.', href: '#', icon: CustomIcons.find(icon => icon.name === 'AnalyticsIcon').component },
+  { name: 'Affordable Pricing', description: 'Enjoy a cost-effective event management solution without hidden fees, making it easier to grow your events without breaking the bank.', href: '#', icon: CustomIcons.find(icon => icon.name === 'CostCuttingIcon').component },
 ]
 const callsToAction = [
   { name: 'Watch demo', href: '#', icon: PlayCircleIcon },
@@ -40,18 +43,19 @@ export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <header className="bg-white">
+    <header className="bg-white z-50"> 
       <nav aria-label="Global" className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8">
         <div className="flex lg:flex-1">
-          <a href="/" className="-m-1.5 p-1.5">
+          <Link to="/" className="-m-1.5 p-1.5"> {/* Changed from <a> to <Link> */}
             <span className="sr-only">Your Company</span>
             <img
               alt=""
               src={EventlyLogo}
               className="h-10 w-auto"
             />
-          </a>
+          </Link>
         </div>
+        
         <div className="flex lg:hidden">
           <button
             type="button"
@@ -63,9 +67,15 @@ export default function Header() {
           </button>
         </div>
         <PopoverGroup className="hidden lg:flex lg:gap-x-12">
+          <Link to="/" className="text-sm/6 font-semibold text-gray-900"> {/* Changed from <a> to <Link> */}
+            Home
+          </Link>
+          <Link to="/AboutUs" className="text-sm/6 font-semibold text-gray-900"> {/* Changed from <a> to <Link> */}
+            About us
+          </Link>
           <Popover className="relative">
             <PopoverButton className="flex items-center gap-x-1 text-sm/6 font-semibold text-gray-900">
-              Product
+              Features
               <ChevronDownIcon aria-hidden="true" className="size-5 flex-none text-gray-400" />
             </PopoverButton>
 
@@ -107,18 +117,12 @@ export default function Header() {
             </PopoverPanel>
           </Popover>
 
-          <a href="/AboutUs" className="text-sm/6 font-semibold text-gray-900">
-            About us
-          </a>
-          <a href="/WhatsNew" className="text-sm/6 font-semibold text-gray-900">
-            What's new
-          </a>
-          <a href="/FAQs" className="text-sm/6 font-semibold text-gray-900">
+          <Link to="/FAQs" className="text-sm/6 font-semibold text-gray-900"> {/* Changed from <a> to <Link> */}
             FAQs
-          </a>
-          <a href="/contact" className="text-sm/6 font-semibold text-gray-900">
+          </Link>
+          <Link to="/contact" className="text-sm/6 font-semibold text-gray-900"> {/* Changed from <a> to <Link> */}
             Contact
-          </a>
+          </Link>
         </PopoverGroup>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
         </div>
@@ -165,24 +169,26 @@ export default function Header() {
                     ))}
                   </DisclosurePanel>
                 </Disclosure>
-                <a
-                  href="#"
-                  className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
-                >
-                  Features
-                </a>
-                <a
-                  href="#"
-                  className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
-                >
-                  Marketplace
-                </a>
-                <a
-                  href="#"
-                  className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
-                >
-                  Company
-                </a>
+                <Link
+                  to="/"
+                  className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"> {/* Changed from <a> to <Link> */}
+                  Home
+                </Link>
+                <Link
+                  to="/AboutUs"
+                  className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"> {/* Changed from <a> to <Link> */}
+                  About us
+                </Link>
+                <Link
+                  to="/FAQs"
+                  className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"> {/* Changed from <a> to <Link> */}
+                  FAQs
+                </Link>
+                <Link
+                  to="/contact"
+                  className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"> {/* Changed from <a> to <Link> */}
+                  Contact
+                </Link>
               </div>
               <div className="py-6">
                 <a

@@ -16,13 +16,12 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<LandingPage />} />
+        <Route path="/AboutUs" element={<AboutUs />}/>
         <Route path="/contact" element={<Contact />} />
         <Route path="/Faqs" element={<Faqs />} />
-        <Route path="/AboutUs" element={<AboutUs />}/>
         <Route path="/WhatsNew" element={<WhatsNew />} />
         <Route path="*" element={<Error404/>} />
       </Routes>
-      {/* <SignUp /> */}
       <Footer />
     </>
   );

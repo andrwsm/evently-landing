@@ -162,13 +162,15 @@ export default function AboutUs() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   return (
+
     <div className="bg-white z-10">
+      
       <main className="isolate">
         {/* Hero section */}
         <div className="relative isolate -z-10">
           <svg
             aria-hidden="true"
-            className="fixed inset-x-0 top-0 -z-10 h-[64rem] w-full stroke-gray-200 [mask-image:radial-gradient(50rem_32rem_at_center,white,transparent)]"
+            className="fixed inset-x-0 top-50 -z-10 h-[64rem] w-full stroke-gray-200 [mask-image:radial-gradient(50rem_32rem_at_center,white,transparent)]"
           >
             <defs>
               <pattern
@@ -335,7 +337,7 @@ export default function AboutUs() {
                     {post.date}
                   </time>
                   <div className="-ml-4 flex items-center gap-x-4">
-                    <svg viewBox="0 0 2 2" className="-ml-0.5 size-0.5 flex-none fill-white/50">
+                    <svg viewBox="0 0 2 2" className="-ml-0.5 size-0.5 flex-none fill-white/50 ">
                       <circle r={1} cx={1} cy={1} />
                     </svg>
                     <div className="flex gap-x-2.5">

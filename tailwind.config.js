@@ -12,6 +12,12 @@ module.exports = {
         'grey': '#474748',
         'black': '#232323',
       },
+      backgroundImage: {
+        'dot-pattern': 'radial-gradient(circle, #33479d 1px, transparent 1px)',
+      },
+      backgroundSize: {
+        'dot-pattern': '10px 10px', // Adjust the size and spacing here
+      },
     },
   },
   plugins: [],

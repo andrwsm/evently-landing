@@ -1,6 +1,7 @@
 'use client'
 
 import EventlyLogo from '../assets/eventlyLogos/EventlyLogo.png';
+import CustomIcons from '../assets/icons'; 
 import { useState } from 'react'
 import {
   Dialog,
@@ -16,6 +17,7 @@ import {
 import {
   ArrowPathIcon,
   Bars3Icon,
+  CalendarIcon,
   ChartPieIcon,
   CursorArrowRaysIcon,
   FingerPrintIcon,
@@ -25,11 +27,11 @@ import {
 import { ChevronDownIcon, PhoneIcon, PlayCircleIcon } from '@heroicons/react/20/solid'
 
 const products = [
-  { name: 'Analytics', description: 'Get a better understanding of your traffic', href: '#', icon: ChartPieIcon },
-  { name: 'Engagement', description: 'Speak directly to your customers', href: '#', icon: CursorArrowRaysIcon },
-  { name: 'Security', description: 'Your customers’ data will be safe and secure', href: '#', icon: FingerPrintIcon },
-  { name: 'Integrations', description: 'Connect with third-party tools', href: '#', icon: SquaresPlusIcon },
-  { name: 'Automations', description: 'Build strategic funnels that will convert', href: '#', icon: ArrowPathIcon },
+  { name: 'Event Creation', description: 'Easily create and manage events with a few clicks. Add event details, set categories, and share with your audience instantly', href: '#', icon: CustomIcons.find(icon => icon.name === 'CalendarIcon').component},
+  { name: 'Promotion & Engagement', description: 'Boost visibility with built-in promotion tools, including email notifications, social sharing, and direct updates to attendees.', href: '#', icon: CustomIcons.find(icon => icon.name === 'PromotionIcon').component },
+  { name: 'Networking & Business Cards', description: 'Connect with attendees and organisers through digital business cards, making professional networking effortless and efficient.', href: '#', icon: CustomIcons.find(icon => icon.name === 'NetworkingIcon').component },
+  { name: 'Analytics & Insights', description: 'CTrack attendance, engagement, and RSVPs with real-time data to optimise your event strategy and maximise reach.', href: '#', icon: CustomIcons.find(icon => icon.name === 'AnalyticsIcon').component },
+  { name: 'Affordable Pricing', description: 'Enjoy a cost-effective event management solution without hidden fees, making it easier to grow your events without breaking the bank.', href: '#', icon: CustomIcons.find(icon => icon.name === 'CostCuttingIcon').component },
 ]
 const callsToAction = [
   { name: 'Watch demo', href: '#', icon: PlayCircleIcon },

@@ -25,7 +25,7 @@ const features = [
 export default function LandingPage() {
   return (
     <div className="relative overflow-hidden bg-white py-24 sm:py-32">
-      <div className="absolute inset-0 z-0 bg-no-repeat opacity-10" style={{ backgroundImage: `linear-gradient(rgba(51, 71, 157, 0.1), rgba(51, 71, 157, 0.1)), url(${EventlyIcon})`, backgroundSize: '70%', backgroundPosition: 'right 0% top -10%' }} />
+      <div className="absolute inset-0 z-0 bg-no-repeat opacity-50" style={{ backgroundImage: `url(${EventlyIcon})`, backgroundSize: '70%', backgroundPosition: 'right 20% top -10%' }} />
       <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
           <div className="lg:pt-4 lg:pr-8">

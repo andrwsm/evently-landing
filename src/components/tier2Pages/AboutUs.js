@@ -1,4 +1,3 @@
-
 import { useState } from 'react'
 import { Dialog, DialogPanel } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
@@ -21,34 +20,34 @@ const stats = [
 ]
 const values = [
   {
-    name: 'Customer first',
+    name: 'Empowerment',
     description:
-      'We prioritize our customers in everything we do, ensuring our products, services, and interactions create real value and exceptional experiences. By deeply understanding their needs, we build long-term trust and loyalty.',
+    'We equip organisers with powerful tools to create and grow their events while giving users the best experience in discovering and attending them.'
   },
   {
-    name: 'Ownership & Accountability',
+    name: 'Community',
     description:
-      'We take full responsibility for our work, owning both successes and challenges. Every team member is empowered to make decisions, take initiative, and drive meaningful outcomes with integrity and commitment.',
+      'We believe in fostering strong connections between organisers and attendees, creating a space where meaningful interactions thrive.',
   },
   {
-    name: 'Innovation & Continuous Improvement',
+    name: 'Innovation',
     description:
-      'We embrace change and constantly seek better ways to solve problems. By fostering a culture of curiosity and adaptability, we stay ahead of the curve and continuously improve our processes, products, and services.',
+      'We are always evolving, integrating new technologies to make event planning, promotion, and discovery effortless and engaging.',
   },
   {
-    name: 'Collaboration & Teamwork',
+    name: 'Accessibility',
     description:
-      'We believe in the power of working together. Open communication, mutual respect, and shared goals drive our success, enabling us to create impactful solutions and a strong, inclusive workplace.',
+      'Our platform is designed to be user-friendly and inclusive, ensuring that both organisers and attendees can easily connect and engage.',
   },
   {
-    name: 'Transparency & Trust',
+    name: 'Reliability',
     description:
-      'Honest and open communication is at the heart of our culture. We encourage constructive feedback, share knowledge freely, and operate with integrity to build trust with our team, customers, and stakeholders.',
+      'We are committed to providing a seamless and trustworthy experience, ensuring events run smoothly and connections are meaningful.',
   },
   {
-    name: 'Excellence & Impact',
+    name: 'Growth',
     description:
-      'We set high standards and strive to deliver outstanding results in everything we do. By focusing on quality, efficiency, and measurable impact, we ensure our work makes a meaningful difference.',
+      'We support organisers in expanding their reach and users in discovering new experiences, fostering both personal and professional growth.',
   },
 ]
 const team = [
@@ -226,7 +225,18 @@ export default function AboutUs() {
                     We’re changing the way people connect
                   </h1>
                   <p className="mt-8 text-pretty text-lg font-medium text-gray-500 sm:max-w-md sm:text-xl/8 lg:max-w-none">
-                    We are a team of passionate individuals who are dedicated to changing the ticketing industry. Without fees, you can focus on what you do best.
+                  We are a team of passionate apprentices who launched our platform in 2024 with a mission to revolutionize the
+                   way organisers and attendees connect. Unlike expensive alternatives, we provide an affordable solution that
+                    makes event creation, discovery, and engagement seamless. Our goal is to help organisers reach their audience
+                     effortlessly while giving users access to meaningful experiences without the high costs. Whether you’re hosting 
+                     or attending, we ensure every step of the journey is smooth, rewarding, and budget-friendly.
+                  </p>
+                  <p className="mt-8 text-pretty text-lg font-medium text-gray-500 sm:max-w-md sm:text-xl/8 lg:max-w-none">
+                  At our core, we believe in community, innovation, and accessibility. As apprentices, we are deeply invested in our 
+                  users and committed to driving growth for both organisers and attendees. By bridging the gap between event creators 
+                  and audiences, we’re building a space where connections flourish, ideas come to life, and every event becomes an 
+                  opportunity to grow. We care about making event management easier and more affordable, so you can focus on what truly
+                   matters—creating and experiencing unforgettable moments.
                   </p>
                 </div>
                 <div className="mt-14 flex justify-end gap-8 sm:-mt-44 sm:justify-start sm:pl-20 lg:mt-0 lg:pl-0">
@@ -289,15 +299,17 @@ export default function AboutUs() {
             <div className="mt-6 flex flex-col gap-x-8 gap-y-20 lg:flex-row">
               <div className="lg:w-full lg:max-w-2xl lg:flex-auto">
                 <p className="text-xl/8 text-gray-600">
-                  Aliquet nec orci mattis amet quisque ullamcorper neque, nibh sem. At arcu, sit dui mi, nibh dui, diam
-                  eget aliquam. Quisque id at vitae feugiat egestas ac. Diam nulla orci at in viverra scelerisque eget.
-                  Eleifend egestas fringilla sapien.
+                Our mission is to create a seamless and engaging event experience for both organisers and attendees. 
+                We empower organisers with the tools to plan, promote, and grow their events while helping users discover and 
+                connect with experiences that matter to them. Through innovation and community-driven solutions, we bridge the 
+                gap between event creators and their audience.
                 </p>
+                <h2 className="mt-16 text-pretty text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl">Our vision</h2>
                 <p className="mt-10 max-w-xl text-base/7 text-gray-700">
-                  Faucibus commodo massa rhoncus, volutpat. Dignissim sed eget risus enim. Mattis mauris semper sed amet
-                  vitae sed turpis id. Id dolor praesent donec est. Odio penatibus risus viverra tellus varius sit neque
-                  erat velit. Faucibus commodo massa rhoncus, volutpat. Dignissim sed eget risus enim. Mattis mauris
-                  semper sed amet vitae sed turpis id.
+                We envision a world where event organisers and attendees are seamlessly connected, making every event an 
+                opportunity to engage, network, and create lasting memories. By building a platform that supports both creators
+                and participants, we aim to cultivate vibrant communities, fuel meaningful connections, and make event discovery
+                and management easier than ever.
                 </p>
               </div>
               <div className="lg:flex lg:flex-auto lg:justify-center">
@@ -344,7 +356,7 @@ export default function AboutUs() {
         </div>
 
         {/* Logo cloud */}
-        <div className="relative isolate -z-10 mt-32 sm:mt-48">
+        {/* <div className="relative isolate -z-10 mt-32 sm:mt-48">
           <div className="absolute inset-x-0 top-1/2 -z-10 flex -translate-y-1/2 justify-center overflow-hidden [mask-image:radial-gradient(50%_45%_at_50%_55%,white,transparent)]">
             <svg aria-hidden="true" className="h-[40rem] w-[80rem] flex-none stroke-gray-200">
               <defs>
@@ -409,7 +421,7 @@ export default function AboutUs() {
               />
             </div>
           </div>
-        </div>
+        </div> */}
 
         {/* Team section */}
         <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-48 lg:px-8">

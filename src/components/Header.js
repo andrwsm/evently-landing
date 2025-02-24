@@ -27,7 +27,7 @@ import {
 import { ChevronDownIcon, PhoneIcon, PlayCircleIcon } from '@heroicons/react/20/solid'
 import { Link } from 'react-router-dom'; // Add this import
 
-const products = [
+const features = [
   { name: 'Event Creation', description: 'Easily create and manage events with a few clicks. Add event details, set categories, and share with your audience instantly', href: '#', icon: CustomIcons.find(icon => icon.name === 'CalendarIcon').component},
   { name: 'Promotion & Engagement', description: 'Boost visibility with built-in promotion tools, including email notifications, social sharing, and direct updates to attendees.', href: '#', icon: CustomIcons.find(icon => icon.name === 'PromotionIcon').component },
   { name: 'Networking & Business Cards', description: 'Connect with attendees and organisers through digital business cards, making professional networking effortless and efficient.', href: '#', icon: CustomIcons.find(icon => icon.name === 'NetworkingIcon').component },
@@ -47,7 +47,7 @@ export default function Header() {
       <nav aria-label="Global" className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8">
         <div className="flex lg:flex-1">
           <Link to="/" className="-m-1.5 p-1.5"> {/* Changed from <a> to <Link> */}
-            <span className="sr-only">Your Company</span>
+            <span className="sr-only">Evently</span>
             <img
               alt=""
               src={EventlyLogo}
@@ -84,7 +84,7 @@ export default function Header() {
               className="absolute top-full -left-8 z-10 mt-3 w-screen max-w-md overflow-hidden rounded-3xl bg-white ring-1 shadow-lg ring-gray-900/5 transition data-closed:translate-y-1 data-closed:opacity-0 data-enter:duration-200 data-enter:ease-out data-leave:duration-150 data-leave:ease-in"
             >
               <div className="p-4">
-                {products.map((item) => (
+                {features.map((item) => (
                   <div
                     key={item.name}
                     className="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm/6 hover:bg-gray-50"
@@ -157,7 +157,7 @@ export default function Header() {
                     <ChevronDownIcon aria-hidden="true" className="size-5 flex-none group-data-open:rotate-180" />
                   </DisclosureButton>
                   <DisclosurePanel className="mt-2 space-y-2">
-                    {[...products, ...callsToAction].map((item) => (
+                    {[...features, ...callsToAction].map((item) => (
                       <DisclosureButton
                         key={item.name}
                         as="a"

@@ -1,6 +1,6 @@
-
 import { Disclosure, DisclosureButton, DisclosurePanel } from '@headlessui/react'
 import { MinusSmallIcon, PlusSmallIcon } from '@heroicons/react/24/outline'
+import FAQ from '../../assets/images/FAQ.png'
 
 const faqs = [
   {
@@ -56,9 +56,9 @@ const faqs = [
 
 export default function Faqs() {
   return (
-    <div className="bg-white">
-      <div className="mx-auto max-w-7xl px-6 py-24 sm:py-32 lg:px-8 lg:py-40">
-        <div className="mx-auto max-w-4xl">
+    <div className="bg-white flex justify-around row">
+      <div className="mx-auto max-w-7xl px-6 py-24 sm:py-32 lg:px-8 lg:py-40 flex flex-col lg:flex-row">
+        <div className="flex-1 mx-auto max-w-4xl">
           <h2 className="text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl">
             Frequently asked questions
           </h2>
@@ -80,6 +80,9 @@ export default function Faqs() {
               </Disclosure>
             ))}
           </dl>
+        </div>
+        <div className="flex-1 mt-32">
+          <img src={FAQ} className="w-full lg:w-auto h-auto mb-8 lg:mb-0 lg:mr-8" alt="FAQ" />
         </div>
       </div>
     </div>

@@ -10,6 +10,8 @@ import Finlay from '../../assets/photos/Finlay.jpg'
 import Target from '../../assets/TargetIcon.png'
 import World from '../../assets/WorldIcon.png'
 
+import ShakingHands from '../../assets/images/shaking-hands.jpg'
+
 
 const values = [
   {
@@ -48,21 +50,28 @@ const team = [
     name: 'Kyle Tracey',
     role: 'Founder / CEO',
     imageUrl: Kyle,
+    bio: ''
+
   },
   {
     name: 'Will Jones',
     role: 'CTO',
     imageUrl: Will,
+    bio: ''
+
   },
   {
     name: 'Finlay Thornell',
     role: 'Executive Marketing Manager',
     imageUrl: Finlay,
+    bio: ''
   },
   {
     name: 'Andrew Smith',
     role: 'Software Engineer',
     imageUrl: dwightimg,
+    bio: 'hello I like evently'
+
   },
   // More people...
 ]
@@ -266,8 +275,8 @@ export default function AboutUs() {
         <div className="mt-32 sm:mt-40 xl:mx-auto xl:max-w-7xl xl:px-8">
           <img
             alt=""
-            src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2832&q=80"
-            className="aspect-[5/2] w-full object-cover xl:rounded-3xl"
+            src={ShakingHands}
+            className="aspect-[10/5] w-full object-cover xl:rounded-3xl"
           />
         </div>
 
@@ -292,23 +301,24 @@ export default function AboutUs() {
         </div>
 
         {/* Team section */}
-        <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-48 lg:px-8">
-          <div className="mx-auto max-w-2xl lg:mx-0">
+        <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-48 lg:px-8 text-center">
+          <div className="text-center margin-auto mx-10">
             <h2 className="text-pretty text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl">Our team</h2>
             <p className="mt-6 text-lg/8 text-gray-600">
-              We’re a dynamic group of individuals who are passionate about what we do and dedicated to delivering the
-              best results for our clients.
+            Meet the passionate team behind Evently. With diverse skills and a shared commitment to excellence, 
+            we work together to bring your event vision to life
             </p>
           </div>
           <ul
             role="list"
-            className="mx-auto mt-20 grid max-w-2xl grid-cols-2 gap-x-8 gap-y-16 text-center sm:grid-cols-3 md:grid-cols-4 lg:mx-0 lg:max-w-none lg:grid-cols-5 xl:grid-cols-6"
+            className="mx-auto mt-20 flex justify-around gap-y-16 text-center sm:grid-cols-3 md:grid-cols-4 lg:mx-0 lg:max-w-none lg:grid-cols-5 xl:grid-cols-6"
           >
             {team.map((person) => (
               <li key={person.name}>
-                <img alt="" src={person.imageUrl} className="mx-auto size-24 rounded-full" />
-                <h3 className="mt-6 text-base/7 font-semibold tracking-tight text-gray-900">{person.name}</h3>
-                <p className="text-sm/6 text-gray-600">{person.role}</p>
+                <img alt="" src={person.imageUrl} className="mx-auto size-32 rounded-full" />
+                <h3 className="mt-6 text-base/4 font-semibold tracking-tight text-gray-900">{person.name}</h3>
+                <p className="text-sm/8 text-black">{person.role}</p>
+                <p className="text-sm/6 text-gray-600">{person.bio}</p>
               </li>
             ))}
           </ul>

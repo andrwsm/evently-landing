@@ -9,6 +9,7 @@ import Will from '../../assets/photos/Will.jpg'
 import Finlay from '../../assets/photos/Finlay.jpg'
 import Target from '../../assets/TargetIcon.png'
 import World from '../../assets/WorldIcon.png'
+
 import ShakingHands from '../../assets/images/shaking-hands.jpg'
 
 
@@ -50,12 +51,14 @@ const team = [
     role: 'Founder / CEO',
     imageUrl: Kyle,
     bio: ''
+
   },
   {
     name: 'Will Jones',
     role: 'CTO',
     imageUrl: Will,
     bio: ''
+
   },
   {
     name: 'Finlay Thornell',
@@ -68,6 +71,7 @@ const team = [
     role: 'Software Engineer',
     imageUrl: dwightimg,
     bio: 'hello I like evently'
+
   },
   // More people...
 ]

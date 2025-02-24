@@ -19,6 +19,12 @@ module.exports = {
       backgroundSize: {
         'dot-pattern': '16px 16px', // Adjust the size and spacing here
       },
+      backgroundImage: {
+        'dot-pattern': 'radial-gradient(circle, #33479d 1px, transparent 1px)',
+      },
+      backgroundSize: {
+        'dot-pattern': '10px 10px', // Adjust the size and spacing here
+      },
     },
   },
   plugins: [],

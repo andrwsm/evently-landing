@@ -1,16 +1,31 @@
-import { Disclosure, DisclosureButton, DisclosurePanel } from '@headlessui/react'
-import { MinusSmallIcon, PlusSmallIcon } from '@heroicons/react/24/outline'
-import FAQ from '../../assets/images/FAQ.png'
+import {
+  Disclosure,
+  DisclosureButton,
+  DisclosurePanel,
+} from "@headlessui/react";
+import { MinusSmallIcon, PlusSmallIcon } from "@heroicons/react/24/outline";
+import FAQ from "../../assets/images/FAQ.png";
 
 const faqs = [
   {
     question: "What are the fees for selling using Evently?",
     answer: (
-        <>
-          We don't charge any fees for selling tickets. You keep all of what you earn from your events. Although there is a 1.5% + 20p processing payment for 
-          <a href="https://support.stripe.com/questions/what-s-the-difference-between-standard-and-premium-cards" className="text-blue-600 underline" target='_blank'> standard UK cards</a> which is charged by Stripe.
-        </>
-      ), },
+      <>
+        We don't charge any fees for selling tickets. You keep all of what you
+        earn from your events. Although there is a 1.5% + 20p processing payment
+        for
+        <a
+          href="https://support.stripe.com/questions/what-s-the-difference-between-standard-and-premium-cards"
+          className="text-blue-600 underline"
+          target="_blank"
+        >
+          {" "}
+          standard UK cards
+        </a>{" "}
+        which is charged by Stripe.
+      </>
+    ),
+  },
   {
     question: "How do I collect feedback from attendees?",
     answer:
@@ -52,7 +67,7 @@ const faqs = [
       "No. There are no set up fees for using Evently. You can create an account and start selling tickets for your event for free.",
   },
   // More questions...
-]
+];
 
 export default function Faqs() {
   return (
@@ -64,13 +79,25 @@ export default function Faqs() {
           </h2>
           <dl className="mt-16 divide-y divide-gray-900/10">
             {faqs.map((faq) => (
-              <Disclosure key={faq.question} as="div" className="py-6 first:pt-0 last:pb-0">
+              <Disclosure
+                key={faq.question}
+                as="div"
+                className="py-6 first:pt-0 last:pb-0"
+              >
                 <dt>
                   <DisclosureButton className="group flex w-full items-start justify-between text-left text-gray-900">
-                    <span className="text-base/7 font-semibold">{faq.question}</span>
+                    <span className="text-base/7 font-semibold">
+                      {faq.question}
+                    </span>
                     <span className="ml-6 flex h-7 items-center">
-                      <PlusSmallIcon aria-hidden="true" className="size-6 group-data-[open]:hidden" />
-                      <MinusSmallIcon aria-hidden="true" className="size-6 group-[&:not([data-open])]:hidden" />
+                      <PlusSmallIcon
+                        aria-hidden="true"
+                        className="size-6 group-data-[open]:hidden"
+                      />
+                      <MinusSmallIcon
+                        aria-hidden="true"
+                        className="size-6 group-[&:not([data-open])]:hidden"
+                      />
                     </span>
                   </DisclosureButton>
                 </dt>
@@ -82,9 +109,13 @@ export default function Faqs() {
           </dl>
         </div>
         <div className="flex-1 mt-32">
-          <img src={FAQ} className="w-full lg:w-auto h-auto mb-8 lg:mb-0 lg:mr-8" alt="FAQ" />
+          <img
+            src={FAQ}
+            className="w-full lg:w-auto h-auto mb-8 lg:mb-0 lg:mr-8"
+            alt="FAQ"
+          />
         </div>
       </div>
     </div>
-  )
+  );
 }

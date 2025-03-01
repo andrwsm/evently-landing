@@ -1,111 +1,106 @@
-import { useState } from 'react';
-import { Dialog, DialogPanel } from '@headlessui/react';
-import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
-import CustomIcons from '../../assets/icons';
+import { useState } from "react";
+import { Dialog, DialogPanel } from "@headlessui/react";
+import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
+import CustomIcons from "../../assets/icons";
 
-import dwightimg from '../../assets/photos/dwight.jpg'
-import Kyle from '../../assets/photos/Kyle.jpg'
-import Will from '../../assets/photos/Will.jpg'
-import Finlay from '../../assets/photos/Finlay.jpg'
-import Target from '../../assets/TargetIcon.png'
-import World from '../../assets/WorldIcon.png'
-
-import ShakingHands from '../../assets/images/shaking-hands.jpg'
-
+import dwightimg from "../../assets/photos/dwight.jpg";
+import Kyle from "../../assets/photos/Kyle.jpg";
+import Will from "../../assets/photos/Will.jpg";
+import Finlay from "../../assets/photos/Finlay.jpg";
+import Target from "../../assets/TargetIcon.png";
+import World from "../../assets/WorldIcon.png";
+import ShakingHands from "../../assets/images/shaking-hands.jpg";
 
 const values = [
   {
-    name: 'Empowerment',
+    name: "Empowerment",
     description:
-      'We equip organisers with powerful tools to create and grow their events while giving users the best experience in discovering and attending them.',
+      "We equip organisers with powerful tools to create and grow their events while giving users the best experience in discovering and attending them.",
   },
   {
-    name: 'Community',
+    name: "Community",
     description:
-      'We believe in fostering strong connections between organisers and attendees, creating a space where meaningful interactions thrive.',
+      "We believe in fostering strong connections between organisers and attendees, creating a space where meaningful interactions thrive.",
   },
   {
-    name: 'Innovation',
+    name: "Innovation",
     description:
-      'We are always evolving, integrating new technologies to make event planning, promotion, and discovery effortless and engaging.',
+      "We are always evolving, integrating new technologies to make event planning, promotion, and discovery effortless and engaging.",
   },
   {
-    name: 'Accessibility',
+    name: "Accessibility",
     description:
-      'Our platform is designed to be user-friendly and inclusive, ensuring that both organisers and attendees can easily connect and engage.',
+      "Our platform is designed to be user-friendly and inclusive, ensuring that both organisers and attendees can easily connect and engage.",
   },
   {
-    name: 'Reliability',
+    name: "Reliability",
     description:
-      'We are committed to providing a seamless and trustworthy experience, ensuring events run smoothly and connections are meaningful.',
+      "We are committed to providing a seamless and trustworthy experience, ensuring events run smoothly and connections are meaningful.",
   },
   {
-    name: 'Growth',
+    name: "Growth",
     description:
-      'We support organisers in expanding their reach and users in discovering new experiences, fostering both personal and professional growth.',
+      "We support organisers in expanding their reach and users in discovering new experiences, fostering both personal and professional growth.",
   },
-]
-const team = [
+];
+const people = [
   {
-    name: 'Kyle Tracey',
-    role: 'Founder / CEO',
+    name: "Kyle Tracey",
+    role: "Founder / CEO",
     imageUrl: Kyle,
-    bio: ''
-
+    bio: "As the founder of the app, he is passionate about creating a platform that empowers organizers and enhances event experiences. He is dedicated to learning, growing, and building solutions that truly meet the needs of users.",
   },
   {
-    name: 'Will Jones',
-    role: 'CTO',
+    name: "Will Jones",
+    role: "CTO",
     imageUrl: Will,
-    bio: ''
-
+    bio: "Managing the technical aspects of Evently's delivery, our CTO works to build our platforms and create forward thinking solutions for event promotion and management. Will is strongly driven to create value for our users, keeping costs low and providing a top-tier user experience.",
   },
   {
-    name: 'Finlay Thornell',
-    role: 'Executive Marketing Manager',
+    name: "Finlay Thornell",
+    role: "Chief Marketing Office",
     imageUrl: Finlay,
-    bio: ''
+    bio: "As Evently’s CMO, he is focused on brand development and marketing strategy, driving visibility and engagement. His goal is to help bridge the gap between apprentices and young professionals by creating impactful networking opportunities.",
   },
   {
-    name: 'Andrew Smith',
-    role: 'Software Engineer',
+    name: "Andrew Smith",
+    role: "Software Engineer",
     imageUrl: dwightimg,
-    bio: 'hello I like evently'
-
+    bio: "As a software engineer on the team, he is passionate about building innovative solutions that enhance event experiences and empower organisers. He thrives on problem-solving, continuous learning, and crafting solutions that empower organizers while enhancing user experiences.",
   },
   // More people...
-]
+];
 const blogPosts = [
   {
     id: 1,
-    title: 'Evently is here',
-    href: '#',
+    title: "Evently is here",
+    href: "#",
     description:
-      'We are excited to announce the launch of Evently, a new platform for event organizers to sell tickets without fees.',
+      "We are excited to announce the start of Evently, a new platform for event organizers to sell tickets without fees.",
     imageUrl:
-      'https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3603&q=80',
-    date: 'Feb 9, 2025',
-    datetime: '2025-02-09',
+      "https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3603&q=80",
+    date: "Feb 9, 2025",
+    datetime: "2025-02-09",
     author: {
-      name: 'Andrew Smith',
-      imageUrl: '',
+      name: "Andrew Smith",
+      imageUrl: "",
     },
   },
   // More posts...
-]
+];
 const footerNavigation = {
   main: [
-    { name: 'About', href: '#' },
-    { name: 'Blog', href: '#' },
-    { name: 'Jobs', href: '#' },
-    { name: 'Press', href: '#' },
-    { name: 'Accessibility', href: '#' },
-    { name: 'Partners', href: '#' },
+    { name: "About", href: "#" },
+    { name: "Blog", href: "#" },
+    { name: "Jobs", href: "#" },
+    { name: "Press", href: "#" },
+    { name: "Accessibility", href: "#" },
+    { name: "Partners", href: "#" },
   ],
   social: [
     {
-      name: 'Facebook',
-      href: '#',
+      name: "Facebook",
+      href: "#",
       icon: (props) => (
         <svg fill="currentColor" viewBox="0 0 24 24" {...props}>
           <path
@@ -117,8 +112,8 @@ const footerNavigation = {
       ),
     },
     {
-      name: 'Instagram',
-      href: '#',
+      name: "Instagram",
+      href: "#",
       icon: (props) => (
         <svg fill="currentColor" viewBox="0 0 24 24" {...props}>
           <path
@@ -130,8 +125,8 @@ const footerNavigation = {
       ),
     },
     {
-      name: 'X',
-      href: '#',
+      name: "X",
+      href: "#",
       icon: (props) => (
         <svg fill="currentColor" viewBox="0 0 24 24" {...props}>
           <path d="M13.6823 10.6218L20.2391 3H18.6854L12.9921 9.61788L8.44486 3H3.2002L10.0765 13.0074L3.2002 21H4.75404L10.7663 14.0113L15.5685 21H20.8131L13.6819 10.6218H13.6823ZM11.5541 13.0956L10.8574 12.0991L5.31391 4.16971H7.70053L12.1742 10.5689L12.8709 11.5655L18.6861 19.8835H16.2995L11.5541 13.096V13.0956Z" />
@@ -139,8 +134,8 @@ const footerNavigation = {
       ),
     },
     {
-      name: 'GitHub',
-      href: '#',
+      name: "GitHub",
+      href: "#",
       icon: (props) => (
         <svg fill="currentColor" viewBox="0 0 24 24" {...props}>
           <path
@@ -152,8 +147,8 @@ const footerNavigation = {
       ),
     },
     {
-      name: 'YouTube',
-      href: '#',
+      name: "YouTube",
+      href: "#",
       icon: (props) => (
         <svg fill="currentColor" viewBox="0 0 24 24" {...props}>
           <path
@@ -165,16 +160,16 @@ const footerNavigation = {
       ),
     },
   ],
-}
+};
 
 export default function AboutUs() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-
-    <div className="bg-white z-10">
-      
-      <main className="isolate pb-20"> {/* Add padding-bottom to create space */}
+    <div className="bg-white z-10" id="aboutUs">
+      <main className="isolate pb-20">
+        {" "}
+        {/* Add padding-bottom to create space */}
         {/* Hero section */}
         <div className="relative isolate -z-10">
           <svg
@@ -193,7 +188,12 @@ export default function AboutUs() {
                 <path d="M.5 200V.5H200" fill="none" />
               </pattern>
             </defs>
-            <rect fill="url(#1f932ae7-37de-4c0a-a8b0-a6e3b4d44b84)" width="100%" height="100%" strokeWidth={0} />
+            <rect
+              fill="url(#1f932ae7-37de-4c0a-a8b0-a6e3b4d44b84)"
+              width="100%"
+              height="100%"
+              strokeWidth={0}
+            />
           </svg>
           <div
             aria-hidden="true"
@@ -202,7 +202,7 @@ export default function AboutUs() {
             <div
               style={{
                 clipPath:
-                  'polygon(63.1% 29.5%, 100% 17.1%, 76.6% 3%, 48.4% 0%, 44.6% 4.7%, 54.5% 25.3%, 59.8% 49%, 55.2% 57.8%, 44.4% 57.2%, 27.8% 47.9%, 35.1% 81.5%, 0% 97.7%, 39.2% 100%, 35.2% 81.4%, 97.2% 52.8%, 63.1% 29.5%)',
+                  "polygon(63.1% 29.5%, 100% 17.1%, 76.6% 3%, 48.4% 0%, 44.6% 4.7%, 54.5% 25.3%, 59.8% 49%, 55.2% 57.8%, 44.4% 57.2%, 27.8% 47.9%, 35.1% 81.5%, 0% 97.7%, 39.2% 100%, 35.2% 81.4%, 97.2% 52.8%, 63.1% 29.5%)",
               }}
               className="aspect-[801/1036] w-[50.0625rem] bg-gradient-to-tr from-[#33479d] to-[#2a2874] opacity-20"
             />
@@ -211,25 +211,25 @@ export default function AboutUs() {
             <div className="mx-auto max-w-7xl px-6 pb-1 pt-0 sm:pt-0 lg:px-60 lg:pt-0">
               <div className="flex justify-center ">
                 <div className="text-center">
-                  <h1 className="text-pretty text-xl font-semibold tracking-tight text-black sm:text-3xl mt-20">
+                  <h1 className="text-pretty text-lg font-semibold tracking-tight text-black sm:text-lg mt-20">
                     Changing the way people connect
                   </h1>
                   <h2 className="mt-8 text-pretty text-xl font-semibold tracking-tight text-midnight-sky sm:text-6xl">
                     About us
                   </h2>
                   <p className="mt-8 text-pretty text-lg font-medium text-black sm:max-w-md sm:text-xl/8 lg:max-w-none">
-                    We are a team of passionate apprentices who launched our platform in 2024 with a mission to revolutionize the
-                    way organisers and attendees connect. Unlike expensive alternatives, we provide an affordable solution that
-                    makes event creation, discovery, and engagement seamless. Our goal is to help organisers reach their audience
-                    effortlessly while giving users access to meaningful experiences without the high costs. Whether you’re hosting 
-                    or attending, we ensure every step of the journey is smooth, rewarding, and budget-friendly.
+                    We are passionate apprentices who launched our platform in
+                    2024 to revolutionise event connections. Unlike costly
+                    alternatives, we offer an affordable, seamless solution for
+                    organisers and attendees. Our goal is to make event
+                    creation, discovery, and engagement effortless and
+                    budget-friendly.
                   </p>
                   <p className="mt-8 text-pretty text-lg font-medium text-black sm:max-w-md sm:text-xl/8 lg:max-w-none">
-                    At our core, we believe in community, innovation, and accessibility. As apprentices, we are deeply invested in our 
-                    users and committed to driving growth for both organisers and attendees. By bridging the gap between event creators 
-                    and audiences, we’re building a space where connections flourish, ideas come to life, and every event becomes an 
-                    opportunity to grow. We care about making event management easier and more affordable, so you can focus on what truly
-                    matters—creating and experiencing unforgettable moments.
+                    We value community, innovation, and accessibility. As
+                    apprentices, we connect organisers and attendees, making
+                    events easier and more affordable. Our goal is to help ideas
+                    thrive and create unforgettable experiences.
                   </p>
                 </div>
               </div>
@@ -243,34 +243,48 @@ export default function AboutUs() {
             <div className="flex flex-col lg:flex-row lg:gap-x-8">
               <div className="lg:w-1/2">
                 <div>
-                  <img src={Target} alt="Target icon" className="mx-auto size-24" />
+                  <img
+                    src={Target}
+                    alt="Target icon"
+                    className="mx-auto size-24"
+                  />
                   <h2 className="text-pretty text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl">
                     Our mission
                   </h2>
                 </div>
                 <p className="mt-6 text-xl/8 text-gray-600">
-                  Our mission is to create a seamless and engaging event experience for both organisers and attendees. 
-                  We empower organisers with the tools to plan, promote, and grow their events while helping users discover and 
-                  connect with experiences that matter to them. Through innovation and community-driven solutions, we bridge the 
-                  gap between event creators and their audience.
+                  Our mission is to create a seamless and engaging event
+                  experience for both organisers and attendees. We empower
+                  organisers with the tools to plan, promote, and grow their
+                  events while helping users discover and connect with
+                  experiences that matter to them. Through innovation and
+                  community-driven solutions, we bridge the gap between event
+                  creators and their audience.
                 </p>
               </div>
               <div className="lg:w-1/2 mt-16 lg:mt-0">
-              <div>
-                <img src={World} alt="World icon" className="mx-auto size-24" />
-                <h2 className="text-pretty text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl">Our vision</h2>
-              </div>
+                <div>
+                  <img
+                    src={World}
+                    alt="World icon"
+                    className="mx-auto size-24"
+                  />
+                  <h2 className="text-pretty text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl">
+                    Our vision
+                  </h2>
+                </div>
                 <p className="mt-6 text-xl/8 text-gray-600">
-                  We envision a world where event organisers and attendees are seamlessly connected, making every event an 
-                  opportunity to engage, network, and create lasting memories. By building a platform that supports both creators
-                  and participants, we aim to cultivate vibrant communities, fuel meaningful connections, and make event discovery
-                  and management easier than ever.
+                  We envision a world where event organisers and attendees are
+                  seamlessly connected, making every event an opportunity to
+                  engage, network, and create lasting memories. By building a
+                  platform that supports both creators and participants, we aim
+                  to cultivate vibrant communities, fuel meaningful connections,
+                  and make event discovery and management easier than ever.
                 </p>
               </div>
             </div>
           </div>
         </div>
-
         {/* Image section */}
         <div className="mt-32 sm:mt-40 xl:mx-auto xl:max-w-7xl xl:px-8">
           <img
@@ -279,15 +293,17 @@ export default function AboutUs() {
             className="aspect-[10/5] w-full object-cover xl:rounded-3xl"
           />
         </div>
-
         {/* Values section */}
         <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
           <div className="mx-auto max-w-2xl lg:mx-0">
-            <h2 className="text-pretty text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl">Our values</h2>
+            <h2 className="text-pretty text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl">
+              Our values
+            </h2>
             <p className="mt-6 text-lg/8 text-gray-600">
-                Our values are the guiding principles that shape our culture and define who we are as a company. They guide
-                our decisions, actions, and interactions, ensuring we stay true to our mission and create a positive impact
-                on the world.
+              Our values are the guiding principles that shape our culture and
+              define who we are as a company. They guide our decisions, actions,
+              and interactions, ensuring we stay true to our mission and create
+              a positive impact on the world.
             </p>
           </div>
           <dl className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 text-base/7 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-3">
@@ -299,31 +315,104 @@ export default function AboutUs() {
             ))}
           </dl>
         </div>
-
         {/* Team section */}
-        <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-48 lg:px-8 text-center">
-          <div className="text-center margin-auto mx-10">
-            <h2 className="text-pretty text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl">Our team</h2>
-            <p className="mt-6 text-lg/8 text-gray-600">
-            Meet the passionate team behind Evently. With diverse skills and a shared commitment to excellence, 
-            we work together to bring your event vision to life
-            </p>
-          </div>
-          <ul
-            role="list"
-            className="mx-auto mt-20 flex justify-around gap-y-16 text-center sm:grid-cols-3 md:grid-cols-4 lg:mx-0 lg:max-w-none lg:grid-cols-5 xl:grid-cols-6"
+        <div className="bg-white py-24 md:py-32 lg:py-40">
+          <div
+            className="mx-auto grid max-w-7xl grid-cols-1 gap-20 px-6
+lg:px-8 xl:grid-cols-3"
           >
-            {team.map((person) => (
-              <li key={person.name}>
-                <img alt="" src={person.imageUrl} className="mx-auto size-32 rounded-full" />
-                <h3 className="mt-6 text-base/4 font-semibold tracking-tight text-gray-900">{person.name}</h3>
-                <p className="text-sm/8 text-black">{person.role}</p>
-                <p className="text-sm/6 text-gray-600">{person.bio}</p>
-              </li>
-            ))}
-          </ul>
+            <div className="mx-auto max-w-2xl lg:mx-0">
+              <h2
+                className="text-pretty text-4xl font-semibold
+        tracking-tight text-gray-900 sm:text-5xl"
+              >
+                Our team
+              </h2>
+              <p className="mt-6 text-lg/8 text-gray-600">
+                We’re a dynamic group of individuals who are passionate about
+                what we do and dedicated to delivering the best results for our
+                clients.
+              </p>
+            </div>
+            <ul
+              role="list"
+              className="mx-auto grid max-w-2xl grid-cols-1 gap-x-6
+gap-y-20 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:gap-x-8
+xl:col-span-2"
+            >
+              {people.map((person) => (
+                <li key={person.name}>
+                  <img
+                    alt=""
+                    src={person.imageUrl}
+                    className="aspect-[3/2] w-full rounded-2xl object-cover"
+                  />
+                  <h3
+                    className="mt-6 text-lg/8 font-semibold
+text-gray-900"
+                  >
+                    {person.name}
+                  </h3>
+                  <p className="text-base/7 text-gray-600">{person.role}</p>
+                  <p className="mt-4 text-base/7 text-gray-600">{person.bio}</p>
+                  <ul role="list" className="mt-6 flex gap-x-6">
+                    <li>
+                      <a
+                        href={person.xUrl}
+                        className="text-gray-400
+hover:text-gray-500"
+                      >
+                        <span className="sr-only">X</span>
+                        <svg
+                          fill="currentColor"
+                          viewBox="0 0 20 20"
+                          aria-hidden="true"
+                          className="size-5"
+                        >
+                          <path
+                            d="M11.4678 8.77491L17.2961
+2H15.915L10.8543 7.88256L6.81232 2H2.15039L8.26263 10.8955L2.15039
+18H3.53159L8.87581 11.7878L13.1444 18H17.8063L11.4675
+8.77491H11.4678ZM9.57608 10.9738L8.95678 10.0881L4.02925
+3.03974H6.15068L10.1273 8.72795L10.7466 9.61374L15.9156
+17.0075H13.7942L9.57608 10.9742V10.9738Z"
+                          />
+                        </svg>
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href={person.linkedinUrl}
+                        className="text-gray-400 hover:text-gray-500"
+                      >
+                        <span className="sr-only">LinkedIn</span>
+                        <svg
+                          fill="currentColor"
+                          viewBox="0 0 20 20"
+                          aria-hidden="true"
+                          className="size-5"
+                        >
+                          <path
+                            d="M16.338
+16.338H13.67V12.16c0-.995-.017-2.277-1.387-2.277-1.39 0-1.601
+1.086-1.601 2.207v4.248H8.014v-8.59h2.559v1.174h.037c.356-.675
+1.227-1.387 2.526-1.387 2.703 0 3.203 1.778 3.203 4.092v4.711zM5.005
+6.575a1.548 1.548 0 11-.003-3.096 1.548 1.548 0 01.003 3.096zm-1.337
+9.763H6.34v-8.59H3.667v8.59zM17.668 1H2.328C1.595 1 1 1.581 1
+2.298v15.403C1 18.418 1.595 19 2.328 19h15.34c.734 0 1.332-.582
+1.332-1.299V2.298C19 1.581 18.402 1 17.668 1z"
+                            clipRule="evenodd"
+                            fillRule="evenodd"
+                          />
+                        </svg>
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
-
         {/* Blog section */}
         <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
           <div className="mx-auto max-w-2xl lg:mx-0 lg:max-w-none">
@@ -338,7 +427,11 @@ export default function AboutUs() {
                 key={post.id}
                 className="relative isolate flex flex-col justify-end overflow-hidden rounded-2xl bg-gray-900 px-8 pb-8 pt-80 sm:pt-48 lg:pt-80"
               >
-                <img alt="" src={post.imageUrl} className="absolute inset-0 -z-10 size-full object-cover" />
+                <img
+                  alt=""
+                  src={post.imageUrl}
+                  className="absolute inset-0 -z-10 size-full object-cover"
+                />
                 <div className="absolute inset-0 -z-10 bg-gradient-to-t from-gray-900 via-gray-900/40" />
                 <div className="absolute inset-0 -z-10 rounded-2xl ring-1 ring-inset ring-gray-900/10" />
 
@@ -347,11 +440,18 @@ export default function AboutUs() {
                     {post.date}
                   </time>
                   <div className="-ml-4 flex items-center gap-x-4">
-                    <svg viewBox="0 0 2 2" className="-ml-0.5 size-0.5 flex-none fill-white/50 ">
+                    <svg
+                      viewBox="0 0 2 2"
+                      className="-ml-0.5 size-0.5 flex-none fill-white/50 "
+                    >
                       <circle r={1} cx={1} cy={1} />
                     </svg>
                     <div className="flex gap-x-2.5">
-                      <img alt="" src={post.author.imageUrl} className="size-6 flex-none rounded-full bg-white/10" />
+                      <img
+                        alt=""
+                        src={post.author.imageUrl}
+                        className="size-6 flex-none rounded-full bg-white/10"
+                      />
                       {post.author.name}
                     </div>
                   </div>
@@ -368,5 +468,5 @@ export default function AboutUs() {
         </div>
       </main>
     </div>
-  )
+  );
 }

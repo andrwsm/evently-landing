@@ -9,11 +9,6 @@ const navigation = {
     { name: "Commerce", href: "#" },
     { name: "Insights", href: "#" },
   ],
-  support: [
-    { name: "Submit ticket", href: "#" },
-    { name: "Documentation", href: "#" },
-    { name: "Guides", href: "#" },
-  ],
   company: [
     { name: "About", href: "#" },
     { name: "Blog", href: "#" },
@@ -92,7 +87,6 @@ const navigation = {
 
 export default function Footer() {
   return (
-
     <footer className="mt-32 bg-gray-900 sm:mt-56">
       <div className="mx-auto max-w-7xl px-6 pb-8 pt-16 sm:pt-24 lg:px-8 lg:pt-32">
         <div className="xl:grid xl:grid-cols-3 xl:gap-8">
@@ -105,21 +99,6 @@ export default function Footer() {
                 </h3>
                 <ul role="list" className="mt-6 space-y-4">
                   {navigation.solutions.map((item) => (
-                    <li key={item.name}>
-                      <a
-                        href={item.href}
-                        className="text-sm/6 text-gray-400 hover:text-white"
-                      >
-                        {item.name}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <div className="mt-10 md:mt-0">
-                <h3 className="text-sm/6 font-semibold text-white">Support</h3>
-                <ul role="list" className="mt-6 space-y-4">
-                  {navigation.support.map((item) => (
                     <li key={item.name}>
                       <a
                         href={item.href}
@@ -173,12 +152,13 @@ export default function Footer() {
             </h3>
             <p className="mt-2 text-sm/6 text-gray-300">
               The latest news, articles, and resources, sent to your inbox
-              weekly. By subscribing you agree to our <a
+              weekly. By subscribing you agree to our{" "}
+              <a
                 href="/privacypolicy"
                 className="text-light-blue hover:text-indigo-400"
-                >
+              >
                 Privacy Policy
-                </a>
+              </a>
             </p>
           </div>
           <form className="mt-6 sm:flex sm:max-w-md lg:mt-0">

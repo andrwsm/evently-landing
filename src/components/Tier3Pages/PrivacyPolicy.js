@@ -24,7 +24,9 @@ export default function PrivacyPolicy() {
           personal data we collect from you and how we use it.
         </p>
         <section className="mt-10">
-          <h2 className="text-2xl font-semibold text-gray-900">Information We Collect</h2>
+          <h2 className="text-2xl font-semibold text-gray-900">
+            Information We Collect
+          </h2>
           <p className="mt-4 text-base text-gray-600">
             We collect information to provide better services to our users. We
             collect information in the following ways:
@@ -35,7 +37,9 @@ export default function PrivacyPolicy() {
           </ul>
         </section>
         <section className="mt-10">
-          <h2 className="text-2xl font-semibold text-gray-900">How We Use Information</h2>
+          <h2 className="text-2xl font-semibold text-gray-900">
+            How We Use Information
+          </h2>
           <p className="mt-4 text-base text-gray-600">
             We use the information we collect in various ways, including to:
           </p>
@@ -43,11 +47,15 @@ export default function PrivacyPolicy() {
             <li>Provide, operate, and maintain our website.</li>
             <li>Improve, personalize, and expand our website.</li>
             <li>Understand and analyze how you use our website.</li>
-            <li>Develop new products, services, features, and functionality.</li>
+            <li>
+              Develop new products, services, features, and functionality.
+            </li>
           </ul>
         </section>
         <section className="mt-10">
-          <h2 className="text-2xl font-semibold text-gray-900">Sharing Information</h2>
+          <h2 className="text-2xl font-semibold text-gray-900">
+            Sharing Information
+          </h2>
           <p className="mt-4 text-base text-gray-600">
             We do not share your personal information with companies,
             organizations, or individuals outside of our company except in the
@@ -55,6 +63,7 @@ export default function PrivacyPolicy() {
           </p>
           <ul className="mt-4 list-disc list-inside text-base text-gray-600">
             <li>With your consent.</li>
+            <li>With event organisers for market understanding.</li>
             <li>For external processing.</li>
             <li>For legal reasons.</li>
           </ul>
@@ -68,7 +77,9 @@ export default function PrivacyPolicy() {
           </p>
         </section>
         <section className="mt-10">
-          <h2 className="text-2xl font-semibold text-gray-900">Changes to This Privacy Policy</h2>
+          <h2 className="text-2xl font-semibold text-gray-900">
+            Changes to This Privacy Policy
+          </h2>
           <p className="mt-4 text-base text-gray-600">
             We may update our privacy policy from time to time. We will notify
             you of any changes by posting the new privacy policy on this page.

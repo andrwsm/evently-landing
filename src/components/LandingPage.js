@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { Dialog, DialogPanel } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
+import ui from "../assets/eventlyLogos/ui.png";
 import {
   ArrowPathIcon,
   ChevronRightIcon,
@@ -53,24 +54,27 @@ const primaryFeatures = [
 ];
 const secondaryFeatures = [
   {
-    name: "No fees",
+    name: "Low fees",
     description:
-      "Sell your tickets without any charges. You keep all of what you earn from your events. The only fee is from out payment processor, Stripe.",
-    details: "With our platform, you can sell your event tickets without worrying about any additional charges. Unlike other ticketing services that take a percentage of your sales, we ensure that you keep 100% of what you earn. The only cost involved is the standard processing fee from our trusted payment partner, Stripe. This means you get full control over your revenue, allowing you to maximize your event profits without hidden costs or service fees. Whether you're organizing a concert, conference, or community gathering, our straightforward pricing model ensures that every dollar you make goes directly to you.",
+      "Sell your tickets without huge fees driving up prices. You keep all of what you earn from your events. The only fee is from out payment processor, Stripe.",
+    details:
+      "With our platform, you can sell your event tickets without worrying about any additional charges. Unlike other ticketing services that take a percentage of your sales, we ensure that you keep 100% of what you earn. The only cost involved is the standard processing fee from our trusted payment partner, Stripe. This means you get full control over your revenue, allowing you to maximize your event profits without hidden costs or service fees. Whether you're organizing a concert, conference, or community gathering, our straightforward pricing model ensures that every dollar you make goes directly to you.",
     icon: CurrencyDollarIcon,
   },
   {
     name: "Easy to use",
     description:
       "Our platform is designed to be easy to use and easy to understand. No need to be a tech wizard.",
-    details: "Our platform is built with simplicity in mind, making it easy for anyone to create, manage, and sell tickets for their events—no technical expertise required. With an intuitive interface and straightforward navigation, you can set up your event in just a few clicks. Whether you're a first-time organizer or a seasoned event planner, our user-friendly tools ensure a hassle-free experience. You won’t need to worry about complicated setups or confusing options—just focus on making your event a success while we handle the rest.",
+    details:
+      "Our platform is built with simplicity in mind, making it easy for anyone to create, manage, and sell tickets for their events—no technical expertise required. With an intuitive interface and straightforward navigation, you can set up your event in just a few clicks. Whether you're a first-time organizer or a seasoned event planner, our user-friendly tools ensure a hassle-free experience. You won’t need to worry about complicated setups or confusing options—just focus on making your event a success while we handle the rest.",
     icon: TicketIcon,
   },
   {
     name: "Client first",
     description:
       "You are our priority. We will always be here to help you with any issues you may have.",
-    details: "Your success is our top priority. We’re committed to providing exceptional support whenever you need it. Whether you have questions, need assistance setting up your event, or encounter any issues along the way, our dedicated team is here to help. With responsive customer service and helpful resources, we ensure you’re never left figuring things out on your own. No matter the challenge, we’ve got your back—because your experience matters to us.",
+    details:
+      "Your success is our top priority. We’re committed to providing exceptional support whenever you need it. Whether you have questions, need assistance setting up your event, or encounter any issues along the way, our dedicated team is here to help. With responsive customer service and helpful resources, we ensure you’re never left figuring things out on your own. No matter the challenge, we’ve got your back—because your experience matters to us.",
     icon: UserCircleIcon,
   },
 ];
@@ -325,7 +329,6 @@ function classNames(...classes) {
 export default function LandingPage() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-
   return (
     <div className="bg-white relative" id="home">
       <main>
@@ -412,14 +415,17 @@ export default function LandingPage() {
             <div className="mx-auto max-w-2xl lg:mx-0 lg:flex-auto">
               <div className="flex">
                 <div className="relative flex items-center gap-x-4 rounded-full bg-white px-4 py-1 text-sm/6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
-                  <span className="font-semibold text-indigo-600">
+                  <span className="font-semibold text-dark-sky">
                     We’re changing things
                   </span>
                   <span
                     aria-hidden="true"
                     className="h-4 w-px bg-gray-900/10"
                   />
-                  <a href="#features" className="flex items-center gap-x-1 scroll-smooth">
+                  <a
+                    href="#features"
+                    className="flex items-center gap-x-1 scroll-smooth"
+                  >
                     <span aria-hidden="true" className="absolute inset-0" />
                     See what we do differently
                     <ChevronRightIcon
@@ -430,64 +436,34 @@ export default function LandingPage() {
                 </div>
               </div>
               <h1 className="mt-10 text-pretty text-5xl font-semibold tracking-tight text-gray-900 sm:text-7xl">
-                Don't just learn it, be it.
+                DON'T JUST LEARN IT, BE IT.
               </h1>
               <p className="mt-8 text-pretty text-lg font-medium text-gray-500 sm:text-xl/8">
-                Join us to elevate your corporate and networking events to the
-                next level. Connect, collaborate, and create unforgettable
+                Join us to elevate your Gen Z corporate and networking events to
+                the next level. Connect, collaborate, and create unforgettable
                 experiences.
               </p>
-              <div className="mt-10 flex items-center gap-x-6">
+              {/* <div className="mt-10 flex items-center gap-x-6">
                 <a
                   href="#"
-                  className="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                  className="rounded-md bg-dark-sky px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-midnight-sky focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-dark-sky"
                 >
                   Get started
                 </a>
                 <a href="#" className="text-sm/6 font-semibold text-gray-900">
                   Learn more <span aria-hidden="true">→</span>
                 </a>
-              </div>
+              </div> */}
             </div>
-            <div className="mt-16 sm:mt-24 lg:mt-0 lg:shrink-0 lg:grow">
-              <svg
-                role="img"
-                viewBox="0 0 366 729"
-                className="mx-auto w-[22.875rem] max-w-full drop-shadow-xl"
-              >
-                <title>App screenshot</title>
-                <defs>
-                  <clipPath id="2ade4387-9c63-4fc4-b754-10e687a0d332">
-                    <rect rx={36} width={316} height={684} />
-                  </clipPath>
-                </defs>
-                <path
-                  d="M363.315 64.213C363.315 22.99 341.312 1 300.092 1H66.751C25.53 1 3.528 22.99 3.528 64.213v44.68l-.857.143A2 2 0 0 0 1 111.009v24.611a2 2 0 0 0 1.671 1.973l.95.158a2.26 2.26 0 0 1-.093.236v26.173c.212.1.398.296.541.643l-1.398.233A2 2 0 0 0 1 167.009v47.611a2 2 0 0 0 1.671 1.973l1.368.228c-.139.319-.314.533-.511.653v16.637c.221.104.414.313.56.689l-1.417.236A2 2 0 0 0 1 237.009v47.611a2 2 0 0 0 1.671 1.973l1.347.225c-.135.294-.302.493-.49.607v377.681c0 41.213 22 63.208 63.223 63.208h95.074c.947-.504 2.717-.843 4.745-.843l.141.001h.194l.086-.001 33.704.005c1.849.043 3.442.37 4.323.838h95.074c41.222 0 63.223-21.999 63.223-63.212v-394.63c-.259-.275-.48-.796-.63-1.47l-.011-.133 1.655-.276A2 2 0 0 0 366 266.62v-77.611a2 2 0 0 0-1.671-1.973l-1.712-.285c.148-.839.396-1.491.698-1.811V64.213Z"
-                  fill="#4B5563"
-                />
-                <path
-                  d="M16 59c0-23.748 19.252-43 43-43h246c23.748 0 43 19.252 43 43v615c0 23.196-18.804 42-42 42H58c-23.196 0-42-18.804-42-42V59Z"
-                  fill="#343E4E"
-                />
-                <foreignObject
-                  width={316}
-                  height={684}
-                  clipPath="url(#2ade4387-9c63-4fc4-b754-10e687a0d332)"
-                  transform="translate(24 24)"
-                >
-                  <img
-                    alt=""
-                    src="https://tailwindui.com/plus-assets/img/component-images/mobile-app-screenshot.png"
-                  />
-                </foreignObject>
-              </svg>
-            </div>
+            <img alt="" src={ui} className="h-[90vh]" />
           </div>
         </div>
 
-
-{/* first feature section */}
-        <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-56 lg:px-8" id="features">
+        {/* first feature section */}
+        <div
+          className="mx-auto mt-32 max-w-7xl px-6 sm:mt-56 lg:px-8"
+          id="features"
+        >
           <div className="mx-auto max-w-2xl lg:text-center">
             <h2 className="text-base/7 font-semibold text-dark-sky">
               Sell and promote your events with ease
@@ -495,9 +471,7 @@ export default function LandingPage() {
             <p className="mt-2 text-pretty text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl lg:text-balance">
               Everything you need to sell tickets to your events
             </p>
-            <p className="mt-6 text-lg/8 text-gray-600">
-              
-            </p>
+            <p className="mt-6 text-lg/8 text-gray-600"></p>
           </div>
           <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
             <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-3">
@@ -516,22 +490,19 @@ export default function LandingPage() {
                       <Disclosure as="div" className="mt-6">
                         {({ open }) => (
                           <>
-                            <DisclosureButton
-                              className="text-sm/10 font-semibold text-indigo-600 top-0"
-                            >
-                              Learn more{" "}
-                              <span aria-hidden="true">↓</span>
+                            <DisclosureButton className="text-sm/10 font-semibold text-dark-sky top-0">
+                              Learn more <span aria-hidden="true">↓</span>
                             </DisclosureButton>
                             <DisclosurePanel className="mt-2 text-sm text-gray-500 absolute top-full left-0 w-full">
                               {feature.details}
                             </DisclosurePanel>
-                            { (
+                            {
                               <img
                                 src={EventlyIcon}
                                 alt="Evently Icon"
                                 className="mt-4 w-10 h-10"
                               />
-                            )}
+                            }
                           </>
                         )}
                       </Disclosure>
@@ -610,7 +581,7 @@ export default function LandingPage() {
               <div className="col-span-2">
                 <h2
                   className="text-base/7 font-semibold
-            text-indigo-600"
+            text-dark-sky"
                 >
                   Everything you need
                 </h2>
@@ -636,7 +607,7 @@ export default function LandingPage() {
                       <CheckIcon
                         aria-hidden="true"
                         className="absolute
-                  left-0 top-1 size-5 text-indigo-500"
+                  left-0 top-1 size-5 text-dark-sky"
                       />
                       {feature.name}
                     </dt>
@@ -655,7 +626,7 @@ export default function LandingPage() {
               Get notified when we’re launching
             </h2>
             <p className="mx-auto mt-6 max-w-lg text-center text-lg text-gray-300">
-              Be the first to know when we launch our new product. 
+              Be the first to know when we launch our new product.
             </p>
             <form className="mx-auto mt-10 flex max-w-md gap-x-4">
               <label htmlFor="email-address" className="sr-only">
@@ -680,7 +651,10 @@ export default function LandingPage() {
             </form>
             <p className="text-center text-stone-50 text-sm mt-5">
               By clicking the the button, you agree to our{" "}
-              <a href="/privacypolicy" className="hover:text-link-color cursor-pointer text-blue-600">
+              <a
+                href="/privacypolicy"
+                className="hover:text-link-color cursor-pointer text-blue-600"
+              >
                 privacy policy
               </a>
             </p>
@@ -714,142 +688,6 @@ export default function LandingPage() {
         </div>
 
         {/* Testimonials section */}
-        <div className="relative isolate mt-32 sm:mt-56 sm:pt-32">
-          <svg
-            aria-hidden="true"
-            className="absolute inset-0 -z-10 hidden size-full stroke-gray-200 [mask-image:radial-gradient(64rem_64rem_at_top,white,transparent)] sm:block"
-          >
-            <defs>
-              <pattern
-                x="50%"
-                y={0}
-                id="55d3d46d-692e-45f2-becd-d8bdc9344f45"
-                width={200}
-                height={200}
-                patternUnits="userSpaceOnUse"
-              >
-                <path d="M.5 200V.5H200" fill="none" />
-              </pattern>
-            </defs>
-            <svg x="50%" y={0} className="overflow-visible fill-gray-50">
-              <path
-                d="M-200.5 0h201v201h-201Z M599.5 0h201v201h-201Z M399.5 400h201v201h-201Z M-400.5 600h201v201h-201Z"
-                strokeWidth={0}
-              />
-            </svg>
-            <rect
-              fill="url(#55d3d46d-692e-45f2-becd-d8bdc9344f45)"
-              width="100%"
-              height="100%"
-              strokeWidth={0}
-            />
-          </svg>
-          <div className="relative">
-            <div
-              aria-hidden="true"
-              className="absolute inset-x-0 top-1/2 -z-10 -translate-y-1/2 transform-gpu overflow-hidden opacity-30 blur-3xl"
-            >
-              <div
-                style={{
-                  clipPath:
-                    "polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)",
-                }}
-                className="ml-[max(50%,38rem)] aspect-[1313/771] w-[82.0625rem] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc]"
-              />
-            </div>
-            <div
-              aria-hidden="true"
-              className="absolute inset-x-0 top-0 -z-10 flex transform-gpu overflow-hidden pt-8 opacity-25 blur-3xl xl:justify-end"
-            >
-              <div
-                style={{
-                  clipPath:
-                    "polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)",
-                }}
-                className="ml-[-22rem] aspect-[1313/771] w-[82.0625rem] flex-none origin-top-right rotate-[30deg] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] xl:ml-0 xl:mr-[calc(50%-12rem)]"
-              />
-            </div>
-            <div className="mx-auto max-w-7xl px-6 lg:px-8">
-              <div className="mx-auto max-w-2xl sm:text-center">
-                <h2 className="text-base/7 font-semibold text-indigo-600">
-                  Testimonials
-                </h2>
-                <p className="mt-2 text-pretty text-4xl font-semibold tracking-tight text-gray-900 sm:text-balance sm:text-5xl">
-                  We have worked with thousands of amazing people
-                </p>
-              </div>
-              <div className="mx-auto mt-16 grid max-w-2xl grid-cols-1 grid-rows-1 gap-8 text-sm/6 text-gray-900 sm:mt-20 sm:grid-cols-2 xl:mx-0 xl:max-w-none xl:grid-flow-col xl:grid-cols-4">
-                <figure className="col-span-2 hidden sm:block sm:rounded-2xl sm:bg-white sm:shadow-lg sm:ring-1 sm:ring-gray-900/5 xl:col-start-2 xl:row-end-1">
-                  <blockquote className="p-12 text-xl/8 font-semibold tracking-tight text-gray-900">
-                    <p>{`“${featuredTestimonial.body}”`}</p>
-                  </blockquote>
-                  <figcaption className="flex items-center gap-x-4 border-t border-gray-900/10 px-6 py-4">
-                    <img
-                      alt=""
-                      src={featuredTestimonial.author.imageUrl}
-                      className="size-10 flex-none rounded-full bg-gray-50"
-                    />
-                    <div className="flex-auto">
-                      <div className="font-semibold">
-                        {featuredTestimonial.author.name}
-                      </div>
-                      <div className="text-gray-600">{`@${featuredTestimonial.author.handle}`}</div>
-                    </div>
-                    <img
-                      alt=""
-                      src={featuredTestimonial.author.logoUrl}
-                      className="h-10 w-auto flex-none"
-                    />
-                  </figcaption>
-                </figure>
-                {testimonials.map((columnGroup, columnGroupIdx) => (
-                  <div
-                    key={columnGroupIdx}
-                    className="space-y-8 xl:contents xl:space-y-0"
-                  >
-                    {columnGroup.map((column, columnIdx) => (
-                      <div
-                        key={columnIdx}
-                        className={classNames(
-                          (columnGroupIdx === 0 && columnIdx === 0) ||
-                            (columnGroupIdx === testimonials.length - 1 &&
-                              columnIdx === columnGroup.length - 1)
-                            ? "xl:row-span-2"
-                            : "xl:row-start-1",
-                          "space-y-8"
-                        )}
-                      >
-                        {column.map((testimonial) => (
-                          <figure
-                            key={testimonial.author.handle}
-                            className="rounded-2xl bg-white p-6 shadow-lg ring-1 ring-gray-900/5"
-                          >
-                            <blockquote className="text-gray-900">
-                              <p>{`“${testimonial.body}”`}</p>
-                            </blockquote>
-                            <figcaption className="mt-6 flex items-center gap-x-4">
-                              <img
-                                alt=""
-                                src={testimonial.author.imageUrl}
-                                className="size-10 rounded-full bg-gray-50"
-                              />
-                              <div>
-                                <div className="font-semibold">
-                                  {testimonial.author.name}
-                                </div>
-                                <div className="text-gray-600">{`@${testimonial.author.handle}`}</div>
-                              </div>
-                            </figcaption>
-                          </figure>
-                        ))}
-                      </div>
-                    ))}
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
       </main>
 
       {/* FAQs sectiom */}

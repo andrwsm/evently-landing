@@ -52,7 +52,7 @@ const people = [
   },
   {
     name: "Will Jones",
-    role: "CTO",
+    role: "Chief Technology Officer",
     imageUrl: Will,
     bio: "Managing the technical aspects of Evently's delivery, our CTO works to build our platforms and create forward thinking solutions for event promotion and management. Will is strongly driven to create value for our users, keeping costs low and providing a top-tier user experience.",
   },
@@ -211,7 +211,7 @@ export default function AboutUs() {
             <div className="mx-auto max-w-7xl px-6 pb-1 pt-0 sm:pt-0 lg:px-60 lg:pt-0">
               <div className="flex justify-center ">
                 <div className="text-center">
-                  <h1 className="text-pretty text-lg font-semibold tracking-tight text-black sm:text-lg mt-20">
+                  <h1 className="text-pretty text-lg font-semibold tracking-tight text-black sm:text-lg mt-36">
                     Changing the way people connect
                   </h1>
                   <h2 className="mt-8 text-pretty text-xl font-semibold tracking-tight text-midnight-sky sm:text-6xl">
@@ -356,7 +356,7 @@ text-gray-900"
                   <p className="text-base/7 text-gray-600">{person.role}</p>
                   <p className="mt-4 text-base/7 text-gray-600">{person.bio}</p>
                   <ul role="list" className="mt-6 flex gap-x-6">
-                    <li>
+                    {/* <li>
                       <a
                         href={person.xUrl}
                         className="text-gray-400
@@ -379,7 +379,7 @@ hover:text-gray-500"
                           />
                         </svg>
                       </a>
-                    </li>
+                    </li> */}
                     <li>
                       <a
                         href={person.linkedinUrl}

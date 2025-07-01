@@ -47,26 +47,6 @@ export default function LandingPage() {
     return () => clearTimeout(timer);
   }, []);
 
-  const primaryFeatures = [
-    {
-      name: "Push to deploy.",
-      description:
-        "Lorem ipsum, dolor sit amet consectetur adipisicing elit aute id magna.",
-      icon: CloudArrowUpIcon,
-    },
-    {
-      name: "SSL certificates.",
-      description:
-        "Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo.",
-      icon: LockClosedIcon,
-    },
-    {
-      name: "Database backups.",
-      description:
-        "Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus.",
-      icon: ServerIcon,
-    },
-  ];
   const secondaryFeatures = [
     {
       name: "Low fees",
@@ -93,71 +73,7 @@ export default function LandingPage() {
       icon: UserCircleIcon,
     },
   ];
-  const featuredTestimonial = {
-    body: "Integer id nunc sit semper purus. Bibendum at lacus ut arcu blandit montes vitae auctor libero. Hac condimentum dignissim nibh vulputate ut nunc. Amet nibh orci mi venenatis blandit vel et proin. Non hendrerit in vel ac diam.",
-    author: {
-      name: "Brenna Goyette",
-      handle: "brennagoyette",
-      imageUrl:
-        "https://images.unsplash.com/photo-1550525811-e5869dd03032?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=1024&h=1024&q=80",
-      logoUrl:
-        "https://tailwindui.com/plus-assets/img/logos/savvycal-logo-gray-900.svg",
-    },
-  };
-  const testimonials = [
-    [
-      [
-        {
-          body: "Laborum quis quam. Dolorum et ut quod quia. Voluptas numquam delectus nihil. Aut enim doloremque et ipsam.",
-          author: {
-            name: "Leslie Alexander",
-            handle: "lesliealexander",
-            imageUrl:
-              "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
-          },
-        },
-        // More testimonials...
-      ],
-      [
-        {
-          body: "Aut reprehenderit voluptatem eum asperiores beatae id. Iure molestiae ipsam ut officia rem nulla blanditiis.",
-          author: {
-            name: "Lindsay Walton",
-            handle: "lindsaywalton",
-            imageUrl:
-              "https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
-          },
-        },
-        // More testimonials...
-      ],
-    ],
-    [
-      [
-        {
-          body: "Voluptas quos itaque ipsam in voluptatem est. Iste eos blanditiis repudiandae. Earum deserunt enim molestiae ipsum perferendis recusandae saepe corrupti.",
-          author: {
-            name: "Tom Cook",
-            handle: "tomcook",
-            imageUrl:
-              "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
-          },
-        },
-        // More testimonials...
-      ],
-      [
-        {
-          body: "Molestias ea earum quos nostrum doloremque sed. Quaerat quasi aut velit incidunt excepturi rerum voluptatem minus harum.",
-          author: {
-            name: "Leonard Krasner",
-            handle: "leonardkrasner",
-            imageUrl:
-              "https://images.unsplash.com/photo-1519345182560-3f2917c472ef?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
-          },
-        },
-        // More testimonials...
-      ],
-    ],
-  ];
+
   const footerNavigation = {
     solutions: [
       { name: "Marketing", href: "#" },
@@ -248,12 +164,16 @@ export default function LandingPage() {
   };
   const faqs = [
     {
-      question: "What are the fees for selling using Evently?",
+      question: "What are the fees for selling using Eventli?",
       answer: (
         <>
-          We don't charge any fees for selling tickets. You keep all of what you
-          earn from your events. Although there is a 1.5% + 20p processing
-          payment for
+          Organisers will pay a flat base rate based on ticket volumes. The
+          platform takes a 3% fee per ticket sold to cover the cost of running
+          the platform. The Stripe processing fee is 1.5% plus 20p per
+          transaction for UK cards. For international cards, the fee is 2.9%
+          plus 20p per transaction. This means that for a ticket priced at £10,
+          the total fees would be approximately £0.50 for UK cards and £0.70 for
+          international cards.
           <a
             href="https://support.stripe.com/questions/what-s-the-difference-between-standard-and-premium-cards"
             className="text-blue-600 underline"
@@ -269,12 +189,12 @@ export default function LandingPage() {
     {
       question: "How do I collect feedback from attendees?",
       answer:
-        "You can collect feedback from attendees by sending out a survey after the event. You can also use the Evently platform to collect feedback from attendees. This is done upon your request.",
+        "You can collect feedback from attendees by sending out a survey after the event. You can also use the Eventli platform to collect feedback from attendees. This is done upon your request.",
     },
     {
       question: "What tools are available for promoting my event?",
       answer:
-        "There are many ways we can help you promote your event. We can help you create a marketing plan, and create a social media strategy. We can also promote your event within our platform.",
+        "We offer a range of tools to help promote your event. Advertising and premium placement options are available starting from £5 per day or £85 per month, tailored to meet the needs of organisers of all sizes.",
     },
     {
       question: "Can I offer discounts and promo codes?",
@@ -282,29 +202,29 @@ export default function LandingPage() {
         "Yes. You can generate discount code for your event, for both percentage and fixed amount discounts. You can also set the number of times a code can be used, and the date range for which it is valid.",
     },
     {
-      question: "What types of events can I host on Evently?",
+      question: "What types of events can I host on Eventli?",
       answer:
         "We support a range of events, however the majorty of events are corporate events, networking events, and conferences. We also support webinars, workshops, and training sessions.",
     },
     {
       question: "Can I print attendee badges?",
       answer:
-        "Yes. You can print attendee badges using the Evently platform. You can also print out a list of attendees, and their contact details.",
+        "Yes. You can print attendee badges using the Eventli platform. You can also print out a list of attendees, and their contact details.",
     },
     {
-      question: "Can I customize the event page?",
+      question: "How do I communicate with attendees?",
       answer:
-        "Yes. You can customize the event page to match your brand. You can add your logo, change the colors, and add images and videos.",
+        "Building a community is at the heart of Eventli. You can communicate with attendees through our platform, which allows you to send messages, updates, and notifications. You can also use our email marketing tools to reach out to your attendees before, during, and after the event.",
     },
     {
       question: "Can I host recurring events?",
       answer:
-        "Yes. You can host recurring events on Evently. You can set the frequency of the event, and the number of times it will repeat.",
+        "Yes. You can host recurring events on Eventli. You can set the frequency of the event, and the number of times it will repeat.",
     },
     {
       question: "Are there any set up fees?",
       answer:
-        "No. There are no set up fees for using Evently. You can create an account and start selling tickets for your event for free.",
+        "No. There are no set up fees for using Eventli. You can create an account and start selling tickets for your event for free.",
     },
     // More questions...
   ];
@@ -347,7 +267,10 @@ export default function LandingPage() {
         {/* Hero section */}
         <div className="relative isolate pt-12">
           <div className="swirls">
-            <img src={blueswirtls} className="opacity-20 -z-10 absolute"></img>
+            <img
+              src={blueswirtls}
+              className="opacity-20 -z-10 absolute -scale-x-100"
+            ></img>
           </div>
           {/* Background icons */}
           {/* <div className="absolute inset-0 -z-10">
@@ -358,42 +281,6 @@ export default function LandingPage() {
                 top: "15%",
                 left: "15%",
                 transform: "rotate(15deg)",
-              }}
-            />
-            <img
-              src={EventlyIcon}
-              className="absolute w-10 h-10"
-              style={{
-                top: "30%",
-                left: "70%",
-                transform: "rotate(-30deg)",
-              }}
-            />
-            <img
-              src={EventlyIcon}
-              className="absolute w-10 h-10"
-              style={{
-                top: "50%",
-                left: "55%",
-                transform: "rotate(45deg)",
-              }}
-            />
-            <img
-              src={EventlyIcon}
-              className="absolute w-10 h-10"
-              style={{
-                top: "70%",
-                left: "20%",
-                transform: "rotate(-60deg)",
-              }}
-            />
-            <img
-              src={EventlyIcon}
-              className="absolute w-10 h-10"
-              style={{
-                top: "8%",
-                left: "80%",
-                transform: "rotate(-140deg)",
               }}
             />
           </div> */}
@@ -426,7 +313,7 @@ export default function LandingPage() {
               strokeWidth={0}
             />
           </svg>
-          <div className="mx-auto max-w-7xl px-6 py-24 sm:py-32 lg:flex lg:items-center lg:gap-x-10 lg:px-8 lg:py-40">
+          <div className="mx-auto max-w-7xl px-6 py-12 sm:py-16 lg:flex lg:items-center lg:gap-x-10 lg:px-8 lg:py-20">
             <div className="mx-auto max-w-2xl lg:mx-0 lg:flex-auto">
               <div className="flex">
                 <div className="relative flex items-center gap-x-4 rounded-full bg-white px-4 py-1 text-sm/6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
@@ -450,10 +337,6 @@ export default function LandingPage() {
                   </a>
                 </div>
               </div>
-              {/* className={`text-4xl md:text-6xl font-bold transition-opacity duration-500 ${
-        isVisible ? "opacity-100" : "opacity-0"
-      }`} */}
-
               <h1
                 className={`mt-10 text-5xl md:text-6xl font-bold text-gray-900 sm:text-7xl transition-opacity duration-[1500ms] ${
                   isVisible ? "opacity-100" : "opacity-0"
@@ -470,119 +353,8 @@ export default function LandingPage() {
             <img alt="" src={ui} className="h-[90vh]" />
           </div>
 
-          <div className="swirls">
-            <img src={blueswirtls} className="flip-x"></img>
-          </div>
-        </div>
-
-        {/* first feature section */}
-        <div
-          className="mx-auto mt-32 max-w-7xl px-6 sm:mt-56 lg:px-8"
-          id="features"
-        >
-          <div className="mx-auto max-w-2xl lg:text-center">
-            <h2 className="text-base/7 font-semibold text-dark-sky">
-              Sell and promote your events with ease
-            </h2>
-            <p className="mt-2 text-pretty text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl lg:text-balance">
-              Everything you need to sell tickets to your events
-            </p>
-            <p className="mt-6 text-lg/8 text-gray-600"></p>
-          </div>
-          <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
-            <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-3">
-              {secondaryFeatures.map((feature) => (
-                <div key={feature.name} className="flex flex-col">
-                  <dt className="flex items-center gap-x-3 text-base/7 font-semibold text-gray-900">
-                    <feature.icon
-                      aria-hidden="true"
-                      className="size-11 flex-none text-dark-sky"
-                    />
-                    {feature.name}
-                  </dt>
-                  <dd className="mt-4 flex flex-auto flex-col text-base/7 text-gray-600">
-                    <p className="flex-auto">{feature.description}</p>
-                    <div className="relative">
-                      <Disclosure as="div" className="mt-6">
-                        {({ open }) => (
-                          <>
-                            <DisclosureButton className="text-sm/10 font-semibold text-dark-sky top-0">
-                              Learn more <span aria-hidden="true">↓</span>
-                            </DisclosureButton>
-                            <DisclosurePanel className="mt-2 text-sm text-gray-500 absolute top-full left-0 w-full">
-                              {feature.details}
-                            </DisclosurePanel>
-                            {
-                              <img
-                                src={EventlyIcon}
-                                alt="Evently Icon"
-                                className="mt-4 w-10 h-10"
-                              />
-                            }
-                          </>
-                        )}
-                      </Disclosure>
-                    </div>
-                  </dd>
-                </div>
-              ))}
-            </dl>
-          </div>
-        </div>
-
-        {/* Feature section */}
-        <div
-          className="mx-auto mt-64 max-w-7xl sm:mt-96 sm:px-6 lg:px-8"
-          id="features"
-        >
-          <div className="relative isolate overflow-hidden bg-gray-900 px-6 py-20 sm:rounded-3xl sm:px-10 sm:py-24 lg:py-24 xl:px-24">
-            <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2 lg:items-center lg:gap-y-0">
-              <div className="lg:row-start-2 lg:max-w-md">
-                <h2 className="text-balance text-3xl font-semibold tracking-tight text-white sm:text-4xl">
-                  Boost your productivity. Start using our app today.
-                </h2>
-                <p className="mt-6 text-lg/8 text-gray-300">
-                  Ac euismod vel sit maecenas id pellentesque eu sed
-                  consectetur. Malesuada adipiscing sagittis vel nulla. Ac
-                  euismod vel sit maecenas.
-                </p>
-              </div>
-              <img
-                alt="Product screenshot"
-                src="https://tailwindui.com/plus-assets/img/component-images/dark-project-app-screenshot.png"
-                width={2432}
-                height={1442}
-                className="relative -z-20 min-w-full max-w-xl rounded-xl shadow-xl ring-1 ring-white/10 lg:row-span-4 lg:w-[64rem] lg:max-w-none"
-              />
-              <div className="max-w-xl lg:row-start-3 lg:mt-10 lg:max-w-md lg:border-t lg:border-white/10 lg:pt-10">
-                <dl className="max-w-xl space-y-8 text-base/7 text-gray-300 lg:max-w-none">
-                  {primaryFeatures.map((feature) => (
-                    <div key={feature.name} className="relative">
-                      <dt className="ml-9 inline-block font-semibold text-white">
-                        <feature.icon
-                          aria-hidden="true"
-                          className="absolute left-1 top-1 size-5 text-dark-sky"
-                        />
-                        {feature.name}
-                      </dt>{" "}
-                      <dd className="inline">{feature.description}</dd>
-                    </div>
-                  ))}
-                </dl>
-              </div>
-            </div>
-            <div
-              aria-hidden="true"
-              className="pointer-events-none absolute left-12 top-1/2 -z-10 -translate-y-1/2 transform-gpu blur-3xl lg:bottom-[-12rem] lg:top-auto lg:translate-y-0 lg:transform-gpu"
-            >
-              <div
-                style={{
-                  clipPath:
-                    "polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)",
-                }}
-                className="aspect-[1155/678] w-[72.1875rem] bg-gradient-to-tr from-dark-sky to-midnight-sky opacity-25"
-              />
-            </div>
+          <div className="swirls -mt-28">
+            <img src={blueswirtls} className="rotate-[-10deg] opacity-75" />
           </div>
         </div>
 
@@ -608,9 +380,11 @@ export default function LandingPage() {
                   All-in-one platform
                 </p>
                 <p className="mt-6 text-base/7 text-gray-600">
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                  Maiores impedit perferendis suscipit eaque, iste dolor
-                  cupiditate blanditiis ratione.
+                  We are proud to offer a comprehensive event management
+                  platform that enables you to create, manage, and promote your
+                  events with ease. Our platform is designed to be user-friendly
+                  and intuitive, allowing you to focus on what matters most -
+                  your event.
                 </p>
               </div>
               <dl

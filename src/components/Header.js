@@ -144,14 +144,31 @@ export default function Header() {
             Home
           </Link>
           <Link
-            to="/AboutUs"
+            to="/Organisers"
             className="text-sm/6 font-semibold text-gray-900"
             onClick={(e) => {
               e.preventDefault();
-              handleNavigation("/AboutUs", "aboutUs");
+              handleNavigation("/Organisers", "organisers");
             }}
           >
-            About us
+            <Link
+              to="/Users"
+              className="text-sm/6 font-semibold text-gray-900"
+              onClick={(e) => {
+                e.preventDefault();
+                handleNavigation("/Users", "users");
+              }}
+            ></Link>
+          </Link>
+          <Link
+            to="/Users"
+            className="text-sm/6 font-semibold text-gray-900"
+            onClick={(e) => {
+              e.preventDefault();
+              handleNavigation("/Users", "Users");
+            }}
+          >
+            Users
           </Link>
           <Popover className="relative">
             <PopoverButton className="flex items-center gap-x-1 text-sm/6 font-semibold text-gray-900">
@@ -288,16 +305,6 @@ export default function Header() {
                   className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
                 >
                   Home
-                </Link>
-                <Link
-                  to="/AboutUs"
-                  className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    handleNavigation("/AboutUs", "aboutUs");
-                  }}
-                >
-                  About us
                 </Link>
                 <Link
                   to="/FAQs"

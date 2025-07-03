@@ -26,6 +26,11 @@ import EventlyIcon from "../assets/eventlyLogos/EventlyIcon.png";
 import blueswirtls from "../assets/eventlyLogos/blueswirls.png";
 import whiteswirls from "../assets/eventlyLogos/whiteswirls.png";
 
+import Kyle from "../assets/photos/Kyle.jpg";
+import Will from "../assets/photos/Will.jpg";
+import dwightimg from "../assets/photos/dwight.jpg";
+import Finlay from "../assets/photos/Finlay.jpg";
+
 import FAQ from "../assets/images/FAQ.png";
 
 const navigation = [
@@ -33,6 +38,67 @@ const navigation = [
   { name: "Features", href: "#" },
   { name: "Marketplace", href: "#" },
   { name: "Company", href: "#" },
+];
+
+const people = [
+  {
+    name: "Kyle Tracey",
+    role: "Founder / CEO",
+    imageUrl: Kyle,
+    bio: "As the founder of the app, he is passionate about creating a platform that empowers organizers and enhances event experiences. He is dedicated to learning, growing, and building solutions that truly meet the needs of users.",
+  },
+  {
+    name: "Will Jones",
+    role: "Chief Technology Officer",
+    imageUrl: Will,
+    bio: "Managing the technical aspects of Evently's delivery, our CTO works to build our platforms and create forward thinking solutions for event promotion and management. Will is strongly driven to create value for our users, keeping costs low and providing a top-tier user experience.",
+  },
+  {
+    name: "Finlay Thornell",
+    role: "Chief Marketing Office",
+    imageUrl: Finlay,
+    bio: "As Evently’s CMO, he is focused on brand development and marketing strategy, driving visibility and engagement. His goal is to help bridge the gap between apprentices and young professionals by creating impactful networking opportunities.",
+  },
+  {
+    name: "Andrew Smith",
+    role: "Software Engineer",
+    imageUrl: dwightimg,
+    bio: "As a software engineer on the team, he is passionate about building innovative solutions that enhance event experiences and empower organisers. He thrives on problem-solving, continuous learning, and crafting solutions that empower organizers while enhancing user experiences.",
+  },
+  // More people...
+];
+
+const values = [
+  {
+    name: "Empowerment",
+    description:
+      "We equip organisers with powerful tools to create and grow their events while giving users the best experience in discovering and attending them.",
+  },
+  {
+    name: "Community",
+    description:
+      "We believe in fostering strong connections between organisers and attendees, creating a space where meaningful interactions thrive.",
+  },
+  {
+    name: "Innovation",
+    description:
+      "We are always evolving, integrating new technologies to make event planning, promotion, and discovery effortless and engaging.",
+  },
+  {
+    name: "Accessibility",
+    description:
+      "Our platform is designed to be user-friendly and inclusive, ensuring that both organisers and attendees can easily connect and engage.",
+  },
+  {
+    name: "Reliability",
+    description:
+      "We are committed to providing a seamless and trustworthy experience, ensuring events run smoothly and connections are meaningful.",
+  },
+  {
+    name: "Growth",
+    description:
+      "We support organisers in expanding their reach and users in discovering new experiences, fostering both personal and professional growth.",
+  },
 ];
 
 export default function LandingPage() {
@@ -352,10 +418,6 @@ export default function LandingPage() {
             </div>
             <img alt="" src={ui} className="h-[90vh]" />
           </div>
-
-          <div className="swirls -mt-28">
-            <img src={blueswirtls} className="rotate-[-10deg] opacity-75" />
-          </div>
         </div>
 
         {/* Feature section */}
@@ -406,6 +468,106 @@ export default function LandingPage() {
                 ))}
               </dl>
             </div>
+          </div>
+        </div>
+        <div className="swirls">
+          <img src={blueswirtls} className="opacity-70 -z-10 -top-90"></img>
+        </div>
+
+        {/* About us section */}
+        <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
+          <div className="mx-auto max-w-2xl lg:mx-0">
+            <h2 className="text-pretty text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl">
+              Our values
+            </h2>
+            <p className="mt-6 text-lg/8 text-gray-600">
+              Our values are the guiding principles that shape our culture and
+              define who we are as a company. They guide our decisions, actions,
+              and interactions, ensuring we stay true to our mission and create
+              a positive impact on the world.
+            </p>
+          </div>
+          <dl className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 text-base/7 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-3">
+            {values.map((value) => (
+              <div key={value.name}>
+                <dt className="font-semibold text-gray-900">{value.name}</dt>
+                <dd className="mt-1 text-gray-600">{value.description}</dd>
+              </div>
+            ))}
+          </dl>
+        </div>
+        {/* Team section */}
+        <div className="bg-white py-24 md:py-32 lg:py-40">
+          <div
+            className="mx-auto grid max-w-7xl grid-cols-1 gap-20 px-6
+lg:px-8 xl:grid-cols-3"
+          >
+            <div className="mx-auto max-w-2xl lg:mx-0">
+              <h2
+                className="text-pretty text-4xl font-semibold
+        tracking-tight text-gray-900 sm:text-5xl"
+              >
+                Our team
+              </h2>
+              <p className="mt-6 text-lg/8 text-gray-600">
+                We’re a dynamic group of individuals who are passionate about
+                what we do and dedicated to delivering the best results for our
+                clients.
+              </p>
+            </div>
+            <ul
+              role="list"
+              className="mx-auto grid max-w-2xl grid-cols-1 gap-x-6
+gap-y-20 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:gap-x-8
+xl:col-span-2"
+            >
+              {people.map((person) => (
+                <li key={person.name}>
+                  <img
+                    alt=""
+                    src={person.imageUrl}
+                    className="aspect-[3/2] w-full rounded-2xl object-cover"
+                  />
+                  <h3
+                    className="mt-6 text-lg/8 font-semibold
+text-gray-900"
+                  >
+                    {person.name}
+                  </h3>
+                  <p className="text-base/7 text-gray-600">{person.role}</p>
+                  <p className="mt-4 text-base/7 text-gray-600">{person.bio}</p>
+                  <ul role="list" className="mt-6 flex gap-x-6">
+                    <li>
+                      <a
+                        href={person.linkedinUrl}
+                        className="text-gray-400 hover:text-gray-500"
+                      >
+                        <span className="sr-only">LinkedIn</span>
+                        <svg
+                          fill="currentColor"
+                          viewBox="0 0 20 20"
+                          aria-hidden="true"
+                          className="size-5"
+                        >
+                          <path
+                            d="M16.338
+                            16.338H13.67V12.16c0-.995-.017-2.277-1.387-2.277-1.39 0-1.601
+                            1.086-1.601 2.207v4.248H8.014v-8.59h2.559v1.174h.037c.356-.675
+                            1.227-1.387 2.526-1.387 2.703 0 3.203 1.778 3.203 4.092v4.711zM5.005
+                            6.575a1.548 1.548 0 11-.003-3.096 1.548 1.548 0 01.003 3.096zm-1.337
+                            9.763H6.34v-8.59H3.667v8.59zM17.668 1H2.328C1.595 1 1 1.581 1
+                            2.298v15.403C1 18.418 1.595 19 2.328 19h15.34c.734 0 1.332-.582
+                            1.332-1.299V2.298C19 1.581 18.402 1 17.668 1z"
+                            clipRule="evenodd"
+                            fillRule="evenodd"
+                          />
+                        </svg>
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
 

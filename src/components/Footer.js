@@ -109,6 +109,22 @@ export default function Footer() {
                     </li>
                   ))}
                 </ul>
+
+              </div>
+              <div className="mt-10 md:mt-0">
+                <h3 className="text-sm/6 font-semibold text-white">Support</h3>
+                <ul role="list" className="mt-6 space-y-4">
+                  {navigation.support.map((item) => (
+                    <li key={item.name}>
+                      <a
+                        href={item.href}
+                        className="text-sm/6 text-gray-400 hover:text-white"
+                      >
+                        {item.name}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
               </div>
             </div>
             <div className="md:grid md:grid-cols-2 md:gap-8">
@@ -152,6 +168,7 @@ export default function Footer() {
             </h3>
             <p className="mt-2 text-sm/6 text-gray-300">
               The latest news, articles, and resources, sent to your inbox
+
               weekly. By subscribing you agree to our{" "}
               <a
                 href="/privacypolicy"

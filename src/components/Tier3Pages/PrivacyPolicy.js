@@ -24,6 +24,7 @@ export default function PrivacyPolicy() {
           personal data we collect from you and how we use it.
         </p>
         <section className="mt-10">
+
           <h2 className="text-2xl font-semibold text-gray-900">
             Information We Collect
           </h2>

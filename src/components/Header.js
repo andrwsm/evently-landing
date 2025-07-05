@@ -309,6 +309,16 @@ export default function Header() {
                   Home
                 </Link>
                 <Link
+                  to="/AboutUs"
+                  className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    handleNavigation("/AboutUs", "aboutUs");
+                  }}
+                >
+                  About us
+                </Link>
+                <Link
                   to="/FAQs"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900"
                 >

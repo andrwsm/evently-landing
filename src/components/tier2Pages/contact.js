@@ -240,7 +240,6 @@ export default function Contact() {
             <h3 className="mt-3 text-xl font-medium text-white">Email</h3>
             <p className="mt-1 text-indigo-100">support@evently.com</p>
           </div>
-
           <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 text-center">
             <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-indigo-100">
               <svg

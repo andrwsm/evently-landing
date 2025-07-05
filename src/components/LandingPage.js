@@ -342,6 +342,9 @@ export default function LandingPage() {
             >
               <circle cx="400" cy="400" r="400" fill="white"></circle>
             </svg>
+            <div className="swirls opacity-25">
+              <img src={whiteswirls}></img>
+            </div>
 
             {/* Keep swirls with adjusted opacity */}
             <img
@@ -380,8 +383,8 @@ export default function LandingPage() {
                 Where events <span className="font-light">come to life</span>
               </h1>
               <p className="mt-8 text-pretty text-lg font-medium text-indigo-100 sm:text-xl/8">
-                Join us to elevate your Gen Z corporate and networking events to
-                the next level. Connect, collaborate, and create unforgettable
+                Join us to elevate your corporate and networking events to the
+                next level. Connect, collaborate, and create unforgettable
                 experiences.
               </p>
 
@@ -404,7 +407,7 @@ export default function LandingPage() {
             <img
               alt=""
               src={ui}
-              className="relative mt-16 lg:mt-0 h-auto w-full max-w-md mx-auto lg:max-w-lg xl:max-w-xl rounded-lg shadow-2xl"
+              className="relative mt-16 lg:mt-0 h-auto w-full max-w-sm mx-auto lg:max-w-md xl:max-w-lg rounded-lg shadow-2xl"
             />
           </div>
         </div>

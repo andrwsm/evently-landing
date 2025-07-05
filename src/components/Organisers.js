@@ -2,6 +2,8 @@ import React from "react";
 import keepMore from "../assets/images/MoreMoneyIcon.webp";
 import { CheckIcon } from "@heroicons/react/24/outline";
 
+import whiteswirls from "../assets/eventlyLogos/whiteswirls.png";
+
 export default function Organisers() {
   // Define the problems and solutions based on the images
   const problems = [
@@ -183,24 +185,9 @@ export default function Organisers() {
       {/* Hero Section */}
       <div className="relative bg-gradient-to-r from-blue-600 to-indigo-700 overflow-hidden">
         <div className="absolute inset-0">
-          <svg
-            className="absolute bottom-0 left-0 transform translate-y-1/2 opacity-20"
-            width="800"
-            height="800"
-            fill="none"
-            viewBox="0 0 800 800"
-          >
-            <circle cx="400" cy="400" r="400" fill="white"></circle>
-          </svg>
-          <svg
-            className="absolute top-0 right-0 transform -translate-y-1/2 opacity-20"
-            width="800"
-            height="800"
-            fill="none"
-            viewBox="0 0 800 800"
-          >
-            <circle cx="400" cy="400" r="400" fill="white"></circle>
-          </svg>
+          <div className="swirls opacity-25">
+            <img src={whiteswirls}></img>
+          </div>
         </div>
 
         <div className="relative px-6 py-32 sm:py-40 lg:py-48 lg:px-8 max-w-7xl mx-auto">
@@ -319,7 +306,7 @@ export default function Organisers() {
       </div>
 
       {/* Testimonial Section */}
-      <div className="bg-indigo-700">
+      {/* <div className="bg-indigo-700">
         <div className="max-w-7xl mx-auto px-4 py-16 sm:px-6 sm:py-24 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl font-extrabold text-white">
@@ -433,7 +420,7 @@ export default function Organisers() {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
 
       {/* CTA Section */}
       <div className="bg-white">

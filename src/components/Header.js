@@ -152,13 +152,15 @@ export default function Header() {
             }}
           >
             <Link
-              to="/Users"
+              to="/Organisers"
               className="text-sm/6 font-semibold text-gray-900"
               onClick={(e) => {
                 e.preventDefault();
                 handleNavigation("/Users", "users");
               }}
-            ></Link>
+            >
+              Organisers
+            </Link>
           </Link>
           <Link
             to="/Users"

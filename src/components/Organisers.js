@@ -1,45 +1,480 @@
 import React from "react";
 import keepMore from "../assets/images/MoreMoneyIcon.webp";
+import { CheckIcon } from "@heroicons/react/24/outline";
 
 export default function Organisers() {
-    return (
+  // Define the problems and solutions based on the images
+  const problems = [
+    {
+      title: "High Event Ticket/Seller Fees",
+      description:
+        "Major platforms charge high fees, cutting into margins and making it harder for independent organizers to make a good return.",
+      icon: (
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          className="h-12 w-12 text-indigo-600"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"
+          />
+        </svg>
+      ),
+    },
+    {
+      title: "Fragmented Communication",
+      description:
+        "Keeping attendees informed means juggling emails, DMs, and chat groups, leading to disorganized outreach and lower engagement.",
+      icon: (
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          className="h-12 w-12 text-indigo-600"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"
+          />
+        </svg>
+      ),
+    },
+    {
+      title: "Multiple Applications",
+      description:
+        "Organizers often juggle multiple platforms to market, manage, and engage their audience.",
+      icon: (
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          className="h-12 w-12 text-indigo-600"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+          />
+        </svg>
+      ),
+    },
+    {
+      title: "Manual Processes",
+      description:
+        "Tasks like RSVPs and data tracking are still largely manual—wasting valuable time and limiting growth potential.",
+      icon: (
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          className="h-12 w-12 text-indigo-600"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
+          />
+        </svg>
+      ),
+    },
+  ];
 
-        <div className="flex flex-col lg:flex-row items-center justify-between min-h-[60vh] px-4">
-            <div className="flex-1 flex justify-start items-center">
-                <div
-                    id="icon-circle"
-                    className="bg-blue-500 flex items-center justify-center"
-                    style={{
-                        width: "25vw",
-                        height: "25vw",
-                        maxWidth: "600px",
-                        maxHeight: "600px",
-                        minWidth: "250px",
-                        minHeight: "250px",
-                        borderRadius: "50%",
-                        marginTop: "4rem",
-                        marginLeft: "10rem",
-                    }}
-                >
-                    <img
-                        src={keepMore}
-                        alt=""
-                        className="w-1/2 h-1/2 object-contain"
-                        style={{ maxWidth: "220px", maxHeight: "220px" }}
-                    />
-                </div>
-            </div>
-            <div className="flex-1 flex flex-col justify-center items-start mt-8 lg:mt-0 lg:ml-12">
-                <h2 className="text-3xl font-bold mb-4">
-                    Sell Out Your Next Event & Engage Your Community Like Never Before
-                </h2>
-                <p className="text-lg">
-                    Our platform makes it effortless for corporate event organisers to manage ticketing, drive registrations, and keep your audience connected — all in one place.
-                </p>
-                <p className="mt-6 text-base text-gray-700">
-                    With Evently, you keep more of what you earn. Our intuitive tools and seamless experience help you focus on what matters most: delivering value to your attendees and growing your community.
-                </p>
-            </div>
+  const solutions = [
+    {
+      title: "40% Lower Fees",
+      description:
+        "Our platform significantly reduces seller fees by 40%, giving you more flexibility to price competitively and retain revenue.",
+      icon: (
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          className="h-16 w-16 text-sky-500"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+          />
+        </svg>
+      ),
+    },
+    {
+      title: "Community Forums",
+      description:
+        "Built-in community spaces let you post announcements, answer questions, and engage directly with attendees before, during, and after the event—all in one place.",
+      icon: (
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          className="h-16 w-16 text-sky-500"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z"
+          />
+        </svg>
+      ),
+    },
+    {
+      title: "Interactive Networking",
+      description:
+        "Attendees can scan QR codes to view profiles and connect instantly—bringing digital networking into the physical world and adding value to your event.",
+      icon: (
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          className="h-16 w-16 text-sky-500"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"
+          />
+        </svg>
+      ),
+    },
+    {
+      title: "Gen Z Audience",
+      description:
+        "Our platform is designed to meet the expectations and behaviors of Gen Z and young professionals—social, fast, and purpose-driven.",
+      icon: (
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          className="h-16 w-16 text-sky-500"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+          />
+        </svg>
+      ),
+    },
+  ];
+
+  return (
+    <div className="bg-white">
+      {/* Hero Section */}
+      <div className="relative bg-gradient-to-r from-blue-600 to-indigo-700 overflow-hidden">
+        <div className="absolute inset-0">
+          <svg
+            className="absolute bottom-0 left-0 transform translate-y-1/2 opacity-20"
+            width="800"
+            height="800"
+            fill="none"
+            viewBox="0 0 800 800"
+          >
+            <circle cx="400" cy="400" r="400" fill="white"></circle>
+          </svg>
+          <svg
+            className="absolute top-0 right-0 transform -translate-y-1/2 opacity-20"
+            width="800"
+            height="800"
+            fill="none"
+            viewBox="0 0 800 800"
+          >
+            <circle cx="400" cy="400" r="400" fill="white"></circle>
+          </svg>
         </div>
-    );
+
+        <div className="relative px-6 py-32 sm:py-40 lg:py-48 lg:px-8 max-w-7xl mx-auto">
+          <h1 className="text-center text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl">
+            <span className="block text-white">
+              Event Management Reimagined
+            </span>
+            <span className="block text-indigo-200 mt-2">
+              For Modern Organizers
+            </span>
+          </h1>
+          <p className="mt-6 max-w-lg mx-auto text-center text-xl text-indigo-100 sm:max-w-3xl">
+            A streamlined web app that cuts costs, centralizes event management,
+            and connects organizers with attendees in a way that resonates with
+            today's audience.
+          </p>
+          <div className="mt-10 max-w-sm mx-auto sm:max-w-none sm:flex sm:justify-center">
+            <div className="space-y-4 sm:space-y-0 sm:mx-auto sm:inline-grid sm:grid-cols-2 sm:gap-5">
+              <a
+                href="#"
+                className="flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-indigo-700 bg-white hover:bg-indigo-50 sm:px-8"
+              >
+                Get Started
+              </a>
+              <a
+                href="#features"
+                className="flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-indigo-500 bg-opacity-60 hover:bg-opacity-70 sm:px-8"
+              >
+                Learn More
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Problem Statement Section */}
+      <div className="py-16 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="lg:text-center">
+            <h2 className="text-base text-indigo-600 font-semibold tracking-wide uppercase">
+              Problem Statement
+            </h2>
+            <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+              Organizing events shouldn't be this hard
+            </p>
+            <p className="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
+              Organizing professional events is costly, time-consuming, and
+              scattered across too many platforms, making it inefficient and
+              inaccessible for modern organizers.
+            </p>
+          </div>
+
+          <div className="mt-16">
+            <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
+              {problems.map((problem, index) => (
+                <div
+                  key={index}
+                  className="bg-white overflow-hidden shadow rounded-lg"
+                >
+                  <div className="p-6">
+                    <div className="flex items-center">
+                      <div className="flex-shrink-0">{problem.icon}</div>
+                      <div className="ml-4">
+                        <h3 className="text-lg leading-6 font-medium text-gray-900">
+                          {problem.title}
+                        </h3>
+                        <p className="mt-1 text-sm text-gray-500">
+                          {problem.description}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Solutions Section */}
+      <div id="features" className="py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="lg:text-center">
+            <h2 className="text-base text-indigo-600 font-semibold tracking-wide uppercase">
+              Our Solutions
+            </h2>
+            <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+              How We Transform Your Event Management
+            </p>
+            <p className="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
+              We've built features specifically designed to solve the biggest
+              pain points for event organizers.
+            </p>
+          </div>
+
+          <div className="mt-20">
+            <div className="grid grid-cols-1 gap-y-20 lg:grid-cols-2 lg:gap-x-12 lg:gap-y-16">
+              {solutions.map((solution, index) => (
+                <div key={index} className="relative">
+                  <div className="absolute h-24 w-24 rounded-md bg-blue-100 flex items-center justify-center">
+                    {solution.icon}
+                  </div>
+                  <div className="ml-32 space-y-4">
+                    <h3 className="text-2xl font-bold text-gray-900">
+                      {solution.title}
+                    </h3>
+                    <p className="text-lg text-gray-500">
+                      {solution.description}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Testimonial Section */}
+      <div className="bg-indigo-700">
+        <div className="max-w-7xl mx-auto px-4 py-16 sm:px-6 sm:py-24 lg:px-8">
+          <div className="max-w-3xl mx-auto text-center">
+            <h2 className="text-3xl font-extrabold text-white">
+              Loved by event organizers
+            </h2>
+            <p className="mt-4 text-xl text-indigo-100">
+              Organizers who've switched to our platform have seen significant
+              improvements in attendee engagement and cost savings.
+            </p>
+          </div>
+          <div className="mt-12 space-y-4 sm:mt-16 sm:space-y-0 sm:grid sm:grid-cols-2 sm:gap-6 lg:grid-cols-3 lg:gap-8">
+            <div className="bg-white overflow-hidden shadow rounded-lg">
+              <div className="px-6 py-8">
+                <div className="flex items-center">
+                  <div className="flex-shrink-0 h-12 w-12 rounded-full bg-indigo-100 flex items-center justify-center">
+                    <svg
+                      className="h-6 w-6 text-indigo-600"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M5 13l4 4L19 7"
+                      />
+                    </svg>
+                  </div>
+                  <div className="ml-4">
+                    <h3 className="text-lg font-medium text-gray-900">
+                      Sarah J.
+                    </h3>
+                    <p className="text-sm text-gray-500">
+                      Tech Conference Organizer
+                    </p>
+                  </div>
+                </div>
+                <p className="mt-4 text-base text-gray-500">
+                  "I've saved over 35% on fees compared to other platforms. The
+                  networking features have also increased attendee satisfaction
+                  by 40%."
+                </p>
+              </div>
+            </div>
+            <div className="bg-white overflow-hidden shadow rounded-lg">
+              <div className="px-6 py-8">
+                <div className="flex items-center">
+                  <div className="flex-shrink-0 h-12 w-12 rounded-full bg-indigo-100 flex items-center justify-center">
+                    <svg
+                      className="h-6 w-6 text-indigo-600"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M5 13l4 4L19 7"
+                      />
+                    </svg>
+                  </div>
+                  <div className="ml-4">
+                    <h3 className="text-lg font-medium text-gray-900">
+                      Mark T.
+                    </h3>
+                    <p className="text-sm text-gray-500">
+                      Networking Event Coordinator
+                    </p>
+                  </div>
+                </div>
+                <p className="mt-4 text-base text-gray-500">
+                  "The QR code networking feature has been a game-changer.
+                  Attendees are connecting more meaningfully, and our post-event
+                  surveys show higher satisfaction."
+                </p>
+              </div>
+            </div>
+            <div className="bg-white overflow-hidden shadow rounded-lg">
+              <div className="px-6 py-8">
+                <div className="flex items-center">
+                  <div className="flex-shrink-0 h-12 w-12 rounded-full bg-indigo-100 flex items-center justify-center">
+                    <svg
+                      className="h-6 w-6 text-indigo-600"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M5 13l4 4L19 7"
+                      />
+                    </svg>
+                  </div>
+                  <div className="ml-4">
+                    <h3 className="text-lg font-medium text-gray-900">
+                      Alex P.
+                    </h3>
+                    <p className="text-sm text-gray-500">Community Builder</p>
+                  </div>
+                </div>
+                <p className="mt-4 text-base text-gray-500">
+                  "The community forums have transformed how I engage with
+                  attendees. Communication is centralized, and my Gen Z audience
+                  loves the modern interface."
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* CTA Section */}
+      <div className="bg-white">
+        <div className="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
+          <div className="bg-indigo-50 rounded-lg shadow-xl overflow-hidden lg:grid lg:grid-cols-2 lg:gap-4">
+            <div className="pt-10 pb-12 px-6 sm:pt-16 sm:px-16 lg:py-16 lg:pr-0 xl:py-20 xl:px-20">
+              <div className="lg:self-center">
+                <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">
+                  <span className="block">
+                    Ready to simplify your event management?
+                  </span>
+                </h2>
+                <p className="mt-4 text-lg leading-6 text-gray-500">
+                  Join thousands of organizers who are saving time, reducing
+                  costs, and creating more engaging events with our platform.
+                </p>
+                <a
+                  href="#"
+                  className="mt-8 bg-indigo-600 border border-transparent rounded-md shadow px-5 py-3 inline-flex items-center text-base font-medium text-white hover:bg-indigo-700"
+                >
+                  Sign up for free
+                </a>
+              </div>
+            </div>
+            <div className="-mt-6 aspect-w-5 aspect-h-3 md:aspect-w-2 md:aspect-h-1">
+              <div className="transform translate-x-6 translate-y-6 rounded-md object-cover object-left-top sm:translate-x-16 lg:translate-y-20 flex items-center justify-center">
+                <div
+                  className="bg-blue-500 flex items-center justify-center rounded-full"
+                  style={{ width: "300px", height: "300px" }}
+                >
+                  <img
+                    src={keepMore}
+                    alt="Keep more of your revenue"
+                    className="w-3/5 h-3/5 object-contain"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
 }

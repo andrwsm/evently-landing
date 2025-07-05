@@ -4,17 +4,7 @@ import { useState, useEffect } from "react";
 import { Dialog, DialogPanel } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import ui from "../assets/eventlyLogos/ui.png";
-import {
-  ArrowPathIcon,
-  ChevronRightIcon,
-  CloudArrowUpIcon,
-  LockClosedIcon,
-  ServerIcon,
-  CurrencyDollarIcon,
-  TicketIcon,
-  UserCircleIcon,
-  CheckIcon,
-} from "@heroicons/react/20/solid";
+import { ChevronRightIcon, CheckIcon } from "@heroicons/react/20/solid";
 import {
   Disclosure,
   DisclosureButton,
@@ -120,7 +110,7 @@ export default function LandingPage() {
         "Sell your tickets without huge fees driving up prices. You keep all of what you earn from your events. The only fee is from out payment processor, Stripe.",
       details:
         "With our platform, you can sell your event tickets without worrying about any additional charges. Unlike other ticketing services that take a percentage of your sales, we ensure that you keep 100% of what you earn. The only cost involved is the standard processing fee from our trusted payment partner, Stripe. This means you get full control over your revenue, allowing you to maximize your event profits without hidden costs or service fees. Whether you're organizing a concert, conference, or community gathering, our straightforward pricing model ensures that every dollar you make goes directly to you.",
-      icon: CurrencyDollarIcon,
+      // icon: CurrencyDollarIcon,
     },
     {
       name: "Easy to use",
@@ -128,7 +118,7 @@ export default function LandingPage() {
         "Our platform is designed to be easy to use and easy to understand. No need to be a tech wizard.",
       details:
         "Our platform is built with simplicity in mind, making it easy for anyone to create, manage, and sell tickets for their events—no technical expertise required. With an intuitive interface and straightforward navigation, you can set up your event in just a few clicks. Whether you're a first-time organizer or a seasoned event planner, our user-friendly tools ensure a hassle-free experience. You won’t need to worry about complicated setups or confusing options—just focus on making your event a success while we handle the rest.",
-      icon: TicketIcon,
+      // icon: TicketIcon,
     },
     {
       name: "Client first",
@@ -136,7 +126,7 @@ export default function LandingPage() {
         "You are our priority. We will always be here to help you with any issues you may have.",
       details:
         "Your success is our top priority. We’re committed to providing exceptional support whenever you need it. Whether you have questions, need assistance setting up your event, or encounter any issues along the way, our dedicated team is here to help. With responsive customer service and helpful resources, we ensure you’re never left figuring things out on your own. No matter the challenge, we’ve got your back—because your experience matters to us.",
-      icon: UserCircleIcon,
+      // icon: UserCircleIcon,
     },
   ];
 
@@ -330,365 +320,346 @@ export default function LandingPage() {
   return (
     <div className="bg-white relative" id="home">
       <main>
-        {/* Hero section */}
-        <div className="relative isolate pt-12">
-          <div className="swirls">
+        {/* Hero section - Updated with gradient background */}
+        <div className="relative bg-gradient-to-r from-blue-600 to-indigo-700 overflow-hidden pt-12">
+          <div className="absolute inset-0">
+            {/* Decorative circles from Organisers page */}
+            <svg
+              className="absolute bottom-0 left-0 transform translate-y-1/2 opacity-20"
+              width="800"
+              height="800"
+              fill="none"
+              viewBox="0 0 800 800"
+            >
+              <circle cx="400" cy="400" r="400" fill="white"></circle>
+            </svg>
+            <svg
+              className="absolute top-0 right-0 transform -translate-y-1/2 opacity-20"
+              width="800"
+              height="800"
+              fill="none"
+              viewBox="0 0 800 800"
+            >
+              <circle cx="400" cy="400" r="400" fill="white"></circle>
+            </svg>
+
+            {/* Keep swirls with adjusted opacity */}
             <img
               src={blueswirtls}
-              className="opacity-20 -z-10 absolute -scale-x-100"
-            ></img>
+              className="absolute w-full h-full object-cover opacity-10 mix-blend-overlay"
+              alt=""
+            />
           </div>
-          {/* Background icons */}
-          {/* <div className="absolute inset-0 -z-10">
-            <img
-              src={EventlyIcon}
-              className="absolute w-10 h-10"
-              style={{
-                top: "15%",
-                left: "15%",
-                transform: "rotate(15deg)",
-              }}
-            />
-          </div> */}
-          <svg
-            aria-hidden="true"
-            className="absolute inset-0 -z-10 size-full stroke-gray-200 [mask-image:radial-gradient(100%_100%_at_top_right,white,transparent)]"
-          >
-            <defs>
-              <pattern
-                x="50%"
-                y={-1}
-                id="83fd4e5a-9d52-42fc-97b6-718e5d7ee527"
-                width={200}
-                height={200}
-                patternUnits="userSpaceOnUse"
-              >
-                <path d="M100 200V.5M.5 .5H200" fill="none" />
-              </pattern>
-            </defs>
-            <svg x="50%" y={-1} className="overflow-visible fill-gray-200">
-              <path
-                d="M-100.5 0h201v201h-201Z M699.5 0h201v201h-201Z M499.5 400h201v201h-201Z M-300.5 600h201v201h-201Z"
-                strokeWidth={0}
-              />
-            </svg>
-            <rect
-              fill="url(#83fd4e5a-9d52-42fc-97b6-718e5d7ee527)"
-              width="100%"
-              height="100%"
-              strokeWidth={0}
-            />
-          </svg>
-          <div className="mx-auto max-w-7xl px-6 py-12 sm:py-16 lg:flex lg:items-center lg:gap-x-10 lg:px-8 lg:py-20">
+
+          <div className="relative mx-auto max-w-7xl px-6 py-12 sm:py-32 lg:flex lg:items-center lg:gap-x-10 lg:px-8 lg:py-40">
             <div className="mx-auto max-w-2xl lg:mx-0 lg:flex-auto">
               <div className="flex">
-                <div className="relative flex items-center gap-x-4 rounded-full bg-white px-4 py-1 text-sm/6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
-                  <span className="font-semibold text-dark-sky">
-                    We’re changing things
+                <div className="relative flex items-center gap-x-4 rounded-full bg-white/10 backdrop-blur-sm px-4 py-1 text-sm/6 text-white ring-1 ring-white/20 hover:ring-white/40">
+                  <span className="font-semibold text-white">
+                    We're changing things
                   </span>
-                  <span
-                    aria-hidden="true"
-                    className="h-4 w-px bg-gray-900/10"
-                  />
+                  <span aria-hidden="true" className="h-4 w-px bg-white/20" />
                   <a
                     href="#features"
-                    className="flex items-center gap-x-1 scroll-smooth"
+                    className="flex items-center gap-x-1 scroll-smooth text-white"
                   >
                     <span aria-hidden="true" className="absolute inset-0" />
                     See what we do differently
                     <ChevronRightIcon
                       aria-hidden="true"
-                      className="-mr-2 size-5 text-gray-400"
+                      className="-mr-2 size-5 text-white/70"
                     />
                   </a>
                 </div>
               </div>
               <h1
-                className={`mt-10 text-5xl md:text-6xl font-bold text-gray-900 sm:text-7xl transition-opacity duration-[1500ms] ${
+                className={`mt-10 text-5xl md:text-6xl font-bold text-white sm:text-7xl transition-opacity duration-[1500ms] ${
                   isVisible ? "opacity-100" : "opacity-0"
                 }`}
               >
-                Where events <span className="font-semibold">come to life</span>
+                Where events <span className="font-light">come to life</span>
               </h1>
-              <p className="mt-8 text-pretty text-lg font-medium text-gray-500 sm:text-xl/8">
+              <p className="mt-8 text-pretty text-lg font-medium text-indigo-100 sm:text-xl/8">
                 Join us to elevate your Gen Z corporate and networking events to
                 the next level. Connect, collaborate, and create unforgettable
                 experiences.
               </p>
+
+              {/* Add CTA buttons similar to Organisers page */}
+              <div className="mt-10 max-w-sm mx-auto sm:max-w-none sm:flex sm:gap-5">
+                <a
+                  href="#"
+                  className="flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-indigo-700 bg-white hover:bg-indigo-50 sm:px-8"
+                >
+                  Get Started
+                </a>
+                <a
+                  href="#features"
+                  className="flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-indigo-500 bg-opacity-60 hover:bg-opacity-70 sm:px-8 mt-4 sm:mt-0"
+                >
+                  Learn More
+                </a>
+              </div>
             </div>
-            <img alt="" src={ui} className="h-[90vh]" />
+            <img
+              alt=""
+              src={ui}
+              className="relative mt-16 lg:mt-0 h-auto w-full max-w-md mx-auto lg:max-w-lg xl:max-w-xl rounded-lg shadow-2xl"
+            />
           </div>
         </div>
 
-        {/* Feature section */}
+        {/* Feature section - Updated styling */}
+        <div className="bg-white py-24 sm:py-32" id="features">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="lg:text-center">
+              <h2 className="text-base text-indigo-600 font-semibold tracking-wide uppercase">
+                Everything you need
+              </h2>
+              <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+                All-in-one platform
+              </p>
+              <p className="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
+                We are proud to offer a comprehensive event management platform
+                that enables you to create, manage, and promote your events with
+                ease.
+              </p>
+            </div>
 
-        <div className="bg-white py-24 sm:py-32">
-          <div className="mx-auto max-w-7xl px-6 lg:px-8">
-            <div
-              className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8
-          gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-5"
-            >
-              <div className="col-span-2">
-                <h2
-                  className="text-base/7 font-semibold
-            text-dark-sky"
-                >
-                  Everything you need
-                </h2>
-                <p
-                  className="mt-2 text-pretty text-4xl font-semibold
-              tracking-tight text-gray-900 sm:text-5xl"
-                >
-                  All-in-one platform
-                </p>
-                <p className="mt-6 text-base/7 text-gray-600">
-                  We are proud to offer a comprehensive event management
-                  platform that enables you to create, manage, and promote your
-                  events with ease. Our platform is designed to be user-friendly
-                  and intuitive, allowing you to focus on what matters most -
-                  your event.
-                </p>
-              </div>
-              <dl
-                className="col-span-3 grid grid-cols-1 gap-x-8 gap-y-10
-            text-base/7 text-gray-600 sm:grid-cols-2 lg:gap-y-16"
-              >
+            <div className="mt-16">
+              <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
                 {features.map((feature) => (
-                  <div key={feature.name} className="relative pl-9">
-                    <dt className="font-semibold text-gray-900">
-                      <CheckIcon
-                        aria-hidden="true"
-                        className="absolute
-                  left-0 top-1 size-5 text-dark-sky"
-                      />
-                      {feature.name}
-                    </dt>
-                    <dd className="mt-2">{feature.description}</dd>
+                  <div
+                    key={feature.name}
+                    className="bg-white overflow-hidden shadow rounded-lg"
+                  >
+                    <div className="p-6">
+                      <div className="flex items-center">
+                        <div className="flex-shrink-0 h-12 w-12 rounded-md bg-indigo-100 flex items-center justify-center">
+                          <CheckIcon
+                            className="h-6 w-6 text-indigo-600"
+                            aria-hidden="true"
+                          />
+                        </div>
+                        <div className="ml-4">
+                          <h3 className="text-lg leading-6 font-medium text-gray-900">
+                            {feature.name}
+                          </h3>
+                          <p className="mt-1 text-sm text-gray-500">
+                            {feature.description}
+                          </p>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 ))}
-              </dl>
+              </div>
             </div>
           </div>
         </div>
-        <div className="swirls">
-          <img src={blueswirtls} className="opacity-70 -z-10 -top-90"></img>
+
+        {/* Values section with swirls background */}
+        <div className="relative bg-indigo-50 py-16 sm:py-24">
+          <div className="absolute inset-0 overflow-hidden opacity-10">
+            <img
+              src={blueswirtls}
+              className="w-full h-full object-cover"
+              alt=""
+            />
+          </div>
+          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="lg:text-center mb-16">
+              <h2 className="text-base text-indigo-600 font-semibold tracking-wide uppercase">
+                Our Core Values
+              </h2>
+              <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+                What guides us
+              </p>
+              <p className="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
+                Our values are the guiding principles that shape our culture and
+                define who we are as a company.
+              </p>
+            </div>
+
+            <div className="mt-10">
+              <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+                {values.map((value) => (
+                  <div
+                    key={value.name}
+                    className="bg-white overflow-hidden shadow rounded-lg p-6"
+                  >
+                    <h3 className="text-lg font-medium text-indigo-600 mb-2">
+                      {value.name}
+                    </h3>
+                    <p className="text-gray-600">{value.description}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
         </div>
 
-        {/* About us section */}
-        <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
-          <div className="mx-auto max-w-2xl lg:mx-0">
-            <h2 className="text-pretty text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl">
-              Our values
-            </h2>
-            <p className="mt-6 text-lg/8 text-gray-600">
-              Our values are the guiding principles that shape our culture and
-              define who we are as a company. They guide our decisions, actions,
-              and interactions, ensuring we stay true to our mission and create
-              a positive impact on the world.
-            </p>
-          </div>
-          <dl className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 text-base/7 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-3">
-            {values.map((value) => (
-              <div key={value.name}>
-                <dt className="font-semibold text-gray-900">{value.name}</dt>
-                <dd className="mt-1 text-gray-600">{value.description}</dd>
-              </div>
-            ))}
-          </dl>
-        </div>
-        {/* Team section */}
-        <div className="bg-white py-24 md:py-32 lg:py-40">
-          <div
-            className="mx-auto grid max-w-7xl grid-cols-1 gap-20 px-6
-lg:px-8 xl:grid-cols-3"
-          >
-            <div className="mx-auto max-w-2xl lg:mx-0">
-              <h2
-                className="text-pretty text-4xl font-semibold
-        tracking-tight text-gray-900 sm:text-5xl"
-              >
+        {/* Team section - Updated styling */}
+        <div className="bg-white py-24 sm:py-32">
+          <div className="mx-auto max-w-7xl px-6 lg:px-8">
+            <div className="mx-auto max-w-2xl lg:mx-0 text-center mb-16">
+              <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
                 Our team
               </h2>
-              <p className="mt-6 text-lg/8 text-gray-600">
-                We’re a dynamic group of individuals who are passionate about
+              <p className="mt-6 text-lg text-gray-600">
+                We're a dynamic group of individuals who are passionate about
                 what we do and dedicated to delivering the best results for our
                 clients.
               </p>
             </div>
-            <ul
-              role="list"
-              className="mx-auto grid max-w-2xl grid-cols-1 gap-x-6
-gap-y-20 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:gap-x-8
-xl:col-span-2"
-            >
+
+            <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-4">
               {people.map((person) => (
-                <li key={person.name}>
-                  <img
-                    alt=""
-                    src={person.imageUrl}
-                    className="aspect-[3/2] w-full rounded-2xl object-cover"
-                  />
-                  <h3
-                    className="mt-6 text-lg/8 font-semibold
-text-gray-900"
-                  >
+                <div key={person.name} className="group relative">
+                  <div className="aspect-[3/2] overflow-hidden rounded-2xl bg-gray-100">
+                    <img
+                      src={person.imageUrl}
+                      alt=""
+                      className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500"
+                    />
+                  </div>
+                  <h3 className="mt-6 text-lg font-semibold text-gray-900">
                     {person.name}
                   </h3>
-                  <p className="text-base/7 text-gray-600">{person.role}</p>
-                  <p className="mt-4 text-base/7 text-gray-600">{person.bio}</p>
-                  <ul role="list" className="mt-6 flex gap-x-6">
-                    <li>
-                      <a
-                        href={person.linkedinUrl}
-                        className="text-gray-400 hover:text-gray-500"
-                      >
-                        <span className="sr-only">LinkedIn</span>
-                        <svg
-                          fill="currentColor"
-                          viewBox="0 0 20 20"
-                          aria-hidden="true"
-                          className="size-5"
-                        >
-                          <path
-                            d="M16.338
-                            16.338H13.67V12.16c0-.995-.017-2.277-1.387-2.277-1.39 0-1.601
-                            1.086-1.601 2.207v4.248H8.014v-8.59h2.559v1.174h.037c.356-.675
-                            1.227-1.387 2.526-1.387 2.703 0 3.203 1.778 3.203 4.092v4.711zM5.005
-                            6.575a1.548 1.548 0 11-.003-3.096 1.548 1.548 0 01.003 3.096zm-1.337
-                            9.763H6.34v-8.59H3.667v8.59zM17.668 1H2.328C1.595 1 1 1.581 1
-                            2.298v15.403C1 18.418 1.595 19 2.328 19h15.34c.734 0 1.332-.582
-                            1.332-1.299V2.298C19 1.581 18.402 1 17.668 1z"
-                            clipRule="evenodd"
-                            fillRule="evenodd"
-                          />
-                        </svg>
-                      </a>
-                    </li>
-                  </ul>
-                </li>
+                  <p className="text-sm text-indigo-600">{person.role}</p>
+                  <p className="mt-2 text-sm text-gray-500 line-clamp-3">
+                    {person.bio}
+                  </p>
+                </div>
               ))}
-            </ul>
+            </div>
           </div>
         </div>
 
-        {/* Newsletter section */}
-        <div className="mx-auto mt-32 max-w-7xl sm:mt-56 sm:px-6 lg:px-8">
-          <div className="relative isolate overflow-hidden bg-gray-900 px-6 py-24 shadow-2xl sm:rounded-3xl sm:px-24 xl:py-32">
-            <h2 className="mx-auto max-w-3xl text-center text-4xl font-semibold tracking-tight text-white sm:text-5xl">
-              Get notified when we’re launching
-            </h2>
-            <p className="mx-auto mt-6 max-w-lg text-center text-lg text-gray-300">
-              Be the first to know when we launch our new product.
-            </p>
-            <form className="mx-auto mt-10 flex max-w-md gap-x-4">
-              <label htmlFor="email-address" className="sr-only">
-                Email address
-              </label>
-              <input
-                id="email-address"
-                name="email"
-                type="email"
-                required
-                placeholder="Enter your email"
-                autoComplete="email"
-                className="min-w-0 flex-auto rounded-md bg-white/5 px-3.5 py-2 text-base text-white outline outline-1 -outline-offset-1 outline-white/10 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-white sm:text-sm/6"
-              />
-              <button
-                type="submit"
-                className="flex-none rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-gray-900 shadow-sm hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
-                onSubmit={console.log("Submitted")}
-              >
-                Notify me
-              </button>
-            </form>
-            <p className="text-center text-stone-50 text-sm mt-5">
-              By clicking the the button, you agree to our{" "}
-              <a
-                href="/privacypolicy"
-                className="hover:text-link-color cursor-pointer text-blue-600"
-              >
-                privacy policy
-              </a>
-            </p>
-            <svg
-              viewBox="0 0 1024 1024"
-              aria-hidden="true"
-              className="absolute left-1/2 top-1/2 -z-10 size-[64rem] -translate-x-1/2"
-            >
-              <circle
-                r={512}
-                cx={512}
-                cy={512}
-                fill="url(#759c1415-0410-454c-8f7c-9a820de03641)"
-                fillOpacity="0.7"
-              />
-              <defs>
-                <radialGradient
-                  r={1}
-                  cx={0}
-                  cy={0}
-                  id="759c1415-0410-454c-8f7c-9a820de03641"
-                  gradientUnits="userSpaceOnUse"
-                  gradientTransform="translate(512 512) rotate(90) scale(512)"
-                >
-                  <stop stopColor="#7775D6" />
-                  <stop offset={1} stopColor="#E935C1" stopOpacity={0} />
-                </radialGradient>
-              </defs>
-            </svg>
+        {/* Newsletter section - Updated styling */}
+        <div className="bg-indigo-700">
+          <div className="mx-auto max-w-7xl py-16 px-6 sm:py-24 lg:px-8">
+            <div className="relative isolate px-6 py-12 sm:px-16 sm:py-16 lg:px-24 overflow-hidden rounded-3xl">
+              <div className="absolute inset-0 -z-10 opacity-20">
+                <img
+                  src={blueswirtls}
+                  className="h-full w-full object-cover"
+                  alt=""
+                />
+              </div>
+
+              <div className="mx-auto max-w-2xl text-center">
+                <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
+                  Get notified when we're launching
+                </h2>
+                <p className="mx-auto mt-6 max-w-xl text-lg text-indigo-100">
+                  Be the first to know when we launch our new product.
+                </p>
+                <form className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
+                  <input
+                    id="email-address"
+                    name="email"
+                    type="email"
+                    required
+                    placeholder="Enter your email"
+                    className="min-w-0 flex-auto rounded-md bg-white/10 px-4 py-3 text-white ring-1 ring-inset ring-white/20 placeholder:text-white/60 focus:ring-2 focus:ring-white sm:text-sm"
+                  />
+                  <button
+                    type="submit"
+                    className="flex-none rounded-md bg-white px-4 py-3 text-sm font-semibold text-indigo-700 shadow-sm hover:bg-indigo-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-white"
+                  >
+                    Notify me
+                  </button>
+                </form>
+                <p className="mt-4 text-sm text-indigo-100">
+                  By clicking the button, you agree to our{" "}
+                  <a
+                    href="/privacypolicy"
+                    className="font-semibold text-white hover:text-indigo-200"
+                  >
+                    privacy policy
+                  </a>
+                </p>
+              </div>
+            </div>
           </div>
         </div>
 
-        {/* Testimonials section */}
+        {/* FAQs section - Updated styling */}
+        <div className="bg-white py-24 sm:py-32" id="faq">
+          <div className="mx-auto max-w-7xl px-6 lg:px-8">
+            <div className="lg:grid lg:grid-cols-12 lg:gap-8">
+              <div className="lg:col-span-5">
+                <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+                  Frequently asked questions
+                </h2>
+                <p className="mt-4 text-lg text-gray-500">
+                  Can't find the answer you're looking for? Contact our
+                  <a
+                    href="/contact"
+                    className="font-medium text-indigo-600 hover:text-indigo-500"
+                  >
+                    {" "}
+                    customer support team
+                  </a>
+                  .
+                </p>
+                <div className="mt-12 hidden lg:block">
+                  <img
+                    src={FAQ}
+                    className="w-full max-w-md rounded-lg shadow-lg"
+                    alt="FAQ"
+                  />
+                </div>
+              </div>
+              <div className="mt-12 lg:col-span-7 lg:mt-0">
+                <dl className="space-y-6 divide-y divide-gray-200">
+                  {faqs.map((faq) => (
+                    <Disclosure as="div" key={faq.question} className="pt-6">
+                      {({ open }) => (
+                        <>
+                          <dt>
+                            <DisclosureButton className="flex w-full items-start justify-between text-left text-gray-900">
+                              <span className="text-base font-semibold leading-7">
+                                {faq.question}
+                              </span>
+                              <span className="ml-6 flex h-7 items-center">
+                                {open ? (
+                                  <MinusSmallIcon
+                                    className="h-6 w-6 text-indigo-600"
+                                    aria-hidden="true"
+                                  />
+                                ) : (
+                                  <PlusSmallIcon
+                                    className="h-6 w-6 text-indigo-600"
+                                    aria-hidden="true"
+                                  />
+                                )}
+                              </span>
+                            </DisclosureButton>
+                          </dt>
+                          <DisclosurePanel as="dd" className="mt-2 pr-12">
+                            <p className="text-base leading-7 text-gray-600">
+                              {faq.answer}
+                            </p>
+                          </DisclosurePanel>
+                        </>
+                      )}
+                    </Disclosure>
+                  ))}
+                </dl>
+                <div className="mt-10 block lg:hidden">
+                  <img
+                    src={FAQ}
+                    className="w-full max-w-md mx-auto rounded-lg shadow-lg"
+                    alt="FAQ"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </main>
-
-      {/* FAQs sectiom */}
-      <div className="bg-white flex justify-around row" id="faq">
-        <div className="mx-auto max-w-7xl px-6 py-24 sm:py-32 lg:px-8 lg:py-40 flex flex-col lg:flex-row">
-          <div className="flex-1 mx-auto max-w-4xl">
-            <h2 className="text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl">
-              Frequently asked questions
-            </h2>
-            <dl className="mt-16 divide-y divide-gray-900/10">
-              {faqs.map((faq) => (
-                <Disclosure
-                  key={faq.question}
-                  as="div"
-                  className="py-6 first:pt-0 last:pb-0"
-                >
-                  <dt>
-                    <DisclosureButton className="group flex w-full items-start justify-between text-left text-gray-900">
-                      <span className="text-base/7 font-semibold">
-                        {faq.question}
-                      </span>
-                      <span className="ml-6 flex h-7 items-center">
-                        <PlusSmallIcon
-                          aria-hidden="true"
-                          className="size-6 group-data-[open]:hidden"
-                        />
-                        <MinusSmallIcon
-                          aria-hidden="true"
-                          className="size-6 group-[&:not([data-open])]:hidden"
-                        />
-                      </span>
-                    </DisclosureButton>
-                  </dt>
-                  <DisclosurePanel as="dd" className="mt-2 pr-12">
-                    <p className="text-base/7 text-gray-600">{faq.answer}</p>
-                  </DisclosurePanel>
-                </Disclosure>
-              ))}
-            </dl>
-          </div>
-          <div className="flex-1 mt-32">
-            <img
-              src={FAQ}
-              className="w-full lg:w-auto h-auto mb-8 lg:mb-0 lg:mr-8"
-              alt="FAQ"
-            />
-          </div>
-        </div>
-      </div>
     </div>
   );
 }

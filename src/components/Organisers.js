@@ -10,7 +10,7 @@ export default function Organisers() {
     {
       title: "High Event Ticket/Seller Fees",
       description:
-        "Major platforms charge high fees, cutting into margins and making it harder for independent organizers to make a good return.",
+        "Major platforms charge high fees, cutting into margins and making it harder for independent organisers to make a good return.",
       icon: (
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -31,7 +31,7 @@ export default function Organisers() {
     {
       title: "Fragmented Communication",
       description:
-        "Keeping attendees informed means juggling emails, DMs, and chat groups, leading to disorganized outreach and lower engagement.",
+        "Keeping attendees informed means juggling emails, DMs, and chat groups, leading to disorganised outreach and lower engagement.",
       icon: (
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -52,7 +52,7 @@ export default function Organisers() {
     {
       title: "Multiple Applications",
       description:
-        "Organizers often juggle multiple platforms to market, manage, and engage their audience.",
+        "Organisers often juggle multiple platforms to market, manage, and engage their audience.",
       icon: (
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -196,12 +196,12 @@ export default function Organisers() {
               Event Management Reimagined
             </span>
             <span className="block text-indigo-200 mt-2">
-              For Modern Organizers
+              For Modern Organisers
             </span>
           </h1>
           <p className="mt-6 max-w-lg mx-auto text-center text-xl text-indigo-100 sm:max-w-3xl">
             A streamlined web app that cuts costs, centralizes event management,
-            and connects organizers with attendees in a way that resonates with
+            and connects organisers with attendees in a way that resonates with
             today's audience.
           </p>
           <div className="mt-10 max-w-sm mx-auto sm:max-w-none sm:flex sm:justify-center">
@@ -231,12 +231,12 @@ export default function Organisers() {
               Problem Statement
             </h2>
             <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
-              Organizing events shouldn't be this hard
+              Organising events shouldn't be this hard
             </p>
             <p className="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
-              Organizing professional events is costly, time-consuming, and
+              Organising professional events is costly, time-consuming, and
               scattered across too many platforms, making it inefficient and
-              inaccessible for modern organizers.
+              inaccessible for modern organisers.
             </p>
           </div>
 
@@ -279,7 +279,7 @@ export default function Organisers() {
             </p>
             <p className="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
               We've built features specifically designed to solve the biggest
-              pain points for event organizers.
+              pain points for event organisers.
             </p>
           </div>
 
@@ -434,7 +434,7 @@ export default function Organisers() {
                   </span>
                 </h2>
                 <p className="mt-4 text-lg leading-6 text-gray-500">
-                  Join thousands of organizers who are saving time, reducing
+                  Join thousands of organisers who are saving time, reducing
                   costs, and creating more engaging events with our platform.
                 </p>
                 <a

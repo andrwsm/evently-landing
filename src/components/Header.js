@@ -151,16 +151,7 @@ export default function Header() {
               handleNavigation("/Organisers", "organisers");
             }}
           >
-            <Link
-              to="/Organisers"
-              className="text-sm/6 font-semibold text-gray-900"
-              onClick={(e) => {
-                e.preventDefault();
-                handleNavigation("/Users", "users");
-              }}
-            >
-              Organisers
-            </Link>
+            Organisers
           </Link>
           <Link
             to="/Users"
@@ -227,28 +218,13 @@ export default function Header() {
               </div>
             </PopoverPanel>
           </Popover>
-          {/* <a
-            href="#faq"
-            className="text-sm/6 font-semibold text-gray-900"
-            onClick={(e) => {
-              e.preventDefault();
-              handleNavigation("/", "faq");
-            }}
-          >
-            FAQs
-          </a> */}
           <Link to="/contact" className="text-sm/6 font-semibold text-gray-900">
             Contact
           </Link>
-          {/* <Link
-            to="/LandingPage"
-            className="text-sm/6 font-semibold text-gray-900"
-          >
-            Home V2
-          </Link> */}
         </PopoverGroup>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end"></div>
       </nav>
+
       <Dialog
         open={mobileMenuOpen}
         onClose={setMobileMenuOpen}
@@ -320,14 +296,6 @@ export default function Header() {
                 >
                   Contact
                 </Link>
-              </div>
-              <div className="py-6">
-                <a
-                  href="#"
-                  className="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
-                >
-                  Log in
-                </a>
               </div>
             </div>
           </div>

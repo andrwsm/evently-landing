@@ -35,7 +35,7 @@ const people = [
     name: "Kyle Tracey",
     role: "Founder / CEO",
     imageUrl: Kyle,
-    bio: "As the founder of the app, he is passionate about creating a platform that empowers organizers and enhances event experiences. He is dedicated to learning, growing, and building solutions that truly meet the needs of users.",
+    bio: "As the founder of the app, he is passionate about creating a platform that empowers organisers and enhances event experiences. He is dedicated to learning, growing, and building solutions that truly meet the needs of users.",
   },
   {
     name: "Will Jones",
@@ -53,7 +53,7 @@ const people = [
     name: "Andrew Smith",
     role: "Software Engineer",
     imageUrl: dwightimg,
-    bio: "As a software engineer on the team, he is passionate about building innovative solutions that enhance event experiences and empower organisers. He thrives on problem-solving, continuous learning, and crafting solutions that empower organizers while enhancing user experiences.",
+    bio: "As a software engineer on the team, he is passionate about building innovative solutions that enhance event experiences and empower organisers. He thrives on problem-solving, continuous learning, and crafting solutions that empower organisers while enhancing user experiences.",
   },
   // More people...
 ];
@@ -109,7 +109,7 @@ export default function LandingPage() {
       description:
         "Sell your tickets without huge fees driving up prices. You keep all of what you earn from your events. The only fee is from out payment processor, Stripe.",
       details:
-        "With our platform, you can sell your event tickets without worrying about any additional charges. Unlike other ticketing services that take a percentage of your sales, we ensure that you keep 100% of what you earn. The only cost involved is the standard processing fee from our trusted payment partner, Stripe. This means you get full control over your revenue, allowing you to maximize your event profits without hidden costs or service fees. Whether you're organizing a concert, conference, or community gathering, our straightforward pricing model ensures that every dollar you make goes directly to you.",
+        "With our platform, you can sell your event tickets without worrying about any additional charges. Unlike other ticketing services that take a percentage of your sales, we ensure that you keep 100% of what you earn. The only cost involved is the standard processing fee from our trusted payment partner, Stripe. This means you get full control over your revenue, allowing you to maximise your event profits without hidden costs or service fees. Whether you're organising a concert, conference, or community gathering, our straightforward pricing model ensures that every pound you make goes directly to you.",
       // icon: CurrencyDollarIcon,
     },
     {
@@ -117,7 +117,7 @@ export default function LandingPage() {
       description:
         "Our platform is designed to be easy to use and easy to understand. No need to be a tech wizard.",
       details:
-        "Our platform is built with simplicity in mind, making it easy for anyone to create, manage, and sell tickets for their events—no technical expertise required. With an intuitive interface and straightforward navigation, you can set up your event in just a few clicks. Whether you're a first-time organizer or a seasoned event planner, our user-friendly tools ensure a hassle-free experience. You won’t need to worry about complicated setups or confusing options—just focus on making your event a success while we handle the rest.",
+        "Our platform is built with simplicity in mind, making it easy for anyone to create, manage, and sell tickets for their events—no technical expertise required. With an intuitive interface and straightforward navigation, you can set up your event in just a few clicks. Whether you're a first-time organiser or a seasoned event planner, our user-friendly tools ensure a hassle-free experience. You won't need to worry about complicated setups or confusing options—just focus on making your event a success while we handle the rest.",
       // icon: TicketIcon,
     },
     {
@@ -125,7 +125,7 @@ export default function LandingPage() {
       description:
         "You are our priority. We will always be here to help you with any issues you may have.",
       details:
-        "Your success is our top priority. We’re committed to providing exceptional support whenever you need it. Whether you have questions, need assistance setting up your event, or encounter any issues along the way, our dedicated team is here to help. With responsive customer service and helpful resources, we ensure you’re never left figuring things out on your own. No matter the challenge, we’ve got your back—because your experience matters to us.",
+        "Your success is our top priority. We're committed to providing exceptional support whenever you need it. Whether you have questions, need assistance setting up your event, or encounter any issues along the way, our dedicated team is here to help. With responsive customer service and helpful resources, we ensure you're never left figuring things out on your own. No matter the challenge, we've got your back—because your experience matters to us.",
       // icon: UserCircleIcon,
     },
   ];
@@ -540,7 +540,7 @@ export default function LandingPage() {
         </div>
 
         {/* Newsletter section - Updated styling */}
-        <div className="bg-indigo-700">
+        <div className="bg-[#2464b4]">
           <div className="mx-auto max-w-7xl py-16 px-6 sm:py-24 lg:px-8">
             <div className="relative isolate px-6 py-12 sm:px-16 sm:py-16 lg:px-24 overflow-hidden rounded-3xl">
               <div className="absolute inset-0 -z-10 opacity-20">

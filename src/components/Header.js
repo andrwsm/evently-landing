@@ -68,7 +68,7 @@ const products = [
 ];
 const callsToAction = [
   { name: "Watch demo", href: "#", icon: PlayCircleIcon },
-  { name: "Contact", href: "/contact", icon: PhoneIcon },
+  { name: "Contact", href: "/contact-new", icon: PhoneIcon },
 ];
 
 export default function Header() {
@@ -218,7 +218,10 @@ export default function Header() {
               </div>
             </PopoverPanel>
           </Popover>
-          <Link to="/contact" className="text-sm/6 font-semibold text-gray-900">
+          <Link
+            to="/contact-new"
+            className="text-sm/6 font-semibold text-gray-900"
+          >
             Contact
           </Link>
         </PopoverGroup>
@@ -230,8 +233,8 @@ export default function Header() {
         onClose={setMobileMenuOpen}
         className="lg:hidden"
       >
-        <div className="fixed inset-0 z-10" />
-        <DialogPanel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+        <div className="fixed inset-0 z-50 bg-black bg-opacity-25" />
+        <DialogPanel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 shadow-xl">
           <div className="flex items-center justify-between">
             <a href="#" className="-m-1.5 p-1.5">
               <span className="sr-only">Your Company</span>
@@ -244,7 +247,7 @@ export default function Header() {
             <button
               type="button"
               onClick={() => setMobileMenuOpen(false)}
-              className="-m-2.5 rounded-md p-2.5 text-gray-700"
+              className="-m-2.5 rounded-md p-2.5 text-gray-700 hover:text-gray-900"
             >
               <span className="sr-only">Close menu</span>
               <XMarkIcon aria-hidden="true" className="size-6" />
@@ -270,7 +273,12 @@ export default function Header() {
                         className="block rounded-lg py-2 pr-3 pl-6 text-sm/7 font-semibold text-gray-900 hover:bg-gray-50"
                         onClick={(e) => {
                           e.preventDefault();
-                          handleNavigation("/", item.href.substring(1));
+                          if (item.href.startsWith("/")) {
+                            handleNavigation(item.href);
+                          } else {
+                            handleNavigation("/", item.href.substring(1));
+                          }
+                          setMobileMenuOpen(false);
                         }}
                       >
                         {item.name}
@@ -281,18 +289,35 @@ export default function Header() {
                 <Link
                   to="/"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
+                  onClick={() => setMobileMenuOpen(false)}
                 >
                   Home
                 </Link>
                 <Link
+                  to="/Organisers"
+                  className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  Organisers
+                </Link>
+                <Link
+                  to="/Users"
+                  className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  Users
+                </Link>
+                <Link
                   to="/FAQs"
-                  className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900"
+                  className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
+                  onClick={() => setMobileMenuOpen(false)}
                 >
                   FAQs
                 </Link>
                 <Link
-                  to="/contact"
-                  className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900"
+                  to="/contact-new"
+                  className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
+                  onClick={() => setMobileMenuOpen(false)}
                 >
                   Contact
                 </Link>

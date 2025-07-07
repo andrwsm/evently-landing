@@ -5,6 +5,7 @@ import LandingPage from "./components/LandingPage";
 import SignUp from "./components/SignUp";
 import Organisers from "./components/Organisers";
 import Contact from "./components/tier2Pages/contact";
+import ContactNew from "./components/tier2Pages/ContactNew";
 import Footer from "./components/Footer";
 import Faqs from "./components/tier2Pages/FAQs";
 import AboutUs from "./components/tier2Pages/AboutUs";
@@ -23,6 +24,7 @@ function App() {
         <Route path="/" element={<LandingPage />} />
         {/* <Route path="/AboutUs" element={<AboutUs />} /> */}
         <Route path="/contact" element={<Contact />} />
+        <Route path="/contact-new" element={<ContactNew />} />
         <Route path="/Faqs" element={<Faqs />} />
         <Route path="/Users" element={<Users />} />
         <Route path="/WhatsNew" element={<WhatsNew />} />

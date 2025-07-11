@@ -5,8 +5,6 @@ import LandingPage from "./components/LandingPage";
 import Organisers from "./components/Organisers";
 import ContactNew from "./components/tier2Pages/ContactNew";
 import Footer from "./components/Footer";
-import Faqs from "./components/tier2Pages/FAQs";
-import WhatsNew from "./components/tier2Pages/WhatsNew";
 import Error404 from "./errors/Error404";
 import Users from "./components/Users";
 import LandingPageBefore from "./components/MainPage";
@@ -20,9 +18,7 @@ function App() {
       <Routes>
         <Route path="/" element={<LandingPage />} />
         <Route path="/contact-new" element={<ContactNew />} />
-        <Route path="/Faqs" element={<Faqs />} />
         <Route path="/Users" element={<Users />} />
-        <Route path="/WhatsNew" element={<WhatsNew />} />
         <Route path="/LandingPage" element={<LandingPageBefore />} />
         <Route path="/organisers" element={<Organisers />} />
         <Route path="/PrivacyPolicy" element={<PrivacyPolicy />} />{" "}

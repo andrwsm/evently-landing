@@ -455,14 +455,14 @@ export default function Users() {
       </div> */}
 
       {/* CTA Section */}
-      <div className="bg-indigo-700">
+      <div className="bg-blue-600">
         <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8 lg:py-24">
           <div className="space-y-12 lg:grid lg:grid-cols-3 lg:gap-8 lg:space-y-0">
             <div className="lg:col-span-2">
               <h2 className="text-3xl font-extrabold text-white sm:text-4xl">
                 Ready to transform your networking experience?
               </h2>
-              <div className="mt-6 text-lg text-indigo-100 max-w-3xl">
+              <div className="mt-6 text-lg text-blue-100 max-w-3xl">
                 <p>
                   Join thousands of professionals who are building meaningful
                   connections, advancing their careers, and discovering
@@ -473,17 +473,9 @@ export default function Users() {
                 <div className="rounded-md shadow">
                   <a
                     href="#"
-                    className="flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-indigo-700 bg-white hover:bg-indigo-50"
+                    className="flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-blue-700 bg-white hover:bg-blue-50"
                   >
-                    Create Free Account
-                  </a>
-                </div>
-                <div className="mt-3 sm:mt-0 sm:ml-3">
-                  <a
-                    href="#"
-                    className="flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-500 bg-opacity-60 hover:bg-opacity-70"
-                  >
-                    Browse Events
+                    Sign up to our waitlist
                   </a>
                 </div>
               </div>

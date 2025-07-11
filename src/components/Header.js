@@ -67,7 +67,7 @@ const products = [
   },
 ];
 const callsToAction = [
-  { name: "Watch demo", href: "#", icon: PlayCircleIcon },
+  { name: "Sign Up", href: "#", icon: PlayCircleIcon },
   { name: "Contact", href: "/contact-new", icon: PhoneIcon },
 ];
 

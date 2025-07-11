@@ -434,8 +434,7 @@ export default function Organisers() {
                   </span>
                 </h2>
                 <p className="mt-4 text-lg leading-6 text-gray-500">
-                  Join thousands of organisers who are saving time, reducing
-                  costs, and creating more engaging events with our platform.
+                  Get on the waitlist and be the first to know when we go live!
                 </p>
                 <a
                   href="#"

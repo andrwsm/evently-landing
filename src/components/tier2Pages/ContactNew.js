@@ -37,8 +37,8 @@ export default function ContactNew() {
               Get in Touch
             </h1>
             <p className="mt-6 max-w-2xl mx-auto text-xl text-indigo-100">
-              Have questions or feedback? We'd love to hear from you and help you
-              make the most of your event experience.
+              Have questions or feedback? We'd love to hear from you and help
+              you make the most of your event experience.
             </p>
           </div>
         </div>
@@ -229,8 +229,8 @@ export default function ContactNew() {
                               className="text-indigo-600 hover:text-indigo-500"
                             >
                               privacy policy
-                            </a>
-                            {" "}and{" "}
+                            </a>{" "}
+                            and{" "}
                             <a
                               href="/termsofservice"
                               className="text-indigo-600 hover:text-indigo-500"
@@ -297,58 +297,6 @@ export default function ContactNew() {
                 support@evently.com
               </p>
             </div>
-
-            <div className="bg-white rounded-lg shadow-md p-6 text-center">
-              <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-indigo-100">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  strokeWidth={1.5}
-                  stroke="currentColor"
-                  className="w-6 h-6 text-indigo-600"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z"
-                  />
-                </svg>
-              </div>
-              <h3 className="mt-4 text-xl font-medium text-gray-900">Phone</h3>
-              <p className="mt-2 text-gray-600">
-                Call us during business hours for immediate assistance
-              </p>
-              <p className="mt-2 text-indigo-600 font-medium">
-                +44 (0) 20 1234 5678
-              </p>
-            </div>
-
-            <div className="bg-white rounded-lg shadow-md p-6 text-center sm:col-span-2 lg:col-span-1">
-              <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-indigo-100">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  strokeWidth={1.5}
-                  stroke="currentColor"
-                  className="w-6 h-6 text-indigo-600"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M8.625 12a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H8.25m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H12m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0h-.375M21 12c0 4.556-4.03 8.25-9 8.25a9.764 9.764 0 01-2.555-.337A5.972 5.972 0 015.41 20.97a5.969 5.969 0 01-.474-.065 4.48 4.48 0 00.978-2.025c.09-.457-.133-.901-.467-1.226C3.93 16.178 3 14.189 3 12c0-4.556 4.03-8.25 9-8.25s9 3.694 9 8.25z"
-                  />
-                </svg>
-              </div>
-              <h3 className="mt-4 text-xl font-medium text-gray-900">Live Chat</h3>
-              <p className="mt-2 text-gray-600">
-                Chat with our support team in real-time
-              </p>
-              <button className="mt-2 text-indigo-600 font-medium hover:text-indigo-500">
-                Start Chat
-              </button>
-            </div>
           </div>
         </div>
       </div>
@@ -372,8 +320,9 @@ export default function ContactNew() {
                   How quickly can I get support?
                 </h3>
                 <p className="text-gray-600">
-                  We aim to respond to all inquiries within 24 hours during business days. 
-                  For urgent matters, please call our support line for immediate assistance.
+                  We aim to respond to all inquiries within 24 hours during
+                  business days. For urgent matters, please call our support
+                  line for immediate assistance.
                 </p>
               </div>
 
@@ -382,9 +331,9 @@ export default function ContactNew() {
                   What information should I include in my message?
                 </h3>
                 <p className="text-gray-600">
-                  Please provide as much detail as possible about your inquiry, including 
-                  your account information (if applicable), the nature of your question, 
-                  and any relevant screenshots or error messages.
+                  Please provide as much detail as possible about your inquiry,
+                  including your account information (if applicable), the nature
+                  of your question.
                 </p>
               </div>
 
@@ -393,8 +342,8 @@ export default function ContactNew() {
                   Do you offer phone support?
                 </h3>
                 <p className="text-gray-600">
-                  Yes, we offer phone support during business hours (9 AM - 5 PM GMT). 
-                  For non-urgent inquiries, email support is available 24/7.
+                  No, currently we only offer support via email and our contact
+                  form. We are working on adding phone support in the future.
                 </p>
               </div>
             </div>

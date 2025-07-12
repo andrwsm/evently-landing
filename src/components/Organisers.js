@@ -207,10 +207,10 @@ export default function Organisers() {
           <div className="mt-10 max-w-sm mx-auto sm:max-w-none sm:flex sm:justify-center">
             <div className="space-y-4 sm:space-y-0 sm:mx-auto sm:inline-grid sm:grid-cols-2 sm:gap-5">
               <a
-                href="#"
+                href="/signup"
                 className="flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-indigo-700 bg-white hover:bg-indigo-50 sm:px-8"
               >
-                Get Started
+                Sign Up
               </a>
               <a
                 href="#features"
@@ -437,7 +437,7 @@ export default function Organisers() {
                   Get on the waitlist and be the first to know when we go live!
                 </p>
                 <a
-                  href="#"
+                  href="/signup"
                   className="mt-8 bg-indigo-600 border border-transparent rounded-md shadow px-5 py-3 inline-flex items-center text-base font-medium text-white hover:bg-indigo-700"
                 >
                   Sign up for free

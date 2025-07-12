@@ -41,13 +41,13 @@ const people = [
     name: "Will Jones",
     role: "Chief Technology Officer",
     imageUrl: Will,
-    bio: "Managing the technical aspects of Evently's delivery, our CTO works to build our platforms and create forward thinking solutions for event promotion and management. Will is strongly driven to create value for our users, keeping costs low and providing a top-tier user experience.",
+    bio: "Managing the technical aspects of Eventli's delivery, our CTO works to build our platforms and create forward thinking solutions for event promotion and management. Will is strongly driven to create value for our users, keeping costs low and providing a top-tier user experience.",
   },
   {
     name: "Finlay Thornell",
     role: "Chief Marketing Office",
     imageUrl: Finlay,
-    bio: "As Evently’s CMO, he is focused on brand development and marketing strategy, driving visibility and engagement. His goal is to help bridge the gap between apprentices and young professionals by creating impactful networking opportunities.",
+    bio: "As Eventli’s CMO, he is focused on brand development and marketing strategy, driving visibility and engagement. His goal is to help bridge the gap between apprentices and young professionals by creating impactful networking opportunities.",
   },
   {
     name: "Andrew Smith",
@@ -471,10 +471,10 @@ export default function LandingPage() {
               {/* Add CTA buttons similar to Organisers page */}
               <div className="mt-10 max-w-sm mx-auto sm:max-w-none sm:flex sm:gap-5">
                 <a
-                  href="#"
+                  href="/signup"
                   className="flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-indigo-700 bg-white hover:bg-indigo-50 sm:px-8"
                 >
-                  Get Started
+                  Sign Up
                 </a>
                 <a
                   href="#features"

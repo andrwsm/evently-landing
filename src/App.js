@@ -10,6 +10,7 @@ import Users from "./components/Users";
 import LandingPageBefore from "./components/MainPage";
 import PrivacyPolicy from "./components/Tier3Pages/PrivacyPolicy"; // Import the PrivacyPolicy component
 import TermsOfService from "./components/Tier3Pages/TermsOfService"; // Import the TermsOfService component
+import SignUpPage from "./components/tier2Pages/SignUpPage";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
         <Route path="/organisers" element={<Organisers />} />
         <Route path="/PrivacyPolicy" element={<PrivacyPolicy />} />{" "}
         <Route path="/TermsOfService" element={<TermsOfService />} />{" "}
+        <Route path="/signup" element={<SignUpPage />} />
         <Route path="*" element={<Error404 />} />
       </Routes>
       <Footer />

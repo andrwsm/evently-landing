@@ -82,7 +82,7 @@ const navigation = {
 
 export default function Footer() {
   return (
-    <footer className="mt-32 bg-gray-900 sm:mt-56">
+    <footer className="bg-gray-900">
       <div className="mx-auto max-w-7xl px-6 pb-8 pt-16 sm:pt-24 lg:px-8 lg:pt-32">
         <div className="xl:grid xl:grid-cols-3 xl:gap-8">
           <img alt="Evently Icon" src={EventlyIcon} className="h-9" />

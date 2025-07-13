@@ -456,7 +456,7 @@ export default function Users() {
 
       {/* CTA Section */}
       <div className="bg-blue-600">
-        <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8 lg:py-24">
+        <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8 lg:py-16">
           <div className="space-y-12 lg:grid lg:grid-cols-3 lg:gap-8 lg:space-y-0">
             <div className="lg:col-span-2">
               <h2 className="text-3xl font-extrabold text-white sm:text-4xl">
@@ -480,7 +480,7 @@ export default function Users() {
                 </div>
               </div>
             </div>
-            <div className="flex items-center justify-center">
+            <div className="hidden lg:flex items-center justify-center">
               <div className="flex-shrink-0">
                 <img
                   className="h-64 w-auto"

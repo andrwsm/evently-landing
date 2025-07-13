@@ -77,29 +77,6 @@ export default function Header() {
   const [lastScrollY, setLastScrollY] = useState(0);
   const navigate = useNavigate();
 
-  const controlHeader = () => {
-    if (typeof window !== "undefined") {
-      if (window.scrollY > lastScrollY) {
-        // if scroll down hide the header
-        setIsVisible(false);
-      } else {
-        // if scroll up show the header
-        setIsVisible(true);
-      }
-      setLastScrollY(window.scrollY);
-    }
-  };
-
-  useEffect(() => {
-    if (typeof window !== "undefined") {
-      window.addEventListener("scroll", controlHeader);
-
-      // cleanup function
-      return () => {
-        window.removeEventListener("scroll", controlHeader);
-      };
-    }
-  }, [lastScrollY]);
 
   const handleNavigation = (path, hash) => {
     navigate(path);
@@ -163,7 +140,7 @@ export default function Header() {
           >
             Users
           </Link>
-          <Popover className="relative">
+          {/* <Popover className="relative">
             <PopoverButton className="flex items-center gap-x-1 text-sm/6 font-semibold text-gray-900">
               Features
               <ChevronDownIcon
@@ -217,7 +194,7 @@ export default function Header() {
                 ))}
               </div>
             </PopoverPanel>
-          </Popover>
+          </Popover> */}
           <Link
             to="/contact-new"
             className="text-sm/6 font-semibold text-gray-900"
@@ -284,36 +261,6 @@ export default function Header() {
                 >
                   Contact
                 </Link>
-                <Disclosure as="div" className="-mx-3">
-                  <DisclosureButton className="group flex w-full items-center justify-between rounded-lg py-2 pr-3.5 pl-3 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">
-                    Features
-                    <ChevronDownIcon
-                      aria-hidden="true"
-                      className="size-5 flex-none group-data-open:rotate-180"
-                    />
-                  </DisclosureButton>
-                  <DisclosurePanel className="mt-2 space-y-2">
-                    {[...products, ...callsToAction].map((item) => (
-                      <DisclosureButton
-                        key={item.name}
-                        as="a"
-                        href={item.href}
-                        className="block rounded-lg py-2 pr-3 pl-6 text-sm/7 font-semibold text-gray-900 hover:bg-gray-50"
-                        onClick={(e) => {
-                          e.preventDefault();
-                          if (item.href.startsWith("/")) {
-                            handleNavigation(item.href);
-                          } else {
-                            handleNavigation("/", item.href.substring(1));
-                          }
-                          setMobileMenuOpen(false);
-                        }}
-                      >
-                        {item.name}
-                      </DisclosureButton>
-                    ))}
-                  </DisclosurePanel>
-                </Disclosure>
               </div>
             </div>
           </div>

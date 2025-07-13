@@ -19,7 +19,6 @@ const navigation = {
   legal: [
     { name: "Terms of service", href: "/termsofservice" },
     { name: "Privacy policy", href: "/privacypolicy" },
-    { name: "License", href: "#" },
   ],
   social: [
     // {

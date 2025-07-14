@@ -473,11 +473,11 @@ export default function LandingPage() {
                 Our Core Values
               </h2>
               <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
-                What guides us
+                What Drives Us 🔥
               </p>
               <p className="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
-                Our values are the guiding principles that shape our culture and
-                define who we are as a company.
+                We’re not just building tools — we’re building a movement.
+                Here's what fuels us:
               </p>
             </div>
 

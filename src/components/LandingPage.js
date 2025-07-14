@@ -62,32 +62,38 @@ const values = [
   {
     name: "Empowerment",
     description:
-      "We equip organisers with powerful tools to create and grow their events while giving users the best experience in discovering and attending them.",
+      "We give organisers the tools to build unforgettable events — and users the power to discover them with ease.",
+    emoji: "💪",
   },
   {
     name: "Community",
     description:
-      "We believe in fostering strong connections between organisers and attendees, creating a space where meaningful interactions thrive.",
+      "It's all about real connections. We're here to spark meaningful moments between organisers and attendees.",
+    emoji: "🤝",
   },
   {
     name: "Innovation",
     description:
-      "We are always evolving, integrating new technologies to make event planning, promotion, and discovery effortless and engaging.",
+      "Always evolving. Smarter tech, smoother planning, better experiences — that's how we do it.",
+    emoji: "🚀",
   },
   {
     name: "Accessibility",
     description:
-      "Our platform is designed to be user-friendly and inclusive, ensuring that both organisers and attendees can easily connect and engage.",
+      "Everyone's invited. Our platform is built to be intuitive, inclusive, and open for all.",
+    emoji: "🌍",
   },
   {
     name: "Reliability",
     description:
-      "We are committed to providing a seamless and trustworthy experience, ensuring events run smoothly and connections are meaningful.",
+      "No surprises. Just a smooth, secure experience that works every time.",
+    emoji: "🔒",
   },
   {
     name: "Growth",
     description:
-      "We support organisers in expanding their reach and users in discovering new experiences, fostering both personal and professional growth.",
+      "We champion your next step — whether it's growing your event, your reach, or yourself.",
+    emoji: "📈",
   },
 ];
 
@@ -482,9 +488,16 @@ export default function LandingPage() {
                     key={value.name}
                     className="bg-white overflow-hidden shadow rounded-lg p-6"
                   >
-                    <h3 className="text-lg font-medium text-indigo-600 mb-2">
-                      {value.name}
-                    </h3>
+                    <div className="flex items-center mb-4">
+                      <div className="flex-shrink-0 h-12 w-12 rounded-md bg-indigo-100 flex items-center justify-center">
+                        <span className="text-2xl">{value.emoji}</span>
+                      </div>
+                      <div className="ml-4">
+                        <h3 className="text-lg font-medium text-indigo-600">
+                          {value.name}
+                        </h3>
+                      </div>
+                    </div>
                     <p className="text-gray-600">{value.description}</p>
                   </div>
                 ))}

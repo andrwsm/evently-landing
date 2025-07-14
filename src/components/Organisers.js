@@ -8,88 +8,28 @@ export default function Organisers() {
   // Define the problems and solutions based on the images
   const problems = [
     {
-      title: "High Event Ticket/Seller Fees",
+      title: "Sky-High Seller Fees",
       description:
-        "Major platforms charge high fees, cutting into margins and making it harder for independent organisers to make a good return.",
-      icon: (
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          className="h-12 w-12 text-indigo-600"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"
-          />
-        </svg>
-      ),
+        "Big platforms take a big cut — leaving indie organisers squeezed and struggling to profit.",
+      emoji: "💸",
     },
     {
-      title: "Fragmented Communication",
+      title: "Scattered Comms = Lost Attention",
       description:
-        "Keeping attendees informed means juggling emails, DMs, and chat groups, leading to disorganised outreach and lower engagement.",
-      icon: (
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          className="h-12 w-12 text-indigo-600"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"
-          />
-        </svg>
-      ),
+        "Email here, DM there... and where did that RSVP go? Fragmented outreach kills engagement.",
+      emoji: "📢",
     },
     {
-      title: "Multiple Applications",
+      title: "Too Many Tools",
       description:
-        "Organisers often juggle multiple platforms to market, manage, and engage their audience.",
-      icon: (
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          className="h-12 w-12 text-indigo-600"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-          />
-        </svg>
-      ),
+        "Managing your event shouldn't mean switching between five apps just to stay afloat.",
+      emoji: "🧩",
     },
     {
-      title: "Manual Processes",
+      title: "Manual Everything",
       description:
-        "Tasks like RSVPs and data tracking are still largely manual—wasting valuable time and limiting growth potential.",
-      icon: (
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          className="h-12 w-12 text-indigo-600"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
-          />
-        </svg>
-      ),
+        "Still tracking RSVPs in spreadsheets? That's time (and growth) you're losing.",
+      emoji: "📊",
     },
   ];
 
@@ -171,7 +111,7 @@ export default function Organisers() {
               Problem Statement
             </h2>
             <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
-              Organising events shouldn't be this hard
+              Organising events shouldn't be this hard...
             </p>
             <p className="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
               Organising professional events is costly, time-consuming, and
@@ -189,7 +129,9 @@ export default function Organisers() {
                 >
                   <div className="p-6">
                     <div className="flex items-center">
-                      <div className="flex-shrink-0">{problem.icon}</div>
+                      <div className="flex-shrink-0 h-12 w-12 rounded-md bg-indigo-100 flex items-center justify-center">
+                        <span className="text-2xl">{problem.emoji}</span>
+                      </div>
                       <div className="ml-4">
                         <h3 className="text-lg leading-6 font-medium text-gray-900">
                           {problem.title}

@@ -95,88 +95,28 @@ export default function Organisers() {
 
   const solutions = [
     {
-      title: "40% Lower Fees",
+      title: "Cut the Fees (30%)",
       description:
-        "Our platform significantly reduces seller fees by 40%, giving you more flexibility to price competitively and retain revenue.",
-      icon: (
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          className="h-16 w-16 text-sky-500"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-          />
-        </svg>
-      ),
+        "Say goodbye to sky-high seller costs. Our platform slashes fees by 30%, so you keep more of what you earn.",
+      emoji: "💸",
     },
     {
-      title: "Community Forums",
+      title: "Build Real Community",
       description:
-        "Built-in community spaces let you post announcements, answer questions, and engage directly with attendees before, during, and after the event—all in one place.",
-      icon: (
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          className="h-16 w-16 text-sky-500"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z"
-          />
-        </svg>
-      ),
+        "Post updates, answer questions, and engage — all in one place with built-in community forums.",
+      emoji: "💬",
     },
     {
-      title: "Interactive Networking",
+      title: "Smarter Networking",
       description:
-        "Attendees can scan QR codes to view profiles and connect instantly—bringing digital networking into the physical world and adding value to your event.",
-      icon: (
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          className="h-16 w-16 text-sky-500"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"
-          />
-        </svg>
-      ),
+        "QR codes = instant connections. Bring digital networking to life and boost your event's value.",
+      emoji: "📱",
     },
     {
-      title: "Gen Z Audience",
+      title: "Designed for Gen Z (and the rest of us)",
       description:
-        "Our platform is designed to meet the expectations and behaviors of Gen Z and young professionals—social, fast, and purpose-driven.",
-      icon: (
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          className="h-16 w-16 text-sky-500"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-          />
-        </svg>
-      ),
+        "Fast, social, and purpose-driven — we meet your audience where they are.",
+      emoji: "👥",
     },
   ];
 
@@ -275,11 +215,11 @@ export default function Organisers() {
               Our Solutions
             </h2>
             <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
-              How We Transform Your Event Management
+              Event Management, Rebuilt for You 🚀
             </p>
             <p className="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
-              We've built features specifically designed to solve the biggest
-              pain points for event organisers.
+              We've tackled the biggest headaches for organisers — and turned
+              them into power moves:
             </p>
           </div>
 
@@ -288,7 +228,7 @@ export default function Organisers() {
               {solutions.map((solution, index) => (
                 <div key={index} className="relative">
                   <div className="absolute h-24 w-24 rounded-md bg-blue-100 flex items-center justify-center">
-                    {solution.icon}
+                    <span className="text-4xl">{solution.emoji}</span>
                   </div>
                   <div className="ml-32 space-y-4">
                     <h3 className="text-2xl font-bold text-gray-900">
@@ -301,126 +241,23 @@ export default function Organisers() {
                 </div>
               ))}
             </div>
+
+            {/* Bonus Section */}
+            <div className="mt-12 text-center">
+              <div className="bg-indigo-50 rounded-lg p-6 max-w-4xl mx-auto">
+                <h3 className="text-xl font-bold text-indigo-600 mb-4">
+                  💥 Bonus:
+                </h3>
+                <p className="text-lg text-gray-700">
+                  No more juggling platforms, disjointed comms, or clunky manual
+                  tasks. We've streamlined it all — so you can focus on what
+                  matters: your event.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-
-      {/* Testimonial Section */}
-      {/* <div className="bg-indigo-700">
-        <div className="max-w-7xl mx-auto px-4 py-16 sm:px-6 sm:py-24 lg:px-8">
-          <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-3xl font-extrabold text-white">
-              Loved by event organizers
-            </h2>
-            <p className="mt-4 text-xl text-indigo-100">
-              Organizers who've switched to our platform have seen significant
-              improvements in attendee engagement and cost savings.
-            </p>
-          </div>
-          <div className="mt-12 space-y-4 sm:mt-16 sm:space-y-0 sm:grid sm:grid-cols-2 sm:gap-6 lg:grid-cols-3 lg:gap-8">
-            <div className="bg-white overflow-hidden shadow rounded-lg">
-              <div className="px-6 py-8">
-                <div className="flex items-center">
-                  <div className="flex-shrink-0 h-12 w-12 rounded-full bg-indigo-100 flex items-center justify-center">
-                    <svg
-                      className="h-6 w-6 text-indigo-600"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M5 13l4 4L19 7"
-                      />
-                    </svg>
-                  </div>
-                  <div className="ml-4">
-                    <h3 className="text-lg font-medium text-gray-900">
-                      Sarah J.
-                    </h3>
-                    <p className="text-sm text-gray-500">
-                      Tech Conference Organizer
-                    </p>
-                  </div>
-                </div>
-                <p className="mt-4 text-base text-gray-500">
-                  "I've saved over 35% on fees compared to other platforms. The
-                  networking features have also increased attendee satisfaction
-                  by 40%."
-                </p>
-              </div>
-            </div>
-            <div className="bg-white overflow-hidden shadow rounded-lg">
-              <div className="px-6 py-8">
-                <div className="flex items-center">
-                  <div className="flex-shrink-0 h-12 w-12 rounded-full bg-indigo-100 flex items-center justify-center">
-                    <svg
-                      className="h-6 w-6 text-indigo-600"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M5 13l4 4L19 7"
-                      />
-                    </svg>
-                  </div>
-                  <div className="ml-4">
-                    <h3 className="text-lg font-medium text-gray-900">
-                      Mark T.
-                    </h3>
-                    <p className="text-sm text-gray-500">
-                      Networking Event Coordinator
-                    </p>
-                  </div>
-                </div>
-                <p className="mt-4 text-base text-gray-500">
-                  "The QR code networking feature has been a game-changer.
-                  Attendees are connecting more meaningfully, and our post-event
-                  surveys show higher satisfaction."
-                </p>
-              </div>
-            </div>
-            <div className="bg-white overflow-hidden shadow rounded-lg">
-              <div className="px-6 py-8">
-                <div className="flex items-center">
-                  <div className="flex-shrink-0 h-12 w-12 rounded-full bg-indigo-100 flex items-center justify-center">
-                    <svg
-                      className="h-6 w-6 text-indigo-600"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M5 13l4 4L19 7"
-                      />
-                    </svg>
-                  </div>
-                  <div className="ml-4">
-                    <h3 className="text-lg font-medium text-gray-900">
-                      Alex P.
-                    </h3>
-                    <p className="text-sm text-gray-500">Community Builder</p>
-                  </div>
-                </div>
-                <p className="mt-4 text-base text-gray-500">
-                  "The community forums have transformed how I engage with
-                  attendees. Communication is centralized, and my Gen Z audience
-                  loves the modern interface."
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div> */}
 
       {/* CTA Section */}
       <div className="bg-white">

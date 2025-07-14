@@ -20,6 +20,7 @@ import Kyle from "../assets/photos/Kyle.jpg";
 import Will from "../assets/photos/Will.jpg";
 import dwightimg from "../assets/photos/dwight.jpg";
 import Finlay from "../assets/photos/Finlay.jpg";
+import Andrew from "../assets/photos/20250623_204441.jpg";
 
 import FAQ from "../assets/images/FAQ.png";
 
@@ -52,7 +53,7 @@ const people = [
   {
     name: "Andrew Smith",
     role: "Lead Software Engineer",
-    imageUrl: dwightimg,
+    imageUrl: Andrew,
     bio: "As a software engineer on the team, he is passionate about building innovative solutions that enhance event experiences and empower organisers. He thrives on problem-solving, continuous learning, and crafting solutions that empower organisers while enhancing user experiences.",
   },
   // More people...
@@ -534,9 +535,7 @@ export default function LandingPage() {
                     {person.name}
                   </h3>
                   <p className="text-sm text-indigo-600">{person.role}</p>
-                  <p className="mt-2 text-sm text-gray-500 line-clamp-3">
-                    {person.bio}
-                  </p>
+                  <p className="mt-2 text-sm text-gray-500">{person.bio}</p>
                 </div>
               ))}
             </div>

@@ -276,9 +276,9 @@ export default function LandingPage() {
 
   const features = [
     {
-      name: "Event Creation",
+      name: "Create Events in Minutes",
       description:
-        "Easily create and manage events with a few clicks. Add event details, set categories, and share with your audience instantly",
+        "Build your event, set the vibe, share instantly. Zero fuss.",
       svg: (
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -297,9 +297,9 @@ export default function LandingPage() {
       ),
     },
     {
-      name: "Promotion & Engagement",
+      name: "Promotion That Pops",
       description:
-        "Boost visibility with built-in promotion tools, including email notifications, social sharing, and direct updates to attendees.",
+        "Boost reach with built-in email alerts, social sharing, and live updates.",
       svg: (
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -318,9 +318,9 @@ export default function LandingPage() {
       ),
     },
     {
-      name: "Networking & Business Cards",
+      name: "Smarter Networking",
       description:
-        "Connect with attendees and organisers through digital business cards, making professional networking effortless and efficient.",
+        "Connect instantly with digital business cards — no awkward small talk required.",
       svg: (
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -339,9 +339,8 @@ export default function LandingPage() {
       ),
     },
     {
-      name: "Analytics & Insights",
-      description:
-        "Track attendance, engagement, and RSVPs with real-time data to optimise your event strategy and maximise reach.",
+      name: "Real-Time Insights",
+      description: "Track RSVPs, engagement & more to level up your next move.",
       svg: (
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -360,9 +359,8 @@ export default function LandingPage() {
       ),
     },
     {
-      name: "Affordable Pricing",
-      description:
-        "Enjoy a cost-effective event management solution without hidden fees, making it easier to grow your events without breaking the bank.",
+      name: "Affordable, Always",
+      description: "Powerful tools, no hidden fees. More impact, less spend.",
       svg: (
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -488,12 +486,11 @@ export default function LandingPage() {
                 Everything you need
               </h2>
               <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
-                All-in-one platform
+                Everything You Need, All in One Place 🔥
               </p>
               <p className="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
-                We are proud to offer a comprehensive event management platform
-                that enables you to create, manage, and promote your events with
-                ease.
+                Your ultimate event HQ — create, manage, and grow your events
+                with ease
               </p>
             </div>
 

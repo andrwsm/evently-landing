@@ -94,109 +94,28 @@ export default function Users() {
 
   const userFeatures = [
     {
-      title: "Interactive Networking",
+      title: "Tap to Connect",
       description:
-        "Scan QR codes to view profiles and connect instantly—bringing digital networking into the physical world and adding value to every event you attend.",
-      icon: (
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          className="h-16 w-16 text-sky-500"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"
-          />
-        </svg>
-      ),
+        "Scan a QR, view a profile, make a move. Digital networking made instant — and way less awkward.",
+      emoji: "📱",
     },
     {
-      title: "Community Forums",
+      title: "Community That Doesn't Clock Out",
       description:
-        "Join discussions, ask questions, and engage with event communities before, during, and after events—all in one place.",
-      icon: (
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          className="h-16 w-16 text-sky-500"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z"
-          />
-        </svg>
-      ),
+        "Jump into convos before, during, and after the event. Forums that keep the energy going, all in one place.",
+      emoji: "💬",
     },
     {
-      title: "Digital Business Cards",
+      title: "Digital Business Cards, Done Right",
       description:
-        "Create your personal digital business card to easily share your contact information and professional profile with new connections.",
-      icon: (
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          className="h-16 w-16 text-sky-500"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"
-          />
-        </svg>
-      ),
+        "Ditch the paper. Share your contact info and profile with one smooth tap — fast, sleek, unforgettable.",
+      emoji: "💼",
     },
     {
-      title: "Designed for Gen Z",
+      title: "Built for Gen Z",
       description:
-        "Experience a platform that matches your digital expectations—social, fast, and purpose-driven with a UI/UX designed for your generation.",
-      icon: (
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          className="h-16 w-16 text-sky-500"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-          />
-        </svg>
-      ),
-    },
-  ];
-
-  const testimonials = [
-    {
-      name: "Alex Kim",
-      role: "Marketing Professional",
-      quote:
-        "I've connected with more meaningful industry contacts in 3 months using Evently than I did in 2 years of traditional networking events.",
-    },
-    {
-      name: "Jamie Rodriguez",
-      role: "Recent Graduate",
-      quote:
-        "The digital business card feature has been a game-changer for me as I start my career. I love how easy it is to maintain connections after events.",
-    },
-    {
-      name: "Taylor Wilson",
-      role: "Tech Enthusiast",
-      quote:
-        "As someone who's always looking for new learning opportunities, Evently has helped me discover workshops and meetups I wouldn't have found elsewhere.",
+        "Social-first. Speedy. Purpose-driven. Finally, a platform that gets you — and looks the part too.",
+      emoji: "⚡",
     },
   ];
 
@@ -304,7 +223,7 @@ export default function Users() {
               {userFeatures.map((feature, index) => (
                 <div key={index} className="relative">
                   <div className="absolute h-24 w-24 rounded-md bg-blue-100 flex items-center justify-center">
-                    {feature.icon}
+                    <span className="text-4xl">{feature.emoji}</span>
                   </div>
                   <div className="ml-32 space-y-4">
                     <h3 className="text-2xl font-bold text-gray-900">
@@ -329,7 +248,7 @@ export default function Users() {
               How It Works
             </h2>
             <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
-              Your journey to better networking
+              Just 3 steps to upgrade your event game:
             </p>
             <p className="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
               Follow these simple steps to transform your event experience and
@@ -355,14 +274,14 @@ export default function Users() {
             <div className="bg-white overflow-hidden shadow rounded-lg">
               <div className="p-6">
                 <div className="flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white mb-4 mx-auto">
-                  <span className="text-xl font-bold">1</span>
+                  <span className="text-xl">👤</span>
                 </div>
                 <h3 className="text-lg font-medium text-gray-900 text-center">
-                  Create Your Profile
+                  1. Create Your Profile
                 </h3>
                 <p className="mt-2 text-base text-gray-500 text-center">
-                  Build your digital business card with your professional
-                  details, interests, and what you're looking to connect about.
+                  Build your digital business card — show off your skills,
+                  interests, and what you're all about.
                 </p>
               </div>
             </div>
@@ -370,14 +289,14 @@ export default function Users() {
             <div className="bg-white overflow-hidden shadow rounded-lg">
               <div className="p-6">
                 <div className="flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white mb-4 mx-auto">
-                  <span className="text-xl font-bold">2</span>
+                  <span className="text-xl">📅</span>
                 </div>
                 <h3 className="text-lg font-medium text-gray-900 text-center">
-                  Discover & Attend Events
+                  2. Find Events That Fit
                 </h3>
                 <p className="mt-2 text-base text-gray-500 text-center">
-                  Find events that match your interests and career goals, and
-                  register directly through our platform.
+                  Browse and register for events tailored to your goals. No
+                  clutter. Just what matters.
                 </p>
               </div>
             </div>
@@ -385,74 +304,20 @@ export default function Users() {
             <div className="bg-white overflow-hidden shadow rounded-lg">
               <div className="p-6">
                 <div className="flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white mb-4 mx-auto">
-                  <span className="text-xl font-bold">3</span>
+                  <span className="text-xl">🤝</span>
                 </div>
                 <h3 className="text-lg font-medium text-gray-900 text-center">
-                  Network & Grow
+                  3. Connect & Grow
                 </h3>
                 <p className="mt-2 text-base text-gray-500 text-center">
-                  Scan QR codes to connect with others, join discussions in
-                  community forums, and nurture your new connections.
+                  Scan. Chat. Connect. Use QR codes and community forums to
+                  build real relationships that last beyond the event.
                 </p>
               </div>
             </div>
           </div>
         </div>
       </div>
-
-      {/* Testimonial Section */}
-      {/* <div className="bg-white py-16 sm:py-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-3xl font-extrabold text-gray-900">
-              What our users are saying
-            </h2>
-            <p className="mt-4 text-xl text-gray-500">
-              See how Evently has transformed professional networking for people
-              like you.
-            </p>
-          </div>
-          <div className="mt-12 space-y-4 sm:mt-16 sm:space-y-0 sm:grid sm:grid-cols-3 sm:gap-6">
-            {testimonials.map((testimonial, index) => (
-              <div
-                key={index}
-                className="bg-white overflow-hidden shadow rounded-lg"
-              >
-                <div className="px-6 py-8">
-                  <div className="flex items-center">
-                    <div className="flex-shrink-0 h-12 w-12 rounded-full bg-indigo-100 flex items-center justify-center">
-                      <svg
-                        className="h-6 w-6 text-indigo-600"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={2}
-                          d="M5 13l4 4L19 7"
-                        />
-                      </svg>
-                    </div>
-                    <div className="ml-4">
-                      <h3 className="text-lg font-medium text-gray-900">
-                        {testimonial.name}
-                      </h3>
-                      <p className="text-sm text-gray-500">
-                        {testimonial.role}
-                      </p>
-                    </div>
-                  </div>
-                  <p className="mt-4 text-base text-gray-500">
-                    "{testimonial.quote}"
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div> */}
 
       {/* CTA Section */}
       <div className="bg-blue-600">

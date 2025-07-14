@@ -71,7 +71,7 @@ const navigation = {
     // },
     {
       name: "LinkedIn",
-      href: "#",
+      href: "https://www.linkedin.com/company/eventli/posts/?feedView=all",
       icon: (props) => (
         <img src={linkedinIcon} alt="LinkedIn" className="size-6" {...props} />
       ),
@@ -112,6 +112,8 @@ export default function Footer() {
               <a
                 key={item.name}
                 href={item.href}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-gray-400 hover:text-gray-300"
               >
                 <span className="sr-only">{item.name}</span>

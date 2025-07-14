@@ -294,7 +294,7 @@ export default function ContactNew() {
                 Send us an email and we'll get back to you within 24 hours
               </p>
               <p className="mt-2 text-indigo-600 font-medium">
-                support@evently.com
+                eventlyplatform@protonmail.com
               </p>
             </div>
           </div>

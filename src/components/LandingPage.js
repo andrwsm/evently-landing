@@ -435,7 +435,7 @@ export default function LandingPage() {
                 Everything You Need, All in One Place 🔥
               </p>
               <p className="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
-                Your ultimate event HQ — create, manage, and grow your events
+                Your ultimate event HQ. Create, manage, and grow your events
                 with ease
               </p>
             </div>
@@ -491,8 +491,8 @@ export default function LandingPage() {
                 What Drives Us 🔥
               </p>
               <p className="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
-                We’re not just building tools — we’re building a movement.
-                Here's what fuels us:
+                We’re not just building tools, we’re building a movement. Here's
+                what fuels us:
               </p>
             </div>
 

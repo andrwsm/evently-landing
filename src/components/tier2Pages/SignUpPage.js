@@ -1,37 +1,27 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { ChevronLeftIcon } from "@heroicons/react/24/outline";
 
 export default function SignUpPage() {
   const navigate = useNavigate();
-  const [email, setEmail] = useState("");
-  const [firstName, setFirstName] = useState("");
-  const [lastName, setLastName] = useState("");
-  const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
-  const [agreed, setAgreed] = useState(false);
-  const [selectedType, setSelectedType] = useState("organiser"); // New state for toggle
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    if (!agreed) return;
+  // Load HubSpot form script
+  useEffect(() => {
+    const script = document.createElement("script");
+    script.src = "https://js.hsforms.net/forms/embed/49525342.js";
+    script.defer = true;
+    document.body.appendChild(script);
 
-    setIsSubmitting(true);
-
-    // Simulate API call
-    setTimeout(() => {
-      setIsSubmitting(false);
-      setIsSubmitted(true);
-      console.log("Sign up data:", {
-        firstName,
-        lastName,
-        email,
-        type: selectedType,
-      });
-    }, 1000);
-  };
+    return () => {
+      // Cleanup script on unmount
+      if (document.body.contains(script)) {
+        document.body.removeChild(script);
+      }
+    };
+  }, []);
 
   if (isSubmitted) {
     return (
@@ -130,366 +120,133 @@ export default function SignUpPage() {
 
       {/* Sign Up Form Section */}
       <div className="py-16 sm:py-24">
-        <div className="max-w-3xl mx-auto px-6 lg:px-8">
-          <div className="bg-white shadow-xl rounded-2xl overflow-hidden">
-            <div className="px-6 py-8 sm:p-10">
-              <div className="text-center mb-8">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold tracking-tight text-gray-900">
+              Get Early Access
+            </h2>
+            <p className="mt-4 text-lg text-gray-600">
+              Choose your role and join thousands waiting for launch
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            {/* Organiser Form */}
+            <div className="bg-white shadow-xl rounded-2xl overflow-hidden">
+              <div className="px-6 py-8 sm:p-10">
                 <div className="text-center mb-8">
-                  <h2 className="text-3xl font-bold tracking-tight text-gray-900">
-                    Get Early Access
-                  </h2>
-                  <p className="mt-4 text-lg text-gray-600">
-                    Join thousands of event organizers and attendees waiting for
-                    launch
+                  <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-blue-100 mb-4">
+                    <svg
+                      className="w-8 h-8 text-blue-600"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"
+                      />
+                    </svg>
+                  </div>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-2">
+                    For Event Organisers
+                  </h3>
+                  <p className="text-gray-600">
+                    Create and manage amazing events with our powerful platform
                   </p>
                 </div>
 
-                {/* Toggle Bar */}
-                <div className="relative mb-8">
-                  <div className="relative bg-gray-100 rounded-lg p-1 flex">
-                    {/* Sliding background */}
-                    <div
-                      className={`absolute top-1 bottom-1 w-1/2 bg-blue-600 rounded-md transition-transform duration-300 ease-in-out ${
-                        selectedType === "user"
-                          ? "translate-x-full"
-                          : "translate-x-0"
-                      }`}
-                    />
-
-                    {/* Buttons */}
-                    <button
-                      type="button"
-                      onClick={() => setSelectedType("organiser")}
-                      className={`relative z-10 flex-1 py-3 px-4 text-sm font-medium rounded-md transition-colors duration-300 ${
-                        selectedType === "organiser"
-                          ? "text-white"
-                          : "text-gray-700 hover:text-gray-900"
-                      }`}
-                    >
-                      Organiser
-                    </button>
-                    <button
-                      type="button"
-                      onClick={() => setSelectedType("user")}
-                      className={`relative z-10 flex-1 py-3 px-4 text-sm font-medium rounded-md transition-colors duration-300 ${
-                        selectedType === "user"
-                          ? "text-white"
-                          : "text-gray-700 hover:text-gray-900"
-                      }`}
-                    >
-                      User
-                    </button>
-                  </div>
+                {/* HubSpot Organiser Form */}
+                <div className="hs-form-container">
+                  <div
+                    className="hs-form-frame"
+                    data-region="na1"
+                    data-form-id="8f028611-b769-4547-ad94-ab2eac040eab"
+                    data-portal-id="49525342"
+                  ></div>
                 </div>
 
-                {/* Form Content */}
-                <div className="min-h-[400px]">
-                  {selectedType === "organiser" ? (
-                    <div className="space-y-6">
-                      <h3 className="text-xl font-semibold text-gray-900">
-                        Organiser Sign Up
-                      </h3>
-                      <p className="text-gray-600">
-                        Create and manage amazing events with our powerful
-                        platform
-                      </p>
-                      {/* Organiser form will go here */}
-                      <form onSubmit={handleSubmit}>
-                        <div className="grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-6">
-                          <div>
-                            <label
-                              htmlFor="first-name"
-                              className="block text-sm font-medium text-gray-700"
-                            >
-                              First name
-                            </label>
-                            <div className="mt-2">
-                              <input
-                                id="first-name"
-                                name="first-name"
-                                type="text"
-                                autoComplete="given-name"
-                                required
-                                value={firstName}
-                                onChange={(e) => setFirstName(e.target.value)}
-                                className="block w-full rounded-md border-gray-300 shadow-sm py-3 px-4 focus:border-blue-500 focus:ring-blue-500 sm:text-sm"
-                                placeholder="Enter your first name"
-                              />
-                            </div>
-                          </div>
+                {/* Legal Text */}
+                <div className="mt-6 text-sm text-gray-600 text-center">
+                  <p>
+                    By clicking the button, you agree to receive updates about
+                    Eventli and accept the{" "}
+                    <a
+                      href="/privacypolicy"
+                      className="text-blue-600 hover:text-blue-500"
+                    >
+                      privacy policy
+                    </a>{" "}
+                    and{" "}
+                    <a
+                      href="/termsofservice"
+                      className="text-blue-600 hover:text-blue-500"
+                    >
+                      terms of service
+                    </a>
+                  </p>
+                </div>
+              </div>
+            </div>
 
-                          <div>
-                            <label
-                              htmlFor="last-name"
-                              className="block text-sm font-medium text-gray-700"
-                            >
-                              Last name
-                            </label>
-                            <div className="mt-2">
-                              <input
-                                id="last-name"
-                                name="last-name"
-                                type="text"
-                                autoComplete="family-name"
-                                required
-                                value={lastName}
-                                onChange={(e) => setLastName(e.target.value)}
-                                className="block w-full rounded-md border-gray-300 shadow-sm py-3 px-4 focus:border-blue-500 focus:ring-blue-500 sm:text-sm"
-                                placeholder="Enter your last name"
-                              />
-                            </div>
-                          </div>
+            {/* User Form */}
+            <div className="bg-white shadow-xl rounded-2xl overflow-hidden">
+              <div className="px-6 py-8 sm:p-10">
+                <div className="text-center mb-8">
+                  <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-purple-100 mb-4">
+                    <svg
+                      className="w-8 h-8 text-purple-600"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"
+                      />
+                    </svg>
+                  </div>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-2">
+                    For Event Attendees
+                  </h3>
+                  <p className="text-gray-600">
+                    Discover and attend amazing events in your area
+                  </p>
+                </div>
 
-                          <div className="sm:col-span-2">
-                            <label
-                              htmlFor="email"
-                              className="block text-sm font-medium text-gray-700"
-                            >
-                              Email address
-                            </label>
-                            <div className="mt-2">
-                              <input
-                                id="email"
-                                name="email"
-                                type="email"
-                                autoComplete="email"
-                                required
-                                value={email}
-                                onChange={(e) => setEmail(e.target.value)}
-                                className="block w-full rounded-md border-gray-300 shadow-sm py-3 px-4 focus:border-blue-500 focus:ring-blue-500 sm:text-sm"
-                                placeholder="Enter your email address"
-                              />
-                            </div>
-                          </div>
+                {/* HubSpot User Form */}
+                <div className="hs-form-container">
+                  <div
+                    className="hs-form-frame"
+                    data-region="na1"
+                    data-form-id="055cdbb7-10fb-4ed2-9ce3-e00113366f11"
+                    data-portal-id="49525342"
+                  ></div>
+                </div>
 
-                          <div className="sm:col-span-2">
-                            <div className="flex items-start">
-                              <div className="flex items-center h-5">
-                                <input
-                                  id="terms"
-                                  name="terms"
-                                  type="checkbox"
-                                  className="h-4 w-4 rounded border-gray-300 text-blue-600 focus:ring-blue-500"
-                                  checked={agreed}
-                                  onChange={() => setAgreed(!agreed)}
-                                />
-                              </div>
-                              <div className="ml-3 text-sm">
-                                <label
-                                  htmlFor="terms"
-                                  className="font-medium text-gray-700"
-                                >
-                                  I agree to receive updates about Eventli and
-                                  accept the{" "}
-                                  <a
-                                    href="/privacypolicy"
-                                    className="text-blue-600 hover:text-blue-500"
-                                  >
-                                    privacy policy
-                                  </a>{" "}
-                                  and{" "}
-                                  <a
-                                    href="/termsofservice"
-                                    className="text-blue-600 hover:text-blue-500"
-                                  >
-                                    terms of service
-                                  </a>
-                                </label>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-
-                        <div className="mt-8">
-                          <button
-                            type="submit"
-                            disabled={!agreed || isSubmitting}
-                            className="flex w-full justify-center rounded-md bg-blue-600 py-3 px-4 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 disabled:opacity-50 disabled:cursor-not-allowed"
-                          >
-                            {isSubmitting ? (
-                              <div className="flex items-center">
-                                <svg
-                                  className="animate-spin -ml-1 mr-3 h-5 w-5 text-white"
-                                  xmlns="http://www.w3.org/2000/svg"
-                                  fill="none"
-                                  viewBox="0 0 24 24"
-                                >
-                                  <circle
-                                    className="opacity-25"
-                                    cx="12"
-                                    cy="12"
-                                    r="10"
-                                    stroke="currentColor"
-                                    strokeWidth="4"
-                                  ></circle>
-                                  <path
-                                    className="opacity-75"
-                                    fill="currentColor"
-                                    d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
-                                  ></path>
-                                </svg>
-                                Signing up...
-                              </div>
-                            ) : (
-                              "Join the Waitlist as Organiser"
-                            )}
-                          </button>
-                        </div>
-                      </form>
-                    </div>
-                  ) : (
-                    <div className="space-y-6">
-                      <h3 className="text-xl font-semibold text-gray-900">
-                        User Sign Up
-                      </h3>
-                      <p className="text-gray-600">
-                        Discover and attend amazing events in your area
-                      </p>
-                      {/* User form will go here */}
-                      <form onSubmit={handleSubmit}>
-                        <div className="grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-6">
-                          <div>
-                            <label
-                              htmlFor="user-first-name"
-                              className="block text-sm font-medium text-gray-700"
-                            >
-                              First name
-                            </label>
-                            <div className="mt-2">
-                              <input
-                                id="user-first-name"
-                                name="user-first-name"
-                                type="text"
-                                autoComplete="given-name"
-                                required
-                                value={firstName}
-                                onChange={(e) => setFirstName(e.target.value)}
-                                className="block w-full rounded-md border-gray-300 shadow-sm py-3 px-4 focus:border-blue-500 focus:ring-blue-500 sm:text-sm"
-                                placeholder="Enter your first name"
-                              />
-                            </div>
-                          </div>
-
-                          <div>
-                            <label
-                              htmlFor="user-last-name"
-                              className="block text-sm font-medium text-gray-700"
-                            >
-                              Last name
-                            </label>
-                            <div className="mt-2">
-                              <input
-                                id="user-last-name"
-                                name="user-last-name"
-                                type="text"
-                                autoComplete="family-name"
-                                required
-                                value={lastName}
-                                onChange={(e) => setLastName(e.target.value)}
-                                className="block w-full rounded-md border-gray-300 shadow-sm py-3 px-4 focus:border-blue-500 focus:ring-blue-500 sm:text-sm"
-                                placeholder="Enter your last name"
-                              />
-                            </div>
-                          </div>
-
-                          <div className="sm:col-span-2">
-                            <label
-                              htmlFor="user-email"
-                              className="block text-sm font-medium text-gray-700"
-                            >
-                              Email address
-                            </label>
-                            <div className="mt-2">
-                              <input
-                                id="user-email"
-                                name="user-email"
-                                type="email"
-                                autoComplete="email"
-                                required
-                                value={email}
-                                onChange={(e) => setEmail(e.target.value)}
-                                className="block w-full rounded-md border-gray-300 shadow-sm py-3 px-4 focus:border-blue-500 focus:ring-blue-500 sm:text-sm"
-                                placeholder="Enter your email address"
-                              />
-                            </div>
-                          </div>
-
-                          <div className="sm:col-span-2">
-                            <div className="flex items-start">
-                              <div className="flex items-center h-5">
-                                <input
-                                  id="user-terms"
-                                  name="user-terms"
-                                  type="checkbox"
-                                  className="h-4 w-4 rounded border-gray-300 text-blue-600 focus:ring-blue-500"
-                                  checked={agreed}
-                                  onChange={() => setAgreed(!agreed)}
-                                />
-                              </div>
-                              <div className="ml-3 text-sm">
-                                <label
-                                  htmlFor="user-terms"
-                                  className="font-medium text-gray-700"
-                                >
-                                  I agree to receive updates about Eventli and
-                                  accept the{" "}
-                                  <a
-                                    href="/privacypolicy"
-                                    className="text-blue-600 hover:text-blue-500"
-                                  >
-                                    privacy policy
-                                  </a>{" "}
-                                  and{" "}
-                                  <a
-                                    href="/termsofservice"
-                                    className="text-blue-600 hover:text-blue-500"
-                                  >
-                                    terms of service
-                                  </a>
-                                </label>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-
-                        <div className="mt-8">
-                          <button
-                            type="submit"
-                            disabled={!agreed || isSubmitting}
-                            className="flex w-full justify-center rounded-md bg-blue-600 py-3 px-4 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 disabled:opacity-50 disabled:cursor-not-allowed"
-                          >
-                            {isSubmitting ? (
-                              <div className="flex items-center">
-                                <svg
-                                  className="animate-spin -ml-1 mr-3 h-5 w-5 text-white"
-                                  xmlns="http://www.w3.org/2000/svg"
-                                  fill="none"
-                                  viewBox="0 0 24 24"
-                                >
-                                  <circle
-                                    className="opacity-25"
-                                    cx="12"
-                                    cy="12"
-                                    r="10"
-                                    stroke="currentColor"
-                                    strokeWidth="4"
-                                  ></circle>
-                                  <path
-                                    className="opacity-75"
-                                    fill="currentColor"
-                                    d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
-                                  ></path>
-                                </svg>
-                                Signing up...
-                              </div>
-                            ) : (
-                              "Join the Waitlist as User"
-                            )}
-                          </button>
-                        </div>
-                      </form>
-                    </div>
-                  )}
+                {/* Legal Text */}
+                <div className="mt-6 text-sm text-gray-600 text-center">
+                  <p>
+                    By clicking the button, you agree to receive updates about
+                    Eventli and accept the{" "}
+                    <a
+                      href="/privacypolicy"
+                      className="text-blue-600 hover:text-blue-500"
+                    >
+                      privacy policy
+                    </a>{" "}
+                    and{" "}
+                    <a
+                      href="/termsofservice"
+                      className="text-blue-600 hover:text-blue-500"
+                    >
+                      terms of service
+                    </a>
+                  </p>
                 </div>
               </div>
             </div>
@@ -559,6 +316,77 @@ export default function SignUpPage() {
           </div>
         </div>
       </div>
+
+      {/* CSS to style HubSpot form */}
+      <style jsx>{`
+        .hs-form-container {
+          margin: 20px 0;
+        }
+
+        .hs-form-frame {
+          width: 100%;
+        }
+
+        /* Style HubSpot form elements to match your design */
+        :global(.hs-form) {
+          max-width: 100%;
+        }
+
+        :global(.hs-form .hs-form-field) {
+          margin-bottom: 1rem;
+        }
+
+        :global(.hs-form .hs-input) {
+          width: 100%;
+          padding: 0.75rem 1rem;
+          border: 1px solid #d1d5db;
+          border-radius: 0.375rem;
+          font-size: 0.875rem;
+          line-height: 1.25rem;
+        }
+
+        :global(.hs-form .hs-input:focus) {
+          outline: none;
+          border-color: #3b82f6;
+          box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+        }
+
+        :global(.hs-form .hs-button) {
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          padding: 0.75rem 1rem;
+          background-color: #2563eb;
+          color: white;
+          border: none;
+          border-radius: 0.375rem;
+          font-size: 0.875rem;
+          font-weight: 600;
+          cursor: pointer;
+          transition: background-color 0.2s ease;
+        }
+
+        :global(.hs-form .hs-button:hover) {
+          background-color: #1d4ed8;
+        }
+
+        :global(.hs-form .hs-form-required) {
+          color: #ef4444;
+        }
+
+        :global(.hs-form .hs-fieldtype-checkbox) {
+          margin-top: 1rem;
+          margin-bottom: 1rem;
+        }
+
+        :global(.hs-form .hs-fieldtype-checkbox label) {
+          font-size: 0.875rem;
+          color: #374151;
+          margin-left: 0.5rem;
+        }
+      `}</style>
     </div>
   );
 }
+                       

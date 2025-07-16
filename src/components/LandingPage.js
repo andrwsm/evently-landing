@@ -18,9 +18,8 @@ import whiteswirls from "../assets/eventlyLogos/whiteswirls.png";
 
 import Kyle from "../assets/photos/Kyle.jpg";
 import Will from "../assets/photos/Will.jpg";
-import dwightimg from "../assets/photos/dwight.jpg";
 import Finlay from "../assets/photos/Finlay.jpg";
-import Andrew from "../assets/photos/20250623_204441.jpg";
+import Andrew from "../assets/photos/Andrew.png";
 
 import FAQ from "../assets/images/FAQ.png";
 

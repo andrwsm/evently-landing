@@ -1,10 +1,164 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { ChevronDownIcon } from "@heroicons/react/16/solid";
 
 export default function ContactNew() {
   const [agreed, setAgreed] = useState(false);
+
+  useEffect(() => {
+    // Load HubSpot form script
+    const script = document.createElement("script");
+    script.src = "https://js.hsforms.net/forms/embed/49525342.js";
+    script.defer = true;
+    document.body.appendChild(script);
+
+    // Add custom CSS for HubSpot form styling
+    const style = document.createElement("style");
+    style.textContent = `
+      .hs-form-frame {
+        background: white;
+        border-radius: 1rem;
+        box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+        padding: 2.5rem;
+        margin: 0 auto;
+        max-width: 42rem;
+      }
+      
+      .hs-form fieldset {
+        border: none;
+        margin: 0;
+        padding: 0;
+      }
+      
+      .hs-form .hs-form-field {
+        margin-bottom: 1.5rem;
+      }
+      
+      .hs-form .hs-form-field:last-child {
+        margin-bottom: 0;
+      }
+      
+      .hs-form label {
+        display: block;
+        font-size: 0.875rem;
+        font-weight: 500;
+        color: #374151;
+        margin-bottom: 0.25rem;
+      }
+      
+      .hs-form input[type="text"],
+      .hs-form input[type="email"],
+      .hs-form input[type="tel"],
+      .hs-form select,
+      .hs-form textarea {
+        display: block;
+        width: 100%;
+        padding: 0.75rem 1rem;
+        border: 1px solid #d1d5db;
+        border-radius: 0.375rem;
+        box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+        font-size: 0.875rem;
+        transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+      }
+      
+      .hs-form input[type="text"]:focus,
+      .hs-form input[type="email"]:focus,
+      .hs-form input[type="tel"]:focus,
+      .hs-form select:focus,
+      .hs-form textarea:focus {
+        outline: none;
+        border-color: #6366f1;
+        box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+      }
+      
+      .hs-form .hs-button {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        border-radius: 0.375rem;
+        background-color: #4f46e5;
+        padding: 0.75rem 1rem;
+        font-size: 0.875rem;
+        font-weight: 600;
+        color: white;
+        box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+        border: none;
+        cursor: pointer;
+        transition: background-color 0.15s ease-in-out;
+      }
+      
+      .hs-form .hs-button:hover {
+        background-color: #4338ca;
+      }
+      
+      .hs-form .hs-button:focus {
+        outline: 2px solid transparent;
+        outline-offset: 2px;
+        box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.5);
+      }
+      
+      .hs-form .hs-error-msgs {
+        color: #dc2626;
+        font-size: 0.875rem;
+        margin-top: 0.25rem;
+      }
+      
+      .hs-form .hs-form-required {
+        color: #dc2626;
+      }
+      
+      .hs-form .hs-fieldtype-checkbox {
+        display: flex;
+        align-items: flex-start;
+        margin-top: 1rem;
+      }
+      
+      .hs-form .hs-fieldtype-checkbox input[type="checkbox"] {
+        width: 1rem;
+        height: 1rem;
+        margin-right: 0.75rem;
+        margin-top: 0.25rem;
+        border-radius: 0.25rem;
+        border: 1px solid #d1d5db;
+        color: #6366f1;
+        flex-shrink: 0;
+      }
+      
+      .hs-form .hs-fieldtype-checkbox input[type="checkbox"]:focus {
+        box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+      }
+      
+      .hs-form .hs-fieldtype-checkbox label {
+        font-size: 0.875rem;
+        color: #374151;
+        margin-bottom: 0;
+      }
+      
+      .hs-form .hs-fieldtype-checkbox a {
+        color: #6366f1;
+        text-decoration: none;
+      }
+      
+      .hs-form .hs-fieldtype-checkbox a:hover {
+        color: #4f46e5;
+      }
+      
+      @media (min-width: 640px) {
+        .hs-form .hs-form-field.two-column {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 1.5rem;
+        }
+      }
+    `;
+    document.head.appendChild(style);
+
+    return () => {
+      document.body.removeChild(script);
+      document.head.removeChild(style);
+    };
+  }, []);
 
   return (
     <div className="bg-white">
@@ -48,213 +202,12 @@ export default function ContactNew() {
       <div className="py-16 sm:py-24">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="max-w-2xl mx-auto">
-            <div className="bg-white shadow-xl rounded-2xl overflow-hidden">
-              <div className="px-6 py-8 sm:p-10">
-                <form action="#" method="POST">
-                  <div className="grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-6">
-                    <div>
-                      <label
-                        htmlFor="first-name"
-                        className="block text-sm font-medium text-gray-700"
-                      >
-                        First name
-                      </label>
-                      <div className="mt-1">
-                        <input
-                          id="first-name"
-                          name="first-name"
-                          type="text"
-                          autoComplete="given-name"
-                          required
-                          className="block w-full rounded-md border-gray-300 shadow-sm py-3 px-4 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
-                        />
-                      </div>
-                    </div>
-
-                    <div>
-                      <label
-                        htmlFor="last-name"
-                        className="block text-sm font-medium text-gray-700"
-                      >
-                        Last name
-                      </label>
-                      <div className="mt-1">
-                        <input
-                          id="last-name"
-                          name="last-name"
-                          type="text"
-                          autoComplete="family-name"
-                          required
-                          className="block w-full rounded-md border-gray-300 shadow-sm py-3 px-4 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
-                        />
-                      </div>
-                    </div>
-
-                    <div className="sm:col-span-2">
-                      <label
-                        htmlFor="company"
-                        className="block text-sm font-medium text-gray-700"
-                      >
-                        Company (optional)
-                      </label>
-                      <div className="mt-1">
-                        <input
-                          id="company"
-                          name="company"
-                          type="text"
-                          autoComplete="organization"
-                          className="block w-full rounded-md border-gray-300 shadow-sm py-3 px-4 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
-                        />
-                      </div>
-                    </div>
-
-                    <div className="sm:col-span-2">
-                      <label
-                        htmlFor="email"
-                        className="block text-sm font-medium text-gray-700"
-                      >
-                        Email
-                      </label>
-                      <div className="mt-1">
-                        <input
-                          id="email"
-                          name="email"
-                          type="email"
-                          autoComplete="email"
-                          required
-                          className="block w-full rounded-md border-gray-300 shadow-sm py-3 px-4 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
-                        />
-                      </div>
-                    </div>
-
-                    <div className="sm:col-span-2">
-                      <label
-                        htmlFor="phone-number"
-                        className="block text-sm font-medium text-gray-700"
-                      >
-                        Phone number
-                      </label>
-                      <div className="mt-1">
-                        <div className="flex rounded-md shadow-sm">
-                          <div className="relative inline-flex items-center rounded-l-md border border-r-0 border-gray-300 bg-gray-50 px-3 py-2">
-                            <select
-                              id="country"
-                              name="country"
-                              autoComplete="country"
-                              className="h-full rounded-md border-0 bg-transparent py-0 pl-3 pr-8 text-gray-500 focus:outline-none focus:ring-0 sm:text-sm"
-                            >
-                              <option>UK</option>
-                              <option>US</option>
-                              <option>EU</option>
-                            </select>
-                            <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2">
-                              <ChevronDownIcon
-                                aria-hidden="true"
-                                className="h-4 w-4 text-gray-400"
-                              />
-                            </div>
-                          </div>
-                          <input
-                            type="text"
-                            name="phone-number"
-                            id="phone-number"
-                            className="block w-full flex-1 rounded-none rounded-r-md border-gray-300 py-3 px-4 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
-                            placeholder="123-456-7890"
-                          />
-                        </div>
-                      </div>
-                    </div>
-
-                    <div className="sm:col-span-2">
-                      <label
-                        htmlFor="subject"
-                        className="block text-sm font-medium text-gray-700"
-                      >
-                        Subject
-                      </label>
-                      <div className="mt-1">
-                        <select
-                          id="subject"
-                          name="subject"
-                          className="block w-full rounded-md border-gray-300 shadow-sm py-3 px-4 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
-                        >
-                          <option>General Inquiry</option>
-                          <option>Event Management</option>
-                          <option>Technical Support</option>
-                          <option>Partnership</option>
-                          <option>Other</option>
-                        </select>
-                      </div>
-                    </div>
-
-                    <div className="sm:col-span-2">
-                      <label
-                        htmlFor="message"
-                        className="block text-sm font-medium text-gray-700"
-                      >
-                        Message
-                      </label>
-                      <div className="mt-1">
-                        <textarea
-                          id="message"
-                          name="message"
-                          rows={4}
-                          required
-                          className="block w-full rounded-md border-gray-300 shadow-sm py-3 px-4 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
-                          placeholder="Tell us how we can help you..."
-                        />
-                      </div>
-                    </div>
-
-                    <div className="sm:col-span-2">
-                      <div className="flex items-start">
-                        <div className="flex items-center h-5">
-                          <input
-                            id="privacy"
-                            name="privacy"
-                            type="checkbox"
-                            className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
-                            checked={agreed}
-                            onChange={() => setAgreed(!agreed)}
-                          />
-                        </div>
-                        <div className="ml-3 text-sm">
-                          <label
-                            htmlFor="privacy"
-                            className="font-medium text-gray-700"
-                          >
-                            By submitting this form, you agree to our{" "}
-                            <a
-                              href="/privacypolicy"
-                              className="text-indigo-600 hover:text-indigo-500"
-                            >
-                              privacy policy
-                            </a>{" "}
-                            and{" "}
-                            <a
-                              href="/termsofservice"
-                              className="text-indigo-600 hover:text-indigo-500"
-                            >
-                              terms of service
-                            </a>
-                          </label>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="mt-8">
-                    <button
-                      type="submit"
-                      className="flex w-full justify-center rounded-md bg-indigo-600 py-3 px-4 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 disabled:opacity-50"
-                      disabled={!agreed}
-                    >
-                      Send Message
-                    </button>
-                  </div>
-                </form>
-              </div>
-            </div>
+            <div
+              className="hs-form-frame"
+              data-region="na1"
+              data-form-id="bca55d35-60f3-4da9-a9df-f778817dc1ce"
+              data-portal-id="49525342"
+            ></div>
           </div>
         </div>
       </div>

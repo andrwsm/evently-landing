@@ -238,6 +238,25 @@ export default function LandingPage() {
       ),
     },
     {
+      question: "Can I host free events?",
+      answer: (
+        <>
+          Yes! We are proud to offer free events on our platform. You can host
+          events and sell tickets for £0 up to a limited amount of attendees
+          with absolutely no cost to you.
+          <a
+            href="https://support.stripe.com/questions/what-s-the-difference-between-standard-and-premium-cards"
+            className="text-blue-600 underline"
+            target="_blank"
+          >
+            {" "}
+            standard UK cards
+          </a>{" "}
+          which is charged by Stripe.
+        </>
+      ),
+    },
+    {
       question: "How do I collect feedback from attendees?",
       answer:
         "You can collect feedback from attendees by sending out a survey after the event. You can also use the Eventli platform to collect feedback from attendees. This is done upon your request.",
@@ -275,7 +294,7 @@ export default function LandingPage() {
     {
       question: "Are there any set up fees?",
       answer:
-        "No. There are no set up fees for using Eventli. You can create an account and start selling tickets for your event for free.",
+        "No. There are no set up fees for using Eventli. You can create an account and start selling tickets for your event with no upfront costs.",
     },
     // More questions...
   ];

@@ -239,22 +239,8 @@ export default function LandingPage() {
     },
     {
       question: "Can I host free events?",
-      answer: (
-        <>
-          Yes! We are proud to offer free events on our platform. You can host
-          events and sell tickets for £0 up to a limited amount of attendees
-          with absolutely no cost to you.
-          <a
-            href="https://support.stripe.com/questions/what-s-the-difference-between-standard-and-premium-cards"
-            className="text-blue-600 underline"
-            target="_blank"
-          >
-            {" "}
-            standard UK cards
-          </a>{" "}
-          which is charged by Stripe.
-        </>
-      ),
+      answer:
+        "Yes! We are proud to offer free events on our platform. You can host events and sell tickets for £0 up to a limited amount of attendees with absolutely no cost to you.",
     },
     {
       question: "How do I collect feedback from attendees?",

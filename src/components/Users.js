@@ -96,7 +96,7 @@ export default function Users() {
     {
       title: "Tap to Connect",
       description:
-        "Scan a QR, view a profile, make a move. Digital networking made instant — and way less awkward.",
+        "Scan a QR, view a profile, make a move. Digital networking made instant and way less awkward.",
       emoji: "📱",
     },
     {
@@ -108,13 +108,13 @@ export default function Users() {
     {
       title: "Digital Business Cards, Done Right",
       description:
-        "Ditch the paper. Share your contact info and profile with one smooth tap — fast, sleek, unforgettable.",
+        "Ditch the paper. Share your contact info and profile with one smooth tap... fast, sleek, unforgettable.",
       emoji: "💼",
     },
     {
       title: "Built for Gen Z",
       description:
-        "Social-first. Speedy. Purpose-driven. Finally, a platform that gets you — and looks the part too.",
+        "Social-first. Speedy. Purpose-driven. Finally, a platform that gets you, and looks the part too.",
       emoji: "⚡",
     },
   ];
@@ -280,7 +280,7 @@ export default function Users() {
                   1. Create Your Profile
                 </h3>
                 <p className="mt-2 text-base text-gray-500 text-center">
-                  Build your digital business card — show off your skills,
+                  Build your digital business card and show off your skills,
                   interests, and what you're all about.
                 </p>
               </div>

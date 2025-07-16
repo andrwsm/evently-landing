@@ -10,7 +10,7 @@ export default function Organisers() {
     {
       title: "Sky-High Seller Fees",
       description:
-        "Big platforms take a big cut — leaving indie organisers squeezed and struggling to profit.",
+        "Big platforms take a big cut, leaving indie organisers squeezed and struggling to profit.",
       emoji: "💸",
     },
     {
@@ -43,7 +43,7 @@ export default function Organisers() {
     {
       title: "Build Real Community",
       description:
-        "Post updates, answer questions, and engage — all in one place with built-in community forums.",
+        "Post updates, answer questions, and engage, all in one place with built-in community forums.",
       emoji: "💬",
     },
     {
@@ -55,7 +55,7 @@ export default function Organisers() {
     {
       title: "Designed for Gen Z (and the rest of us)",
       description:
-        "Fast, social, and purpose-driven — we meet your audience where they are.",
+        "Fast, social, and purpose-driven, we meet your audience where they are.",
       emoji: "👥",
     },
   ];
@@ -160,8 +160,8 @@ export default function Organisers() {
               Event Management, Rebuilt for You 🚀
             </p>
             <p className="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
-              We've tackled the biggest headaches for organisers — and turned
-              them into power moves:
+              We've tackled the biggest headaches for organisers and turned them
+              into power moves:
             </p>
           </div>
 
@@ -192,7 +192,7 @@ export default function Organisers() {
                 </h3>
                 <p className="text-lg text-gray-700">
                   No more juggling platforms, disjointed comms, or clunky manual
-                  tasks. We've streamlined it all — so you can focus on what
+                  tasks. We've streamlined it all, so you can focus on what
                   matters: your event.
                 </p>
               </div>

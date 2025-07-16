@@ -63,7 +63,7 @@ const values = [
   {
     name: "Empowerment",
     description:
-      "We give organisers the tools to build unforgettable events — and users the power to discover them with ease.",
+      "We give organisers the tools to build unforgettable events, and users the power to discover them with ease.",
     emoji: "💪",
   },
   {
@@ -75,7 +75,7 @@ const values = [
   {
     name: "Innovation",
     description:
-      "Always evolving. Smarter tech, smoother planning, better experiences — that's how we do it.",
+      "Always evolving. Smarter tech, smoother planning, better experiences... that's how we do it.",
     emoji: "🚀",
   },
   {
@@ -93,7 +93,7 @@ const values = [
   {
     name: "Growth",
     description:
-      "We champion your next step — whether it's growing your event, your reach, or yourself.",
+      "We champion your next step, whether it's growing your event, your reach, or yourself.",
     emoji: "📈",
   },
 ];
@@ -113,7 +113,7 @@ export default function LandingPage() {
       description:
         "Our platform is designed to be easy to use and easy to understand. No need to be a tech wizard.",
       details:
-        "Our platform is built with simplicity in mind, making it easy for anyone to create, manage, and sell tickets for their events—no technical expertise required. With an intuitive interface and straightforward navigation, you can set up your event in just a few clicks. Whether you're a first-time organiser or a seasoned event planner, our user-friendly tools ensure a hassle-free experience. You won't need to worry about complicated setups or confusing options—just focus on making your event a success while we handle the rest.",
+        "Our platform is built with simplicity in mind, making it easy for anyone to create, manage, and sell tickets for their events, no technical expertise required. With an intuitive interface and straightforward navigation, you can set up your event in just a few clicks. Whether you're a first-time organiser or a seasoned event planner, our user-friendly tools ensure a hassle-free experience. You won't need to worry about complicated setups or confusing options, just focus on making your event a success while we handle the rest.",
       // icon: TicketIcon,
     },
     {
@@ -297,7 +297,7 @@ export default function LandingPage() {
     {
       name: "Smarter Networking",
       description:
-        "Connect instantly with digital business cards — no awkward small talk required.",
+        "Connect instantly with digital business cards, no awkward small talk required.",
       emoji: "🤝",
     },
     {
@@ -421,7 +421,7 @@ export default function LandingPage() {
                 Everything You Need, All in One Place 🔥
               </p>
               <p className="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
-                Your ultimate event HQ — create, manage, and grow your events
+                Your ultimate event HQ. Create, manage, and grow your events
                 with ease
               </p>
             </div>
@@ -477,8 +477,8 @@ export default function LandingPage() {
                 What Drives Us 🔥
               </p>
               <p className="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
-                We’re not just building tools — we’re building a movement.
-                Here's what fuels us:
+                We’re not just building tools, we’re building a movement. Here's
+                what fuels us:
               </p>
             </div>
 

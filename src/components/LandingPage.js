@@ -62,7 +62,7 @@ const values = [
   {
     name: "Empowerment",
     description:
-      "We give organisers the tools to build unforgettable events, and users the power to discover them with ease.",
+      "We give organisers the tools to build unforgettable events — and users the power to discover them with ease.",
     emoji: "💪",
   },
   {
@@ -74,7 +74,7 @@ const values = [
   {
     name: "Innovation",
     description:
-      "Always evolving. Smarter tech, smoother planning, better experiences... that's how we do it.",
+      "Always evolving. Smarter tech, smoother planning, better experiences — that's how we do it.",
     emoji: "🚀",
   },
   {
@@ -92,7 +92,7 @@ const values = [
   {
     name: "Growth",
     description:
-      "We champion your next step, whether it's growing your event, your reach, or yourself.",
+      "We champion your next step — whether it's growing your event, your reach, or yourself.",
     emoji: "📈",
   },
 ];
@@ -112,7 +112,7 @@ export default function LandingPage() {
       description:
         "Our platform is designed to be easy to use and easy to understand. No need to be a tech wizard.",
       details:
-        "Our platform is built with simplicity in mind, making it easy for anyone to create, manage, and sell tickets for their events, no technical expertise required. With an intuitive interface and straightforward navigation, you can set up your event in just a few clicks. Whether you're a first-time organiser or a seasoned event planner, our user-friendly tools ensure a hassle-free experience. You won't need to worry about complicated setups or confusing options, just focus on making your event a success while we handle the rest.",
+        "Our platform is built with simplicity in mind, making it easy for anyone to create, manage, and sell tickets for their events—no technical expertise required. With an intuitive interface and straightforward navigation, you can set up your event in just a few clicks. Whether you're a first-time organiser or a seasoned event planner, our user-friendly tools ensure a hassle-free experience. You won't need to worry about complicated setups or confusing options—just focus on making your event a success while we handle the rest.",
       // icon: TicketIcon,
     },
     {
@@ -296,7 +296,7 @@ export default function LandingPage() {
     {
       name: "Smarter Networking",
       description:
-        "Connect instantly with digital business cards, no awkward small talk required.",
+        "Connect instantly with digital business cards — no awkward small talk required.",
       emoji: "🤝",
     },
     {
@@ -314,6 +314,21 @@ export default function LandingPage() {
   function classNames(...classes) {
     return classes.filter(Boolean).join(" ");
   }
+
+  // Load HubSpot form script
+  useEffect(() => {
+    const script = document.createElement("script");
+    script.src = "https://js.hsforms.net/forms/embed/49525342.js";
+    script.defer = true;
+    document.body.appendChild(script);
+
+    return () => {
+      // Cleanup script on unmount
+      if (document.body.contains(script)) {
+        document.body.removeChild(script);
+      }
+    };
+  }, []);
 
   return (
     <div className="bg-white relative" id="home">
@@ -420,7 +435,7 @@ export default function LandingPage() {
                 Everything You Need, All in One Place 🔥
               </p>
               <p className="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
-                Your ultimate event HQ. Create, manage, and grow your events
+                Your ultimate event HQ — create, manage, and grow your events
                 with ease
               </p>
             </div>
@@ -476,8 +491,8 @@ export default function LandingPage() {
                 What Drives Us 🔥
               </p>
               <p className="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
-                We’re not just building tools, we’re building a movement. Here's
-                what fuels us:
+                We’re not just building tools — we’re building a movement.
+                Here's what fuels us:
               </p>
             </div>
 
@@ -560,29 +575,33 @@ export default function LandingPage() {
                 <p className="mx-auto mt-6 max-w-xl text-lg text-indigo-100">
                   Be the first to know when we launch our new product.
                 </p>
-                <form className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
-                  <input
-                    id="email-address"
-                    name="email"
-                    type="email"
-                    required
-                    placeholder="Enter your email"
-                    className="min-w-0 flex-auto rounded-md bg-white/10 px-4 py-3 text-white ring-1 ring-inset ring-white/20 placeholder:text-white/60 focus:ring-2 focus:ring-white sm:text-sm"
-                  />
-                  <button
-                    type="submit"
-                    className="flex-none rounded-md bg-white px-4 py-3 text-sm font-semibold text-indigo-700 shadow-sm hover:bg-indigo-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-white"
-                  >
-                    Notify me
-                  </button>
-                </form>
+
+                {/* HubSpot Newsletter Form */}
+                <div className="mt-10">
+                  <div className="hs-form-container">
+                    <div
+                      className="hs-form-frame"
+                      data-region="na1"
+                      data-form-id="52bb8044-ca13-4426-a7bf-07e52a0dd70a"
+                      data-portal-id="49525342"
+                    ></div>
+                  </div>
+                </div>
+
                 <p className="mt-4 text-sm text-indigo-100">
-                  By clicking the button, you agree to our{" "}
+                  By clicking submit, you agree to our{" "}
                   <a
                     href="/privacypolicy"
                     className="font-semibold text-white hover:text-indigo-200"
                   >
                     privacy policy
+                  </a>{" "}
+                  and{" "}
+                  <a
+                    href="/termsofservice"
+                    className="font-semibold text-white hover:text-indigo-200"
+                  >
+                    terms of service
                   </a>
                 </p>
               </div>
@@ -665,6 +684,100 @@ export default function LandingPage() {
           </div>
         </div>
       </main>
+
+      {/* CSS to style HubSpot newsletter form */}
+      <style jsx>{`
+        .hs-form-container {
+          margin: 20px 0;
+        }
+
+        .hs-form-frame {
+          width: 100%;
+        }
+
+        /* Style HubSpot newsletter form elements */
+        :global(.hs-form) {
+          max-width: 100%;
+        }
+
+        :global(.hs-form .hs-form-field) {
+          margin-bottom: 1rem;
+        }
+
+        :global(.hs-form .hs-input) {
+          width: 100%;
+          padding: 0.75rem 1rem;
+          border: 1px solid rgba(255, 255, 255, 0.3);
+          border-radius: 0.375rem;
+          font-size: 0.875rem;
+          line-height: 1.25rem;
+          background-color: rgba(255, 255, 255, 0.1);
+          color: white;
+        }
+
+        :global(.hs-form .hs-input::placeholder) {
+          color: rgba(255, 255, 255, 0.6);
+        }
+
+        :global(.hs-form .hs-input:focus) {
+          outline: none;
+          border-color: white;
+          box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.2);
+        }
+
+        :global(.hs-form .hs-button) {
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          padding: 0.75rem 1rem;
+          background-color: white;
+          color: #3730a3;
+          border: none;
+          border-radius: 0.375rem;
+          font-size: 0.875rem;
+          font-weight: 600;
+          cursor: pointer;
+          transition: background-color 0.2s ease;
+        }
+
+        :global(.hs-form .hs-button:hover) {
+          background-color: #f3f4f6;
+        }
+
+        :global(.hs-form .hs-form-required) {
+          color: #fbbf24;
+        }
+
+        :global(.hs-form .hs-fieldtype-checkbox) {
+          margin-top: 1rem;
+          margin-bottom: 1rem;
+        }
+
+        :global(.hs-form .hs-fieldtype-checkbox label) {
+          font-size: 0.875rem;
+          color: rgba(255, 255, 255, 0.9);
+          margin-left: 0.5rem;
+        }
+
+        @media (min-width: 640px) {
+          :global(.hs-form .hs-form-field) {
+            display: flex;
+            flex-direction: row;
+            gap: 1rem;
+          }
+
+          :global(.hs-form .hs-input) {
+            flex: 1;
+          }
+
+          :global(.hs-form .hs-button) {
+            width: auto;
+            flex: none;
+            padding: 0.75rem 1.5rem;
+          }
+        }
+      `}</style>
     </div>
   );
 }

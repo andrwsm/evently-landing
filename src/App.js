@@ -8,13 +8,15 @@ import Footer from "./components/Footer";
 import Error404 from "./errors/Error404";
 import Users from "./components/Users";
 import LandingPageBefore from "./components/MainPage";
-import PrivacyPolicy from "./components/Tier3Pages/PrivacyPolicy"; // Import the PrivacyPolicy component
-import TermsOfService from "./components/Tier3Pages/TermsOfService"; // Import the TermsOfService component
+import PrivacyPolicy from "./components/Tier3Pages/PrivacyPolicy";
+import TermsOfService from "./components/Tier3Pages/TermsOfService";
 import SignUpPage from "./components/tier2Pages/SignUpPage";
+import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
   return (
     <>
+      <ScrollToTop />
       <Header />
       <Routes>
         <Route path="/" element={<LandingPage />} />
@@ -22,8 +24,8 @@ function App() {
         <Route path="/Users" element={<Users />} />
         <Route path="/LandingPage" element={<LandingPageBefore />} />
         <Route path="/organisers" element={<Organisers />} />
-        <Route path="/PrivacyPolicy" element={<PrivacyPolicy />} />{" "}
-        <Route path="/TermsOfService" element={<TermsOfService />} />{" "}
+        <Route path="/PrivacyPolicy" element={<PrivacyPolicy />} />
+        <Route path="/TermsOfService" element={<TermsOfService />} />
         <Route path="/signup" element={<SignUpPage />} />
         <Route path="*" element={<Error404 />} />
       </Routes>

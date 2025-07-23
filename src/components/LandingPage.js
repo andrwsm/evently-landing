@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import { Dialog, DialogPanel } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
-import ui from "../assets/eventlyLogos/ui.png";
+import ui from "../assets/eventlyLogos/ui2.png";
 import { ChevronRightIcon, CheckIcon } from "@heroicons/react/20/solid";
 import {
   Disclosure,
@@ -219,11 +219,11 @@ export default function LandingPage() {
       answer: (
         <>
           Organisers will pay a flat base rate based on ticket volumes. The
-          platform takes a 3% fee per ticket sold to cover the cost of running
-          the platform. The Stripe processing fee is 1.5% plus 20p per
-          transaction for UK cards. For international cards, the fee is 2.9%
+          platform takes a 3% fee plus £0.50 per ticket sold to cover the cost
+          of running the platform. The Stripe processing fee is 1.5% plus 20p
+          per transaction for UK cards. For international cards, the fee is 2.9%
           plus 20p per transaction. This means that for a ticket priced at £10,
-          the total fees would be approximately £0.50 for UK cards and £0.70 for
+          the total fees would be approximately £1.15 for UK cards and £1.39 for
           international cards.
           <a
             href="https://support.stripe.com/questions/what-s-the-difference-between-standard-and-premium-cards"
@@ -240,7 +240,7 @@ export default function LandingPage() {
     {
       question: "Can I host free events?",
       answer:
-        "Yes! We are proud to offer free events on our platform. You can host events and sell tickets for £0 up to a limited amount of attendees with absolutely no cost to you.",
+        "Yes! We are proud to offer free events on our platform. You can host events and sell free tickets for up to 2 events per month at no cost. If you need to host more than 2 free events per month, we offer a premium plan that allows you to host 8 events for £49 per month. Alternatively, you can use our pay-as-you-go plan, which allows you to host events for a fee of £20 per event.",
     },
     {
       question: "How do I collect feedback from attendees?",
@@ -260,7 +260,7 @@ export default function LandingPage() {
     {
       question: "What types of events can I host on Eventli?",
       answer:
-        "We support a range of events, however the majorty of events are corporate events, networking events, and conferences. We also support webinars, workshops, and training sessions.",
+        "We support a range of events, however the majorty of events are corporate events, networking events, insight events, and conferences. We also support webinars, workshops, and training sessions.",
     },
     {
       question: "Can I print attendee badges?",

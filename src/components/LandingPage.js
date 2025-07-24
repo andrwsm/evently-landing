@@ -221,10 +221,7 @@ export default function LandingPage() {
           Organisers will pay a flat base rate based on ticket volumes. The
           platform takes a 3% fee plus £0.50 per ticket sold to cover the cost
           of running the platform. The Stripe processing fee is 1.5% plus 20p
-          per transaction for UK cards. For international cards, the fee is 2.9%
-          plus 20p per transaction. This means that for a ticket priced at £10,
-          the total fees would be approximately £1.15 for UK cards and £1.39 for
-          international cards.
+          per transaction for{" "}
           <a
             href="https://support.stripe.com/questions/what-s-the-difference-between-standard-and-premium-cards"
             className="text-blue-600 underline"
@@ -232,8 +229,10 @@ export default function LandingPage() {
           >
             {" "}
             standard UK cards
-          </a>{" "}
-          which is charged by Stripe.
+          </a>
+          . For international cards, the fee is 2.9% plus 20p per transaction.
+          This means that for a ticket priced at £10, the total fees would be
+          approximately £1.15 for UK cards and £1.39 for international cards.
         </>
       ),
     },

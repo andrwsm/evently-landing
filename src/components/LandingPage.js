@@ -12,7 +12,7 @@ import {
 } from "@headlessui/react";
 import { MinusSmallIcon, PlusSmallIcon } from "@heroicons/react/24/outline";
 
-import EventlyIcon from "../assets/eventlyLogos/EventlyIcon.png";
+import EventlyIcon from "../assets/eventlyLogos/Eventli/EventlyIcon.png";
 import blueswirtls from "../assets/eventlyLogos/blueswirls.png";
 import whiteswirls from "../assets/eventlyLogos/whiteswirls.png";
 
@@ -62,7 +62,7 @@ const values = [
   {
     name: "Empowerment",
     description:
-      "We give organisers the tools to build unforgettable events — and users the power to discover them with ease.",
+      "We give organisers the tools to build unforgettable events, and users the power to discover them with ease.",
     emoji: "💪",
   },
   {
@@ -74,7 +74,7 @@ const values = [
   {
     name: "Innovation",
     description:
-      "Always evolving. Smarter tech, smoother planning, better experiences — that's how we do it.",
+      "Always evolving. Smarter tech, smoother planning, better experiences. That's how we do it.",
     emoji: "🚀",
   },
   {
@@ -92,7 +92,7 @@ const values = [
   {
     name: "Growth",
     description:
-      "We champion your next step — whether it's growing your event, your reach, or yourself.",
+      "We champion your next step, whether it's growing your event, your reach, or yourself.",
     emoji: "📈",
   },
 ];
@@ -112,7 +112,7 @@ export default function LandingPage() {
       description:
         "Our platform is designed to be easy to use and easy to understand. No need to be a tech wizard.",
       details:
-        "Our platform is built with simplicity in mind, making it easy for anyone to create, manage, and sell tickets for their events—no technical expertise required. With an intuitive interface and straightforward navigation, you can set up your event in just a few clicks. Whether you're a first-time organiser or a seasoned event planner, our user-friendly tools ensure a hassle-free experience. You won't need to worry about complicated setups or confusing options—just focus on making your event a success while we handle the rest.",
+        "Our platform is built with simplicity in mind, making it easy for anyone to create, manage, and sell tickets for their events. No technical expertise required. With an intuitive interface and straightforward navigation, you can set up your event in just a few clicks. Whether you're a first-time organiser or a seasoned event planner, our user-friendly tools ensure a hassle-free experience. You won't need to worry about complicated setups or confusing options. Just focus on making your event a success while we handle the rest.",
       // icon: TicketIcon,
     },
     {
@@ -120,7 +120,7 @@ export default function LandingPage() {
       description:
         "You are our priority. We will always be here to help you with any issues you may have.",
       details:
-        "Your success is our top priority. We're committed to providing exceptional support whenever you need it. Whether you have questions, need assistance setting up your event, or encounter any issues along the way, our dedicated team is here to help. With responsive customer service and helpful resources, we ensure you're never left figuring things out on your own. No matter the challenge, we've got your back—because your experience matters to us.",
+        "Your success is our top priority. We're committed to providing exceptional support whenever you need it. Whether you have questions, need assistance setting up your event, or encounter any issues along the way, our dedicated team is here to help. With responsive customer service and helpful resources, we ensure you're never left figuring things out on your own. No matter the challenge, we've got your back, because your experience matters to us.",
       // icon: UserCircleIcon,
     },
   ];
@@ -300,7 +300,7 @@ export default function LandingPage() {
     {
       name: "Smarter Networking",
       description:
-        "Connect instantly with digital business cards — no awkward small talk required.",
+        "Connect instantly with digital business cards. No awkward small talk required.",
       emoji: "🤝",
     },
     {
@@ -337,8 +337,8 @@ export default function LandingPage() {
   return (
     <div className="bg-white relative" id="home">
       <main>
-        {/* Hero section - Updated with gradient background */}
-        <div className="relative bg-gradient-to-r from-blue-600 to-indigo-700 overflow-hidden pt-12">
+        {/* Hero section - Updated with sleeker gradient background */}
+        <div className="relative bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 overflow-hidden pt-12">
           <div className="absolute inset-0">
             {/* Decorative circles from Organisers page */}
             <svg
@@ -374,7 +374,7 @@ export default function LandingPage() {
           <div className="relative mx-auto max-w-7xl px-6 py-12 sm:py-32 lg:flex lg:items-center lg:gap-x-10 lg:px-8 lg:py-40">
             <div className="mx-auto max-w-2xl lg:mx-0 lg:flex-auto">
               <div className="flex">
-                <div className="relative flex items-center gap-x-4 rounded-full bg-white/10 backdrop-blur-sm px-4 py-1 text-sm/6 text-white ring-1 ring-white/20 hover:ring-white/40">
+                <div className="relative flex items-center gap-x-4 rounded-full bg-white/5 backdrop-blur-md px-4 py-1 text-sm/6 text-white ring-1 ring-white/10 hover:ring-white/20 transition-all duration-300">
                   <span className="font-semibold text-white">
                     We're changing things
                   </span>
@@ -398,7 +398,7 @@ export default function LandingPage() {
               >
                 Where events <span className="font-light">come to life</span>
               </h1>
-              <p className="mt-8 text-pretty text-lg font-medium text-indigo-100 sm:text-xl/8">
+              <p className="mt-8 text-pretty text-lg font-medium text-slate-200 sm:text-xl/8">
                 Join us to elevate your corporate and networking events to the
                 next level. Connect, collaborate, and create unforgettable
                 experiences.
@@ -408,13 +408,13 @@ export default function LandingPage() {
               <div className="mt-10 max-w-sm mx-auto sm:max-w-none sm:flex sm:gap-5">
                 <a
                   href="/signup"
-                  className="flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-indigo-700 bg-white hover:bg-indigo-50 sm:px-8"
+                  className="flex items-center justify-center px-6 py-3 border border-transparent text-base font-semibold rounded-xl shadow-lg text-slate-900 bg-white hover:bg-gray-50 hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-200 sm:px-8"
                 >
                   Sign Up
                 </a>
                 <a
                   href="#features"
-                  className="flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-indigo-500 bg-opacity-60 hover:bg-opacity-70 sm:px-8 mt-4 sm:mt-0"
+                  className="flex items-center justify-center px-6 py-3 border border-white/20 text-base font-semibold rounded-xl shadow-lg text-white bg-transparent backdrop-blur-sm hover:bg-white/10 hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-200 sm:px-8 mt-4 sm:mt-0"
                 >
                   Learn More
                 </a>
@@ -423,22 +423,25 @@ export default function LandingPage() {
             <img
               alt=""
               src={ui}
-              className="relative mt-16 lg:mt-0 h-auto w-full max-w-sm mx-auto lg:max-w-md xl:max-w-lg rounded-lg shadow-2xl"
+              className="relative mt-16 lg:mt-0 h-auto w-full max-w-sm mx-auto lg:max-w-md xl:max-w-lg rounded-2xl shadow-2xl ring-1 ring-white/10"
             />
           </div>
         </div>
 
         {/* Feature section - Updated styling */}
-        <div className="bg-white py-24 sm:py-32" id="features">
+        <div
+          className="bg-gradient-to-b from-slate-50 to-white py-24 sm:py-32"
+          id="features"
+        >
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="lg:text-center">
-              <h2 className="text-base text-indigo-600 font-semibold tracking-wide uppercase">
+              <h2 className="text-base text-slate-600 font-semibold tracking-wide uppercase">
                 Everything you need
               </h2>
-              <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+              <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-slate-900 sm:text-4xl">
                 Everything You Need, All in One Place 🔥
               </p>
-              <p className="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
+              <p className="mt-4 max-w-2xl text-xl text-slate-600 lg:mx-auto">
                 Your ultimate event HQ. Create, manage, and grow your events
                 with ease
               </p>
@@ -449,11 +452,11 @@ export default function LandingPage() {
                 {features.map((feature) => (
                   <div
                     key={feature.name}
-                    className="bg-white overflow-hidden shadow rounded-lg"
+                    className="bg-white overflow-hidden shadow-lg hover:shadow-xl rounded-2xl border border-slate-200/50 hover:border-slate-300/50 transition-all duration-300 transform hover:-translate-y-1"
                   >
                     <div className="p-6">
                       <div className="flex items-center">
-                        <div className="flex-shrink-0 h-12 w-12 rounded-md bg-indigo-100 flex items-center justify-center">
+                        <div className="flex-shrink-0 h-12 w-12 rounded-xl bg-gradient-to-br from-slate-100 to-slate-200 flex items-center justify-center shadow-sm">
                           {feature.emoji ? (
                             <span className="text-2xl">{feature.emoji}</span>
                           ) : (
@@ -461,10 +464,10 @@ export default function LandingPage() {
                           )}
                         </div>
                         <div className="ml-4">
-                          <h3 className="text-lg leading-6 font-medium text-gray-900">
+                          <h3 className="text-lg leading-6 font-semibold text-slate-900">
                             {feature.name}
                           </h3>
-                          <p className="mt-1 text-sm text-gray-500">
+                          <p className="mt-1 text-sm text-slate-600">
                             {feature.description}
                           </p>
                         </div>
@@ -478,7 +481,7 @@ export default function LandingPage() {
         </div>
 
         {/* Values section with swirls background */}
-        <div className="relative bg-indigo-50 py-16 sm:py-24">
+        <div className="relative bg-gradient-to-b from-slate-100 to-slate-50 py-16 sm:py-24">
           <div className="absolute inset-0 overflow-hidden opacity-10">
             <img
               src={blueswirtls}
@@ -488,14 +491,14 @@ export default function LandingPage() {
           </div>
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="lg:text-center mb-16">
-              <h2 className="text-base text-indigo-600 font-semibold tracking-wide uppercase">
+              <h2 className="text-base text-slate-600 font-semibold tracking-wide uppercase">
                 Our Core Values
               </h2>
-              <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+              <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-slate-900 sm:text-4xl">
                 What Drives Us 🔥
               </p>
-              <p className="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
-                We’re not just building tools, we’re building a movement. Here's
+              <p className="mt-4 max-w-2xl text-xl text-slate-600 lg:mx-auto">
+                We're not just building tools, we're building a movement. Here's
                 what fuels us:
               </p>
             </div>
@@ -505,19 +508,19 @@ export default function LandingPage() {
                 {values.map((value) => (
                   <div
                     key={value.name}
-                    className="bg-white overflow-hidden shadow rounded-lg p-6"
+                    className="bg-white overflow-hidden shadow-lg hover:shadow-xl rounded-2xl border border-slate-200/50 hover:border-slate-300/50 transition-all duration-300 transform hover:-translate-y-1 p-6"
                   >
                     <div className="flex items-center mb-4">
-                      <div className="flex-shrink-0 h-12 w-12 rounded-md bg-indigo-100 flex items-center justify-center">
+                      <div className="flex-shrink-0 h-12 w-12 rounded-xl bg-gradient-to-br from-slate-100 to-slate-200 flex items-center justify-center shadow-sm">
                         <span className="text-2xl">{value.emoji}</span>
                       </div>
                       <div className="ml-4">
-                        <h3 className="text-lg font-medium text-indigo-600">
+                        <h3 className="text-lg font-semibold text-slate-700">
                           {value.name}
                         </h3>
                       </div>
                     </div>
-                    <p className="text-gray-600">{value.description}</p>
+                    <p className="text-slate-600">{value.description}</p>
                   </div>
                 ))}
               </div>
@@ -526,13 +529,13 @@ export default function LandingPage() {
         </div>
 
         {/* Team section - Updated styling */}
-        <div className="bg-white py-24 sm:py-32">
+        <div className="bg-gradient-to-b from-white to-slate-50 py-24 sm:py-32">
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
             <div className="mx-auto max-w-2xl text-center mb-16">
-              <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+              <h2 className="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
                 Our team
               </h2>
-              <p className="mt-6 text-lg text-gray-600">
+              <p className="mt-6 text-lg text-slate-600">
                 We're a dynamic group of individuals who are passionate about
                 what we do and dedicated to delivering the best results for our
                 clients.
@@ -542,18 +545,20 @@ export default function LandingPage() {
             <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-4">
               {people.map((person) => (
                 <div key={person.name} className="group relative">
-                  <div className="aspect-square overflow-hidden rounded-2xl bg-gray-100">
+                  <div className="aspect-square overflow-hidden rounded-2xl bg-slate-100 ring-1 ring-slate-200">
                     <img
                       src={person.imageUrl}
                       alt=""
                       className="object-cover w-full h-full group-hover:scale-110 transition-transform duration-500"
                     />
                   </div>
-                  <h3 className="mt-6 text-lg font-semibold text-gray-900">
+                  <h3 className="mt-6 text-lg font-semibold text-slate-900">
                     {person.name}
                   </h3>
-                  <p className="text-sm text-indigo-600">{person.role}</p>
-                  <p className="mt-2 text-sm text-gray-500">{person.bio}</p>
+                  <p className="text-sm text-slate-600 font-medium">
+                    {person.role}
+                  </p>
+                  <p className="mt-2 text-sm text-slate-500">{person.bio}</p>
                 </div>
               ))}
             </div>
@@ -561,9 +566,9 @@ export default function LandingPage() {
         </div>
 
         {/* Newsletter section - Updated styling */}
-        <div className="bg-[#2464b4]">
+        <div className="bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900">
           <div className="mx-auto max-w-7xl py-16 px-6 sm:py-24 lg:px-8">
-            <div className="relative isolate px-6 py-12 sm:px-16 sm:py-16 lg:px-24 overflow-hidden rounded-3xl">
+            <div className="relative isolate px-6 py-12 sm:px-16 sm:py-16 lg:px-24 overflow-hidden rounded-3xl bg-black/10 backdrop-blur-sm border border-white/10">
               <div className="absolute inset-0 -z-10 opacity-20">
                 <img
                   src={blueswirtls}
@@ -576,7 +581,7 @@ export default function LandingPage() {
                 <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
                   Get notified when we're launching
                 </h2>
-                <p className="mx-auto mt-6 max-w-xl text-lg text-indigo-100">
+                <p className="mx-auto mt-6 max-w-xl text-lg text-slate-200">
                   Be the first to know when we launch our new product.
                 </p>
 
@@ -592,7 +597,7 @@ export default function LandingPage() {
                   </div>
                 </div>
 
-                <p className="mt-4 text-sm text-indigo-100">
+                <p className="mt-4 text-sm text-slate-300">
                   By clicking submit, you agree to our{" "}
                   <a
                     href="/privacypolicy"
@@ -614,18 +619,21 @@ export default function LandingPage() {
         </div>
 
         {/* FAQs section - Updated styling */}
-        <div className="bg-white py-24 sm:py-32" id="faq">
+        <div
+          className="bg-gradient-to-b from-slate-50 to-white py-24 sm:py-32"
+          id="faq"
+        >
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
             <div className="lg:grid lg:grid-cols-12 lg:gap-8">
               <div className="lg:col-span-5">
-                <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+                <h2 className="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
                   Frequently asked questions
                 </h2>
-                <p className="mt-4 text-lg text-gray-500">
+                <p className="mt-4 text-lg text-slate-600">
                   Can't find the answer you're looking for? Contact our
                   <a
                     href="/contact-new"
-                    className="font-medium text-indigo-600 hover:text-indigo-500"
+                    className="font-medium text-slate-700 hover:text-slate-900 transition-colors duration-200"
                   >
                     {" "}
                     customer support team
@@ -635,7 +643,7 @@ export default function LandingPage() {
                 <div className="mt-12 hidden lg:block">
                   <img
                     src={FAQ}
-                    className="w-full max-w-md rounded-lg shadow-lg"
+                    className="w-full max-w-md rounded-2xl shadow-xl ring-1 ring-slate-200"
                     alt="FAQ"
                   />
                 </div>
@@ -647,19 +655,19 @@ export default function LandingPage() {
                       {({ open }) => (
                         <>
                           <dt>
-                            <DisclosureButton className="flex w-full items-start justify-between text-left text-gray-900">
+                            <DisclosureButton className="flex w-full items-start justify-between text-left text-slate-900 hover:text-slate-700 transition-colors duration-200">
                               <span className="text-base font-semibold leading-7">
                                 {faq.question}
                               </span>
                               <span className="ml-6 flex h-7 items-center">
                                 {open ? (
                                   <MinusSmallIcon
-                                    className="h-6 w-6 text-indigo-600"
+                                    className="h-6 w-6 text-slate-600"
                                     aria-hidden="true"
                                   />
                                 ) : (
                                   <PlusSmallIcon
-                                    className="h-6 w-6 text-indigo-600"
+                                    className="h-6 w-6 text-slate-600"
                                     aria-hidden="true"
                                   />
                                 )}
@@ -667,7 +675,7 @@ export default function LandingPage() {
                             </DisclosureButton>
                           </dt>
                           <DisclosurePanel as="dd" className="mt-2 pr-12">
-                            <p className="text-base leading-7 text-gray-600">
+                            <p className="text-base leading-7 text-slate-600">
                               {faq.answer}
                             </p>
                           </DisclosurePanel>
@@ -679,7 +687,7 @@ export default function LandingPage() {
                 <div className="mt-10 block lg:hidden">
                   <img
                     src={FAQ}
-                    className="w-full max-w-md mx-auto rounded-lg shadow-lg"
+                    className="w-full max-w-md mx-auto rounded-2xl shadow-xl ring-1 ring-slate-200"
                     alt="FAQ"
                   />
                 </div>
@@ -711,12 +719,14 @@ export default function LandingPage() {
         :global(.hs-form .hs-input) {
           width: 100%;
           padding: 0.75rem 1rem;
-          border: 1px solid rgba(255, 255, 255, 0.3);
-          border-radius: 0.375rem;
+          border: 1px solid rgba(255, 255, 255, 0.2);
+          border-radius: 0.75rem;
           font-size: 0.875rem;
           line-height: 1.25rem;
-          background-color: rgba(255, 255, 255, 0.1);
+          background-color: rgba(255, 255, 255, 0.05);
+          backdrop-filter: blur(8px);
           color: white;
+          transition: all 0.2s ease;
         }
 
         :global(.hs-form .hs-input::placeholder) {
@@ -725,8 +735,10 @@ export default function LandingPage() {
 
         :global(.hs-form .hs-input:focus) {
           outline: none;
-          border-color: white;
-          box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.2);
+          border-color: rgba(255, 255, 255, 0.4);
+          background-color: rgba(255, 255, 255, 0.1);
+          box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.1),
+            0 4px 6px -1px rgba(0, 0, 0, 0.1);
         }
 
         :global(.hs-form .hs-button) {
@@ -736,17 +748,20 @@ export default function LandingPage() {
           align-items: center;
           padding: 0.75rem 1rem;
           background-color: white;
-          color: #3730a3;
+          color: #0f172a;
           border: none;
-          border-radius: 0.375rem;
+          border-radius: 0.75rem;
           font-size: 0.875rem;
           font-weight: 600;
           cursor: pointer;
-          transition: background-color 0.2s ease;
+          transition: all 0.2s ease;
+          box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
         }
 
         :global(.hs-form .hs-button:hover) {
-          background-color: #f3f4f6;
+          background-color: #f8fafc;
+          transform: translateY(-1px);
+          box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
         }
 
         :global(.hs-form .hs-form-required) {
@@ -778,7 +793,7 @@ export default function LandingPage() {
           :global(.hs-form .hs-button) {
             width: auto;
             flex: none;
-            padding: 0.75rem 1.5rem;
+            padding: 0.75rem 2rem;
           }
         }
       `}</style>

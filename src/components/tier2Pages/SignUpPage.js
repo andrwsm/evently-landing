@@ -29,7 +29,7 @@ export default function SignUpPage() {
         <main className="max-w-7xl mx-auto px-6 py-24 sm:py-32 lg:px-8 lg:py-40">
           <button
             onClick={() => navigate(-1)}
-            className="flex items-center text-blue-600 hover:text-blue-800"
+            className="flex items-center text-slate-600 hover:text-slate-800 transition-colors duration-200"
           >
             <ChevronLeftIcon className="h-5 w-5 mr-2" aria-hidden="true" />
             Back
@@ -51,17 +51,17 @@ export default function SignUpPage() {
                 />
               </svg>
             </div>
-            <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">
+            <h1 className="text-4xl font-bold tracking-tight text-slate-900 sm:text-5xl">
               Welcome to Eventli!
             </h1>
-            <p className="mt-6 text-lg text-gray-600 max-w-2xl mx-auto">
+            <p className="mt-6 text-lg text-slate-600 max-w-2xl mx-auto">
               Thank you for signing up! We'll keep you updated on our launch
               progress and notify you as soon as we're ready to go live.
             </p>
             <div className="mt-10">
               <button
                 onClick={() => navigate(-1)}
-                className="rounded-md bg-blue-600 px-6 py-3 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
+                className="rounded-xl bg-slate-600 px-6 py-3 text-sm font-semibold text-white shadow-lg hover:bg-slate-500 hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-600"
               >
                 Continue Exploring
               </button>
@@ -75,7 +75,7 @@ export default function SignUpPage() {
   return (
     <div className="bg-white">
       {/* Hero Section */}
-      <div className="relative bg-gradient-to-r from-blue-600 to-indigo-700 overflow-hidden">
+      <div className="relative bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 overflow-hidden">
         <div className="absolute inset-0">
           <svg
             className="absolute bottom-0 left-0 transform translate-y-1/2 opacity-20"
@@ -110,7 +110,7 @@ export default function SignUpPage() {
             <h1 className="text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl">
               Join the Waitlist
             </h1>
-            <p className="mt-6 max-w-2xl mx-auto text-xl text-indigo-100">
+            <p className="mt-6 max-w-2xl mx-auto text-xl text-slate-200">
               Be the first to experience the future of event management. Sign up
               now and get exclusive early access when we launch.
             </p>
@@ -122,10 +122,10 @@ export default function SignUpPage() {
       <div className="py-16 sm:py-24">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold tracking-tight text-gray-900">
+            <h2 className="text-3xl font-bold tracking-tight text-slate-900">
               Get Early Access
             </h2>
-            <p className="mt-4 text-lg text-gray-600">
+            <p className="mt-4 text-lg text-slate-600">
               Choose your role and join thousands waiting for launch
             </p>
           </div>
@@ -150,10 +150,10 @@ export default function SignUpPage() {
                       />
                     </svg>
                   </div>
-                  <h3 className="text-2xl font-bold text-gray-900 mb-2">
+                  <h3 className="text-2xl font-bold text-slate-900 mb-2">
                     For Event Organisers
                   </h3>
-                  <p className="text-gray-600">
+                  <p className="text-slate-600">
                     Create and manage amazing events with our powerful platform
                   </p>
                 </div>
@@ -175,14 +175,14 @@ export default function SignUpPage() {
                     Eventli and accept the{" "}
                     <a
                       href="/privacypolicy"
-                      className="text-blue-600 hover:text-blue-500"
+                      className="text-slate-600 hover:text-slate-800 transition-colors duration-200"
                     >
                       privacy policy
                     </a>{" "}
                     and{" "}
                     <a
                       href="/termsofservice"
-                      className="text-blue-600 hover:text-blue-500"
+                      className="text-slate-600 hover:text-slate-800 transition-colors duration-200"
                     >
                       terms of service
                     </a>
@@ -210,10 +210,10 @@ export default function SignUpPage() {
                       />
                     </svg>
                   </div>
-                  <h3 className="text-2xl font-bold text-gray-900 mb-2">
+                  <h3 className="text-2xl font-bold text-slate-900 mb-2">
                     For Event Attendees
                   </h3>
-                  <p className="text-gray-600">
+                  <p className="text-slate-600">
                     Discover and attend amazing events in your area
                   </p>
                 </div>
@@ -235,14 +235,14 @@ export default function SignUpPage() {
                     Eventli and accept the{" "}
                     <a
                       href="/privacypolicy"
-                      className="text-blue-600 hover:text-blue-500"
+                      className="text-slate-600 hover:text-slate-800 transition-colors duration-200"
                     >
                       privacy policy
                     </a>{" "}
                     and{" "}
                     <a
                       href="/termsofservice"
-                      className="text-blue-600 hover:text-blue-500"
+                      className="text-slate-600 hover:text-slate-800 transition-colors duration-200"
                     >
                       terms of service
                     </a>

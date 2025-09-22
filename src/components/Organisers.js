@@ -63,7 +63,7 @@ export default function Organisers() {
   return (
     <div className="bg-white">
       {/* Hero Section */}
-      <div className="relative bg-gradient-to-r from-blue-600 to-indigo-700 overflow-hidden">
+      <div className="relative bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 overflow-hidden">
         <div className="absolute inset-0">
           <div className="swirls opacity-25">
             <img src={whiteswirls}></img>
@@ -79,7 +79,7 @@ export default function Organisers() {
               For Modern Organisers
             </span>
           </h1>
-          <p className="mt-6 max-w-lg mx-auto text-center text-xl text-indigo-100 sm:max-w-3xl">
+          <p className="mt-6 max-w-lg mx-auto text-center text-xl text-slate-200 sm:max-w-3xl">
             A streamlined web app that cuts costs, centralizes event management,
             and connects organisers with attendees in a way that resonates with
             today's audience.
@@ -88,13 +88,13 @@ export default function Organisers() {
             <div className="space-y-4 sm:space-y-0 sm:mx-auto sm:inline-grid sm:grid-cols-2 sm:gap-5">
               <a
                 href="/signup"
-                className="flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-indigo-700 bg-white hover:bg-indigo-50 sm:px-8"
+                className="flex items-center justify-center px-6 py-3 border border-transparent text-base font-semibold rounded-xl shadow-lg text-slate-900 bg-white hover:bg-gray-50 hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-200 sm:px-8"
               >
                 Sign Up
               </a>
               <a
                 href="#features"
-                className="flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-indigo-500 bg-opacity-60 hover:bg-opacity-70 sm:px-8"
+                className="flex items-center justify-center px-6 py-3 border border-white/20 text-base font-semibold rounded-xl shadow-lg text-white bg-transparent backdrop-blur-sm hover:bg-white/10 hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-200 sm:px-8"
               >
                 Learn More
               </a>
@@ -104,16 +104,16 @@ export default function Organisers() {
       </div>
 
       {/* Problem Statement Section */}
-      <div className="py-16 bg-gray-50">
+      <div className="py-16 bg-gradient-to-b from-slate-100 to-slate-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="lg:text-center">
-            <h2 className="text-base text-indigo-600 font-semibold tracking-wide uppercase">
+            <h2 className="text-base text-slate-600 font-semibold tracking-wide uppercase">
               Problem Statement
             </h2>
-            <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+            <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-slate-900 sm:text-4xl">
               Organising events shouldn't be this hard...
             </p>
-            <p className="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
+            <p className="mt-4 max-w-2xl text-xl text-slate-600 lg:mx-auto">
               Organising professional events is costly, time-consuming, and
               scattered across too many platforms, making it inefficient and
               inaccessible for modern organisers.
@@ -125,18 +125,18 @@ export default function Organisers() {
               {problems.map((problem, index) => (
                 <div
                   key={index}
-                  className="bg-white overflow-hidden shadow rounded-lg"
+                  className="bg-white overflow-hidden shadow-lg hover:shadow-xl rounded-2xl border border-slate-200/50 hover:border-slate-300/50 transition-all duration-300 transform hover:-translate-y-1"
                 >
                   <div className="p-6">
                     <div className="flex items-center">
-                      <div className="flex-shrink-0 h-12 w-12 rounded-md bg-indigo-100 flex items-center justify-center">
+                      <div className="flex-shrink-0 h-12 w-12 rounded-xl bg-gradient-to-br from-slate-100 to-slate-200 flex items-center justify-center shadow-sm">
                         <span className="text-2xl">{problem.emoji}</span>
                       </div>
                       <div className="ml-4">
-                        <h3 className="text-lg leading-6 font-medium text-gray-900">
+                        <h3 className="text-lg leading-6 font-semibold text-slate-900">
                           {problem.title}
                         </h3>
-                        <p className="mt-1 text-sm text-gray-500">
+                        <p className="mt-1 text-sm text-slate-600">
                           {problem.description}
                         </p>
                       </div>

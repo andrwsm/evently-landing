@@ -1,6 +1,6 @@
 import CustomIcons from "../assets/icons";
-import EventlyIcon from "../assets/eventlyLogos/EventlyIcon.png";
-import EventlyLogo from "../assets/eventlyLogos/EventlyLogo.png";
+import EventlyIcon from "../assets/eventlyLogos/Eventli/EventlyIcon.png";
+import EventlyLogo from "../assets/eventlyLogos/Eventli/EventlyLogo.png";
 import lookingDown from "../assets/images/lookingAtPhone.png";
 
 const features = [
@@ -26,7 +26,7 @@ const features = [
 
 export default function LandingPageBefore() {
   return (
-    <div className="relative overflow-hidden bg-white py-24 sm:py-32">
+    <div className="relative overflow-hidden bg-gradient-to-b from-slate-50 to-white py-24 sm:py-32">
       <div className="absolute top-5 right-10 w-32 h-32 bg-dot-pattern bg-[size:16px_16px]"></div>
       <div
         className="absolute inset-0 z-0 bg-no-repeat opacity-20"
@@ -41,35 +41,35 @@ export default function LandingPageBefore() {
           <div className="lg:pt-4 lg:pr-8">
             <div className="lg:max-w-lg">
               <h2
-                className="text-2xl font-semibold text-grey"
+                className="text-2xl font-semibold text-slate-600"
                 style={{ fontFamily: "Montserrat, sans-serif" }}
               >
                 Don't just learn it
               </h2>
               <p
-                className="mt-2 text-7xl font-bold tracking-tight text-pretty text-grey sm:text-8xl"
+                className="mt-2 text-7xl font-bold tracking-tight text-pretty text-slate-900 sm:text-8xl"
                 style={{ fontFamily: "Montserrat, sans-serif" }}
               >
                 BECOME IT
               </p>
-              <p className="mt-6 text-base text-grey-600">
+              <p className="mt-6 text-base text-slate-600">
                 Join us to elevate your corporate and networking events to the
                 next level. Connect, collaborate, and create unforgettable
                 experiences.
               </p>
-              <button className="mt-6 px-6 py-2 border-2 border-gray-900 text-gray-900 font-semibold rounded-md hover:bg-gray-900 hover:text-white transition-colors duration-300">
+              <button className="mt-6 px-6 py-3 border-2 border-slate-900 text-slate-900 font-semibold rounded-xl hover:bg-slate-900 hover:text-white hover:shadow-lg transform hover:-translate-y-0.5 transition-all duration-200">
                 Work with us --Placeholder
               </button>
-              <dl className="mt-10 flex flex-wrap gap-x-8 gap-y-8 text-base/7 text-gray-600 lg:max-w-none lg:flex-nowrap">
+              <dl className="mt-10 flex flex-wrap gap-x-8 gap-y-8 text-base/7 text-slate-600 lg:max-w-none lg:flex-nowrap">
                 {features.map((feature) => (
                   <div
                     key={feature.name}
                     className="relative pl-4 flex-shrink-0 w-full sm:w-auto lg:w-1/3 flex-grow-0"
                   >
-                    <dt className="inline font-semibold text-gray-900">
+                    <dt className="inline font-semibold text-slate-900">
                       <feature.icon
                         aria-hidden="true"
-                        className="absolute top-1 left-0 size-5 text--midnight-sky-600"
+                        className="absolute top-1 left-0 size-5 text-slate-600"
                       />
                       {feature.name}
                     </dt>{" "}
@@ -84,7 +84,7 @@ export default function LandingPageBefore() {
             src={lookingDown}
             width={2432}
             height={1442}
-            className="w-[36rem] max-w-none sm:w-[57rem] md:-ml-4 lg:-ml-0"
+            className="w-[36rem] max-w-none sm:w-[57rem] md:-ml-4 lg:-ml-0 rounded-2xl shadow-xl ring-1 ring-slate-200"
           />
         </div>
       </div>

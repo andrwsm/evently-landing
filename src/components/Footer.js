@@ -1,5 +1,5 @@
-import EventlyLogo from "../assets/eventlyLogos/EventlyLogo.png";
-import EventlyIcon from "../assets/eventlyLogos/EventlyIcon.png";
+import EventlyLogo from "../assets/eventlyLogos/Eventli/EventlyLogo.png";
+import EventlyIcon from "../assets/eventlyLogos/Eventli/EventlyIcon.png";
 import linkedinIcon from "../assets/images/linkedin-icon.png";
 
 const navigation = {
@@ -81,7 +81,7 @@ const navigation = {
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-900">
+    <footer className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <div className="mx-auto max-w-7xl px-6 pb-8 pt-16 sm:pt-24 lg:px-8 lg:pt-32">
         <div className="xl:grid xl:grid-cols-3 xl:gap-8">
           <img alt="Evently Icon" src={EventlyIcon} className="h-9" />
@@ -94,7 +94,7 @@ export default function Footer() {
                     <li key={item.name}>
                       <a
                         href={item.href}
-                        className="text-sm/6 text-gray-400 hover:text-white"
+                        className="text-sm/6 text-slate-400 hover:text-white transition-colors duration-200"
                       >
                         {item.name}
                       </a>
@@ -114,14 +114,14 @@ export default function Footer() {
                 href={item.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-400 hover:text-gray-300"
+                className="text-slate-400 hover:text-white transition-colors duration-200"
               >
                 <span className="sr-only">{item.name}</span>
                 <item.icon aria-hidden="true" className="size-6" />
               </a>
             ))}
           </div>
-          <p className="mt-8 text-sm/6 text-gray-400 md:order-1 md:mt-0">
+          <p className="mt-8 text-sm/6 text-slate-400 md:order-1 md:mt-0">
             &copy; 2024 Eventli, Inc. All rights reserved.
           </p>
         </div>

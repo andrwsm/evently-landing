@@ -56,7 +56,7 @@ export default function ContactNew() {
         width: 100%;
         padding: 0.75rem 1rem;
         border: 1px solid #d1d5db;
-        border-radius: 0.375rem;
+        border-radius: 0.75rem;
         box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
         font-size: 0.875rem;
         transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
@@ -68,16 +68,16 @@ export default function ContactNew() {
       .hs-form select:focus,
       .hs-form textarea:focus {
         outline: none;
-        border-color: #6366f1;
-        box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+        border-color: #64748b;
+        box-shadow: 0 0 0 3px rgba(100, 116, 139, 0.1);
       }
       
       .hs-form .hs-button {
         display: flex;
         width: 100%;
         justify-content: center;
-        border-radius: 0.375rem;
-        background-color: #4f46e5;
+        border-radius: 0.75rem;
+        background-color: #475569;
         padding: 0.75rem 1rem;
         font-size: 0.875rem;
         font-weight: 600;
@@ -89,7 +89,7 @@ export default function ContactNew() {
       }
       
       .hs-form .hs-button:hover {
-        background-color: #4338ca;
+        background-color: #334155;
       }
       
       .hs-form .hs-button:focus {
@@ -126,7 +126,7 @@ export default function ContactNew() {
       }
       
       .hs-form .hs-fieldtype-checkbox input[type="checkbox"]:focus {
-        box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+        box-shadow: 0 0 0 3px rgba(100, 116, 139, 0.1);
       }
       
       .hs-form .hs-fieldtype-checkbox label {
@@ -163,7 +163,7 @@ export default function ContactNew() {
   return (
     <div className="bg-white">
       {/* Hero Section */}
-      <div className="relative bg-gradient-to-r from-indigo-600 to-blue-500 overflow-hidden">
+      <div className="relative bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 overflow-hidden">
         <div className="absolute inset-0">
           <svg
             className="absolute bottom-0 left-0 transform translate-y-1/2 opacity-20"
@@ -190,7 +190,7 @@ export default function ContactNew() {
             <h1 className="text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl">
               Get in Touch
             </h1>
-            <p className="mt-6 max-w-2xl mx-auto text-xl text-indigo-100">
+            <p className="mt-6 max-w-2xl mx-auto text-xl text-slate-200">
               Have questions or feedback? We'd love to hear from you and help
               you make the most of your event experience.
             </p>

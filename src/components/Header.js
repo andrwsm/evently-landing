@@ -26,7 +26,7 @@ import {
   PlayCircleIcon,
 } from "@heroicons/react/20/solid";
 import { Link, useNavigate } from "react-router-dom";
-import EventlyLogo from "../assets/eventlyLogos/EventlyLogo.png";
+import EventlyLogo from "../assets/eventlyLogos/Eventli/EventlyLogo.png";
 import CustomIcons from "../assets/icons";
 
 const products = [
@@ -77,7 +77,6 @@ export default function Header() {
   const [lastScrollY, setLastScrollY] = useState(0);
   const navigate = useNavigate();
 
-
   const handleNavigation = (path, hash) => {
     navigate(path);
     if (hash) {
@@ -92,7 +91,7 @@ export default function Header() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 bg-white shadow-md transition-transform duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md shadow-lg border-b border-slate-200/50 transition-all duration-300 ${
         isVisible ? "translate-y-0" : "-translate-y-full"
       }`}
     >
@@ -110,19 +109,22 @@ export default function Header() {
           <button
             type="button"
             onClick={() => setMobileMenuOpen(true)}
-            className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
+            className="-m-2.5 inline-flex items-center justify-center rounded-xl p-2.5 text-slate-700 hover:text-slate-900 hover:bg-slate-100 transition-all duration-200"
           >
             <span className="sr-only">Open main menu</span>
             <Bars3Icon aria-hidden="true" className="size-6" />
           </button>
         </div>
         <PopoverGroup className="hidden lg:flex lg:gap-x-12">
-          <Link to="/" className="text-sm/6 font-semibold text-gray-900">
+          <Link
+            to="/"
+            className="text-sm/6 font-semibold text-slate-900 hover:text-slate-700 transition-colors duration-200"
+          >
             Home
           </Link>
           <Link
             to="/Organisers"
-            className="text-sm/6 font-semibold text-gray-900"
+            className="text-sm/6 font-semibold text-slate-900 hover:text-slate-700 transition-colors duration-200"
             onClick={(e) => {
               e.preventDefault();
               handleNavigation("/Organisers", "organisers");
@@ -132,7 +134,7 @@ export default function Header() {
           </Link>
           <Link
             to="/Users"
-            className="text-sm/6 font-semibold text-gray-900"
+            className="text-sm/6 font-semibold text-slate-900 hover:text-slate-700 transition-colors duration-200"
             onClick={(e) => {
               e.preventDefault();
               handleNavigation("/Users", "Users");
@@ -197,7 +199,7 @@ export default function Header() {
           </Popover> */}
           <Link
             to="/contact-new"
-            className="text-sm/6 font-semibold text-gray-900"
+            className="text-sm/6 font-semibold text-slate-900 hover:text-slate-700 transition-colors duration-200"
           >
             Contact
           </Link>
@@ -211,7 +213,7 @@ export default function Header() {
         className="lg:hidden"
       >
         <div className="fixed inset-0 z-50 bg-black bg-opacity-25" />
-        <DialogPanel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 shadow-xl">
+        <DialogPanel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white/95 backdrop-blur-md px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-slate-900/10 shadow-2xl border-l border-slate-200/50">
           <div className="flex items-center justify-between">
             <a href="#" className="-m-1.5 p-1.5">
               <span className="sr-only">Your Company</span>
@@ -224,7 +226,7 @@ export default function Header() {
             <button
               type="button"
               onClick={() => setMobileMenuOpen(false)}
-              className="-m-2.5 rounded-md p-2.5 text-gray-700 hover:text-gray-900"
+              className="-m-2.5 rounded-xl p-2.5 text-slate-700 hover:text-slate-900 hover:bg-slate-100 transition-all duration-200"
             >
               <span className="sr-only">Close menu</span>
               <XMarkIcon aria-hidden="true" className="size-6" />
@@ -235,28 +237,28 @@ export default function Header() {
               <div className="space-y-2 py-6">
                 <Link
                   to="/"
-                  className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
+                  className="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-slate-900 hover:bg-slate-100 transition-all duration-200"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   Home
                 </Link>
                 <Link
                   to="/Organisers"
-                  className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
+                  className="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-slate-900 hover:bg-slate-100 transition-all duration-200"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   Organisers
                 </Link>
                 <Link
                   to="/Users"
-                  className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
+                  className="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-slate-900 hover:bg-slate-100 transition-all duration-200"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   Users
                 </Link>
                 <Link
                   to="/contact-new"
-                  className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
+                  className="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-slate-900 hover:bg-slate-100 transition-all duration-200"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   Contact
